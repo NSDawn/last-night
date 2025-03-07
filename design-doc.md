@@ -24,9 +24,10 @@ OPPOSITES ATTRACT
 ## 🎨 aesthetic
 cartoony, pink line art, flat colors (washed-out pastel)
 lot of inspiration from florence
-- pfps
-- images 
-- bgs 
+- pfps 1:1 
+- images 9:16 / 16:9
+- bgs  9:16
+- stretch: emojis 1:1 transparent
 
 ```css
 :root {
@@ -45,21 +46,26 @@ hottest girl in school very popular. gets the shits before prom.
 pajamas 
 ### kaytlyn mchawté
 twin sister of above. is going in ur place
+wallflower, nerdy, smarter, software developer, woman in STEM
+emergency makeover
 pink-ass dress long ballgown
-### tim henderson
+### tim nguyen
 ![tim](/ref-assets/design-doc-img/tim.png)
+
 basically kuroko from kuroko's basketball. (guy friend)
 navy blue suit (boringcore) (got it from his dad) (checkered tie) (too big) 
 ### brad football
 ![brad](/ref-assets/design-doc-img/brad.png)
+
 jock man. 
 varsity jacket + jeans + aviators
 ### hunter lionshead
 ![hunter](/ref-assets/design-doc-img/hunter.png)
-a psychopath!
+
+a psychopath! (white guy now)
 copy light yagami exactly mustard suit, red tie
 ### stuart newman
-transmasc + shy bookworm + good looking twink
+transmasc + shy bookworm + good looking twink 
 the most archetypical suit 
 ### rebecca kansas
 regina george
