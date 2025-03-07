@@ -1,17 +1,94 @@
 section.app {
     transition: ease-in-out 0.25s;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
     z-index: 3;
+    transform: scale(1);
     &.disabled {
         transition: ease-in-out 0.25s;
         z-index: 1;
-        
-        width: 0;
-        height: 0;
+        transform: scale(0.75);
+        opacity: 0;
     }
-    &.messages {
+}
+section.app.messages {
+    background-color: var(--rgb-main);
+    max-height: 80vh;
+    aspect-ratio: calc(9/13);
+    & header { 
         background-color: var(--rgb-main);
+        height: 10vh;
+        border-bottom: var(--rgb-line) 0.5rem solid;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        & h1 {
+            margin: 0;
+            padding: 1rem;
+        }
+        & button.back-button {
+            
+            height: min-content;
+            background-color: transparent;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+    & .user-list {
+        transition: ease-in-out 0.25s;
+        transition-delay: 1s;
+        max-height: 70vh;
+        
+        justify-content: center;
+        padding: 1rem;
+        
+        overflow-y: scroll;
+
+        
+        & .user {
+            height: 10vh;
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            flex-direction: row;
+            border-radius: 1rem;
+            outline: 0.15rem solid var(--rgb-line);
+            box-shadow: var(--box-shadow);
+            background-color: var(--rgb-main);
+
+            &:hover {
+                transform: scale(1.05);
+            }
+            & .pfp {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                & img {
+                    height: 8vh;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    outline: 0.15rem solid var(--rgb-line);
+                    box-shadow: var(--box-shadow);
+                }
+            }
+            & .text {
+                display: flex; 
+                flex-direction: column;
+                overflow: hidden;
+                width: max-content;
+                align-items: flex-start;
+                padding: 1rem;
+                text-align: left;
+                max-height: 2rem;
+                & .user-name {
+                    font-weight: bold;
+                    
+                }
+                & .message-preview {
+                    
+                }
+            }
+        }
     }
 }

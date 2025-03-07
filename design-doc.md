@@ -65,12 +65,14 @@ pfp: chiken laying blue egg
 
 jock man. 
 varsity jacket + jeans + aviators
+pfp: self holding trophy
+
 ### hunter lionshead
 ![hunter](/ref-assets/design-doc-img/hunter.png)
 
 a psychopath! (white guy now)
 copy light yagami exactly mustard suit, red tie
-pfp: self holding trophy
+pfp: anime profile pic /emo
 
 ### stuart newman
 transmasc + shy bookworm + good looking twink 

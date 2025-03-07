@@ -3,6 +3,8 @@
     "app.notes": "Notes",
     "app.settings": "Settings",
 
+    "char.debugShrek.displayName": "Mr. Shrek",
+    "char.debugPlayer.displayName": "N.S. Dawn",
 
     "message.debug.debugscene.0.0": "WHATCHA DOIN' IN MY SWAMP 🧌🧌🧌",
     "message.debug.debugscene.0.1": "Shrek, is that you?",
@@ -13,5 +15,6 @@
     "message.debug.debugscene.0.6": "i'm going to find ye, and when I do...",
     "message.debug.debugscene.0.7": "poggies",
     
+    "app.messages.userList.h": "Chats",
     "debug": "Debug"
 }
