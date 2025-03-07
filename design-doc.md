@@ -44,16 +44,22 @@ concept art made using machowwka's picrew, [here](https://picrew.me/en/image_mak
 ### angela mchawté
 hottest girl in school very popular. gets the shits before prom.
 pajamas 
+pfp: pretty much exactly what kayltlyn looks like rn
 ### kaytlyn mchawté
 twin sister of above. is going in ur place
 wallflower, nerdy, smarter, software developer, woman in STEM
 emergency makeover
+uses a LOT of emoji
 pink-ass dress long ballgown
+pfp: her wearing glasses
+
 ### tim nguyen
 ![tim](/ref-assets/design-doc-img/tim.png)
 
 basically kuroko from kuroko's basketball. (guy friend)
 navy blue suit (boringcore) (got it from his dad) (checkered tie) (too big) 
+
+pfp: chiken laying blue egg
 ### brad football
 ![brad](/ref-assets/design-doc-img/brad.png)
 
@@ -64,12 +70,17 @@ varsity jacket + jeans + aviators
 
 a psychopath! (white guy now)
 copy light yagami exactly mustard suit, red tie
+pfp: self holding trophy
+
 ### stuart newman
 transmasc + shy bookworm + good looking twink 
 the most archetypical suit 
+pfp: self but face mostly covered
+
 ### rebecca kansas
 regina george
 open shoulders white dress 
+pfp: self full makeup
 
 
 
