@@ -1,0 +1,17 @@
+{
+    "app.messages": "Messages",
+    "app.notes": "Notes",
+    "app.settings": "Settings",
+
+
+    "message.debug.debugscene.0.0": "WHATCHA DOIN' IN MY SWAMP 🧌🧌🧌",
+    "message.debug.debugscene.0.1": "Shrek, is that you?",
+    "message.debug.debugscene.0.2": "tell me ya little rat bastard",
+    "message.debug.debugscene.0.3": "who gave you the address?",
+    "message.debug.debugscene.0.4": "I'm sorry, Mr. Shrek, I just have to put a lot of text in this particular message so we can test how text wraps.",
+    "message.debug.debugscene.0.5": "💀",
+    "message.debug.debugscene.0.6": "i'm going to find ye, and when I do...",
+    "message.debug.debugscene.0.7": "poggies",
+    
+    "debug": "Debug"
+}

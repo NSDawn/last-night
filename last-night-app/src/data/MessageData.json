@@ -1,0 +1,34 @@
+{
+    "debug.debugscene.0.0": {
+        "id": "debug.debugscene.0.0",
+        "senderId": "debugShrek"
+    },
+    "debug.debugscene.0.1": {
+        "id": "debug.debugscene.0.1",
+        "senderId": "debugPlayer"
+    },
+    "debug.debugscene.0.2": {
+        "id": "debug.debugscene.0.2",
+        "senderId": "debugShrek"
+    },
+    "debug.debugscene.0.3": {
+        "id": "debug.debugscene.0.3",
+        "senderId": "debugShrek"
+    },
+    "debug.debugscene.0.4": {
+        "id": "debug.debugscene.0.4",
+        "senderId": "debugPlayer"
+    },
+    "debug.debugscene.0.5": {
+        "id": "debug.debugscene.0.0",
+        "senderId": "debugShrek"
+    },
+    "debug.debugscene.0.6": {
+        "id": "debug.debugscene.0.0",
+        "senderId": "debugShrek"
+    },
+    "debug.debugscene.0.7": {
+        "id": "debug.debugscene.0.0",
+        "senderId": "debugPlayer"
+    }
+}

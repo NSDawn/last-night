@@ -3,40 +3,67 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+main.phone {
+  height: 90vh;
+  aspect-ratio: calc(9/17);
+  outline: 2px solid var(--rgb-line);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rgb-light);
+  box-shadow: var(--box-shadow);
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  & section.screen {
+    outline: 2px solid var(--rgb-line);
+    aspect-ratio: calc(9/16);
+    height: 80vh;
+    background-color: var(--rgb-line);
+    display: grid; 
+    & > * {
+      aspect-ratio: calc(9/16);
+      height: 80vh;
+      grid-row: 1;
+      grid-column: 1;
+    }
+    & section.home-screen { 
+      background-image: url("/assets/img/bg/phone-wallpaper.png");
+      background-size: cover;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+      & div.app-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center; justify-content: center;
+        & button {
+          width: 60%;
+          aspect-ratio: 1;
+          font-size: 2rem;
+          text-shadow: var(--box-shadow);
+        }
+
+      }
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  & div.home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & button {
+      background-color: var(--rgb-main);
+      height: 2vh;
+      aspect-ratio: 4;
+      margin-top: 2vh;
+      outline: 2px solid var(--rgb-line);
+      
+    }
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

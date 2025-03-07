@@ -1,0 +1,11 @@
+{
+    "debugShrek": {
+        "id": "debugShrek",
+        "pfpUrl": "/assets/img/pfp/debugShrek.png"
+    },
+    "debugPlayer": {
+        "id": "debugPlayer",
+        "pfpUrl": "/assets/img/pfp/debugPlayer.png",
+        "isPlayer": true
+    }
+}
