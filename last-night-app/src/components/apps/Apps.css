@@ -178,6 +178,10 @@ section.app.messages {
                         border-radius: 1rem;
                         outline: 0.15rem solid var(--rgb-line);
                         box-shadow: var(--box-shadow-small);
+                        & img {
+                            display: block;
+                            width: 12rem;
+                        }
                     }
                     &.new-user {
                         margin-top: 0.75rem;

@@ -12,7 +12,7 @@ export default function Phone() {
             <Screen />
             <div className="home-button">
                 <button onClick={() => setCurrentApp(null)}/>
-
+                
             </div>
         </main>
     )

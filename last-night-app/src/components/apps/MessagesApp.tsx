@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getMessage, getMessageChain, getUser, MessageHistory } from "../../game/Messages";
 import { State, useGlobal } from "../../GlobalContextHandler";
 import { t } from "../../strings/i18n";
@@ -14,7 +14,7 @@ export default function MessagesApp() {
         <>  
             <header>
                 <button className={`back-button ${selectedUser === null ? "disabled" : ""}`} onClick={() => setSelectedUser(null)}>
-                   <img src="/assets/img/ui/icon-home.png" alt="back icon" />
+                   <img src="/assets/img/ui/icon-back.png" alt="back icon" />
                 </button>
                 <img className={`pfp ${selectedUser === null ? "disabled" : ""}`} src={`${getUser(selectedUser).pfpUrl}`} alt={`${selectedUser} profile picture`} />
                 <h1>
@@ -59,14 +59,24 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
     
     const userMessageHistory = props.messageHistory.filter((h) => h.userId === props.selectedUser)[0];
     let prevUserId = "";
+    let shownMessagesI = 0;
+
+    useEffect(() => {
+        const div = document.querySelector("div.chat-history");
+        if (!div) return;
+        div.scrollTop = div.scrollHeight;
+         console.log("what");
+    }, [props.messageHistory]);
 
     return (
         <div className={`chat ${props.selectedUser === null ? "disabled" : ""}`}>
-            <div className="chat-history">
+            <div className="chat-history" >
                 {props.selectedUser !== null ? 
                     
                     userMessageHistory.messageChainIds.map((messageChainId) => getMessageChain(messageChainId).messageIds.map((messageId, i) => 
                         {
+                            if (shownMessagesI > (userMessageHistory.shownMessages ?? 0)) return;
+                            shownMessagesI ++;
                             const message = getMessage(messageId);
                             const sender = getUser(message.senderId);
                             const sameUser = i !== 0 &&  message.senderId == prevUserId;
@@ -80,9 +90,8 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
                                     : null}
                                 </div>
                                 <div className="text">
-                                    {
-                                        t(`message.${messageId}`)
-                                    }
+                                    { t(`message.${messageId}`) }
+                                    { message.imgUrl ? <img src={message.imgUrl} alt="message image" /> : null }
                                 </div>
                             </div>)
                         }

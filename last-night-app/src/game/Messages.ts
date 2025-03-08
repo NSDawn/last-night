@@ -4,7 +4,6 @@ const messageData: Record<string, Message> = _messageData;
 export type Message = {
     id: string;
     senderId: string;
-    isImage?: boolean;
     imgUrl?: string;
 }
 export function getMessage(key: string): Message {
@@ -24,6 +23,7 @@ export function getMessageChain(key: string): MessageChain {
 }
 
 import _userData from "../data/UserData.json";
+import { GlobalSingleton } from "../GlobalContextHandler";
 const userData: Record<string, User> = _userData;
 export type User = {
     id: string;
@@ -41,6 +41,7 @@ export type MessageHistory = UserMessageHistory[];
 
 export type UserMessageHistory = {
     userId: string;
+    shownMessages?: number;
     messageChainIds: string[];
 }
 
@@ -59,4 +60,31 @@ export function getDefaultMessageHistory(): MessageHistory {
             ],
         },
     ]
+}
+
+export function addChainMessageHistory(G: GlobalSingleton, chainId: string, userId: string) {
+    const [messageHistory, _] = G.messageHistory;
+
+    const userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
+    if (!userMessageHistory) return;
+
+    userMessageHistory.messageChainIds.push(chainId);
+
+    updateMessageHistory(G, messageHistory);
+}
+
+export function incrementShownMessagesMessageHistory(G: GlobalSingleton, addend: number, userId: string) {
+    const [messageHistory, _] = G.messageHistory;
+
+    const userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
+    if (!userMessageHistory) return;
+
+    if (userMessageHistory.shownMessages === undefined) userMessageHistory.shownMessages = 0;
+    userMessageHistory.shownMessages += addend;
+    updateMessageHistory(G, messageHistory);
+}
+
+export function updateMessageHistory(G: GlobalSingleton, messageHistory: MessageHistory) {
+    const [_, setMessageHistoryJSON] = G.messageHistoryJSON;
+    setMessageHistoryJSON(JSON.stringify(messageHistory));
 }
