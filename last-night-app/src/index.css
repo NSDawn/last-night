@@ -19,10 +19,15 @@
   line-height: 1.5;
   font-weight: 400;
 
+
+  --rgb-line: #802344;
   --rgb-main: #be3462;
   --rgb-light: 	#ffb6c1;
-  --rgb-line: #802344;
+  --rgb-juicy: #ffab66;
+  --rgb-drab: #c99da3;
   --rgb-off: #bde7f1;
+  --rgb-text-light: #fff0f0; 
+  --rgb-offdrab: #c6ddf0;
   --rgb-shadow: #802344;
   
   --box-shadow: 0px 0px 0.5rem var(--rgb-shadow);
@@ -31,7 +36,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: var(--rgb-off);
-  
+  color: var(--rgb-text-light);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -44,6 +49,7 @@ button {
   background-color: var(--rgb-light);
   box-shadow: var(--box-shadow-small);
   outline: 2px solid var(--rgb-line);
+  cursor: pointer;
   &:hover {
     transform: scale(1.05);
   }
@@ -54,7 +60,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--rgb-light);
+  background: var(--rgb-line);
   border-radius: 0.5rem;
 }
 

@@ -7,6 +7,10 @@ export type Message = {
     isImage?: boolean;
     imgUrl?: string;
 }
+export function getMessage(key: string): Message {
+    const DEFAULT_KEY = "debug.debugscene.0.0";
+    return messageData[key] ?? messageData[DEFAULT_KEY];
+}
 
 import _messageChainData from "../data/MessageChainData.json";
 const messageChainData: Record<string, MessageChain> = _messageChainData;
@@ -14,7 +18,7 @@ export type MessageChain = {
     id: string;
     messageIds: string[]; // ids
 }
-function getMessageChain(key: string): MessageChain {
+export function getMessageChain(key: string): MessageChain {
     const DEFAULT_KEY = "debug.debugscene.0";
     return messageChainData[key] ?? messageChainData[DEFAULT_KEY];
 }
@@ -26,8 +30,10 @@ export type User = {
     pfpUrl: string;
     isPlayer?: boolean;
 }
-export function getUser(key: string): User {
-    return userData[key] ?? userData["debugShrek"];
+export function getUser(key: string | null): User {
+    const DEFAULT_USER = userData["debugShrek"]
+    if (!key) return DEFAULT_USER;
+    return userData[key] ?? DEFAULT_USER;
 }
 
 export type MessageHistory = UserMessageHistory[];
@@ -47,31 +53,7 @@ export function getDefaultMessageHistory(): MessageHistory {
             ],
         },
         {
-            userId: "debugShrek",
-            messageChainIds: [
-                "debug.debugscene.0"
-            ],
-        },
-        {
-            userId: "debugShrek",
-            messageChainIds: [
-                "debug.debugscene.0"
-            ],
-        },
-        {
-            userId: "debugShrek",
-            messageChainIds: [
-                "debug.debugscene.0"
-            ],
-        },
-        {
-            userId: "debugShrek",
-            messageChainIds: [
-                "debug.debugscene.0"
-            ],
-        },
-        {
-            userId: "debugShrek",
+            userId: "tim",
             messageChainIds: [
                 "debug.debugscene.0"
             ],

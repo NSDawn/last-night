@@ -4,6 +4,7 @@ section.app {
     z-index: 3;
     transform: scale(1);
     &.disabled {
+        pointer-events: none;
         transition: ease-in-out 0.25s;
         z-index: 1;
         transform: scale(0.75);
@@ -16,7 +17,8 @@ section.app.messages {
     aspect-ratio: calc(9/13);
     & header { 
         background-color: var(--rgb-main);
-        height: 10vh;
+        transition: ease-in-out 0.25s;
+        height: 5vh;
         border-bottom: var(--rgb-line) 0.5rem solid;
         box-shadow: var(--box-shadow);
         display: flex;
@@ -25,70 +27,164 @@ section.app.messages {
         padding: 0.5rem;
         & h1 {
             margin: 0;
-            padding: 1rem;
+            font-size: 1.5rem;
         }
-        & button.back-button {
-            
-            height: min-content;
+        & button {
+            width: 2rem;
+            aspect-ratio: 1;
             background-color: transparent;
             box-shadow: none;
             outline: none;
-        }
-    }
-    & .user-list {
-        transition: ease-in-out 0.25s;
-        transition-delay: 1s;
-        max-height: 70vh;
-        
-        justify-content: center;
-        padding: 1rem;
-        
-        overflow-y: scroll;
-
-        
-        & .user {
-            height: 10vh;
-            padding: 1rem;
-            margin: 1rem 0;
-            display: flex;
-            flex-direction: row;
-            border-radius: 1rem;
-            outline: 0.15rem solid var(--rgb-line);
-            box-shadow: var(--box-shadow);
-            background-color: var(--rgb-main);
-
-            &:hover {
-                transform: scale(1.05);
-            }
-            & .pfp {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                & img {
-                    height: 8vh;
-                    aspect-ratio: 1;
-                    border-radius: 50%;
-                    outline: 0.15rem solid var(--rgb-line);
-                    box-shadow: var(--box-shadow);
-                }
-            }
-            & .text {
-                display: flex; 
-                flex-direction: column;
+            transition: ease-in 0.15s;
+            &.disabled {
+                width: 0;
                 overflow: hidden;
-                width: max-content;
-                align-items: flex-start;
+            }
+            & img {
+                width: 2rem;
+                aspect-ratio: 1;
+            }
+            &.home-button {
+                margin-left: auto;
+                margin-right: 0.5rem;
+            }
+        }
+        & img.pfp {
+            height: 4vh;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            outline: 0.15rem solid var(--rgb-line);
+            transition: ease-in 0.15s;
+            box-shadow: var(--box-shadow);
+            &.disabled {
+                width: 0;
+                margin-left: 0;
+                opacity: 0;
+                overflow: hidden;
+            }
+
+        }
+        
+    }
+    & > main {
+        display: grid;
+        & > * {
+            grid-row: 1; grid-column: 1;
+            max-height: 75vh;
+        }
+        & > .user-list {
+            background-color: var(--rgb-drab);
+            transition: ease-in-out 0.25s;
+            transition-delay: 1s;
+            max-height: 70vh; /*i don't know why it's not 75vh*/ 
+            
+            justify-content: center;
+            padding: 1rem;
+            
+            overflow-y: scroll;
+    
+            &.disabled {
+                pointer-events: none;
+            }
+            & .user {
+                height: 10vh;
                 padding: 1rem;
-                text-align: left;
-                max-height: 2rem;
-                & .user-name {
-                    font-weight: bold;
-                    
+                margin: 1rem 0;
+                display: flex;
+                flex-direction: row;
+                border-radius: 1rem;
+                outline: 0.15rem solid var(--rgb-line);
+                box-shadow: var(--box-shadow);
+                background-color: var(--rgb-main);
+                cursor: pointer;
+                &:nth-child(2n) {
+                    background-color: var(--rgb-juicy);
                 }
-                & .message-preview {
-                    
+                &:hover {
+                    transform: scale(1.05);
+                }
+                & .pfp {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    & img {
+                        height: 8vh;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        outline: 0.15rem solid var(--rgb-line);
+                        box-shadow: var(--box-shadow);
+                    }
+                }
+                & .text {
+                    display: flex; 
+                    flex-direction: column;
+                    overflow: hidden;
+                    width: max-content;
+                    align-items: flex-start;
+                    padding: 1rem;
+                    text-align: left;
+                    max-height: 3rem;
+                    & .user-name {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+                    & .message-preview {
+                        
+                    }
+                }
+            }
+        }
+        & > .chat {
+            height: 75vh;
+            background-color: var(--rgb-juicy);
+            transition: ease-in-out 0.25s;
+            &.disabled {
+                pointer-events: none;
+                transform: translateX(100%);
+            }
+            & > .chat-history {
+                overflow: scroll;
+                max-height: calc(75vh - 2rem);
+                padding: 1rem 0;
+                & > .message {
+                    display: flex;
+                    flex-direction: row;
+                    &.player {
+                        flex-direction: row-reverse;
+                        & > .text {
+                            background-color: var(--rgb-drab);
+                        }
+                    }
+                    & > .pfp {
+                        width: 3rem;
+                        display: flex;
+                        align-items: flex-start; justify-content: center;
+                        & > img {
+                            margin-top: 1rem;
+                            width: 2rem;
+                            aspect-ratio: 1;
+                            border-radius: 50%;
+                            outline: 0.15rem solid var(--rgb-line);
+                            transition: ease-in 0.15s;
+                            box-shadow: var(--box-shadow);
+                        }
+                    }
+                    & > .text {
+                        text-align: left;
+                        background-color: var(--rgb-main);
+                        padding: 1rem;
+                        margin: 0.25rem;
+                        max-width: 15rem;
+                        border-radius: 1rem;
+                        outline: 0.15rem solid var(--rgb-line);
+                        box-shadow: var(--box-shadow-small);
+                    }
+                    &.new-user {
+                        margin-top: 0.75rem;
+                    }
                 }
             }
         }
     }
+    
 }

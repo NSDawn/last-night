@@ -9,13 +9,9 @@ export default function Screen() {
     const [currentApp, setCurrentApp] = G.currentApp;
     
     const appIcons: AppIconData[] = [
-        {
-            id: "messages", 
-            icon: "💬", 
-            appNode: <MessagesApp />,
-        },
-        {id: "notes", icon: "📝", appNode: undefined},
-        {id: "settings", icon: "⚙️", appNode: undefined},
+        { id: "messages", iconUrl: "/assets/img/ui/appicon-messages.png", appNode: <MessagesApp />},
+        {id: "notes", iconUrl: "/assets/img/ui/appicon-notes.png", appNode: undefined},
+        {id: "settings", iconUrl: "/assets/img/ui/appicon-settings.png", appNode: undefined},
     ];
 
     return (
@@ -24,7 +20,7 @@ export default function Screen() {
                 {appIcons.map((appIcon, i) => 
                     <div className={`app-icon ${appIcon.id}`} key={i}>
                         <button onClick={() => setCurrentApp(appIcon.id)}>
-                            {appIcon.icon}
+                            <img src={appIcon.iconUrl} alt={`app icon ${appIcon.id}`} />
                         </button>
                         <div className="app-name">
                             {t(`app.${appIcon.id}`)}
@@ -44,6 +40,6 @@ export default function Screen() {
 
 type AppIconData = {
     id: string;
-    icon: string;
+    iconUrl: string;
     appNode?: React.ReactNode;
 }

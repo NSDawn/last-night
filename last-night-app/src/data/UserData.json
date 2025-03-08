@@ -3,6 +3,10 @@
         "id": "debugShrek",
         "pfpUrl": "/assets/img/pfp/debugShrek.png"
     },
+    "tim": {
+        "id": "tim",
+        "pfpUrl": "/assets/img/pfp/tim.png"
+    },
     "debugPlayer": {
         "id": "debugPlayer",
         "pfpUrl": "/assets/img/pfp/debugPlayer.png",

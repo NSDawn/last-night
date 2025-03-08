@@ -43,10 +43,16 @@ main.phone {
         flex-direction: column;
         align-items: center; justify-content: center;
         & button {
-          width: 60%;
+          width: 5rem;
           aspect-ratio: 1;
           font-size: 2rem;
           text-shadow: var(--box-shadow);
+          display: flex;
+          overflow: hidden;
+          & > img {
+            width: 5rem;
+            aspect-ratio: 1;
+          }
         }
 
       }
