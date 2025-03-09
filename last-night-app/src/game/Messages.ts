@@ -93,17 +93,11 @@ export type UserMessageHistory = {
 export function getDefaultMessageHistory(): MessageHistory {
     return [
         {
-            userId: "debugShrek",
+            userId: "kaytlyn",
             messageChainIds: [
-                "debug.debugscene.0"
+                "m.kaytlyn.0"
             ],
-        },
-        {
-            userId: "tim",
-            messageChainIds: [
-                "debug.debugscene.0"
-            ],
-        },
+        }
     ]
 }
 
