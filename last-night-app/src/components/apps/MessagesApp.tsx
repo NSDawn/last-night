@@ -56,7 +56,7 @@ function UserList(props: {messageHistory: MessageHistory, selectedUser: string|n
                         </div>
                         { getHasNotifications(userMessageHistory) ?
                             <div className="notification">
-                                <img src="/assets/img/ui/icon-speech.png" alt="notification icon" />
+                                <img src="/assets/img/ui/icon-notif.png" alt="notification icon" />
                             </div>
                         : null}
                     </div>
@@ -73,9 +73,10 @@ function getLastMessageId(userMessageHistory: UserMessageHistory) {
 
 function getHasNotifications(userMessageHistory: UserMessageHistory): boolean {
     return (
-        userMessageHistory.messageChainIds.reduce((a, v) => a.concat(getMessageChain(v).messageIds), [] as string[]).length > (userMessageHistory.shownMessages ?? 0)
+        userMessageHistory.messageChainIds.reduce((a, v) => a.concat(getMessageChain(v).messageIds), [] as string[]).length > ((userMessageHistory.shownMessages ?? 0) +1)
     )
 }
+
 function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null, setSelectedUser: (user: string|null) => void}) {
     
     const G = useGlobal();
