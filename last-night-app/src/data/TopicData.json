@@ -38,5 +38,9 @@
     "debugTopic": {
         "id": "debugTopic",
         "category": "thing"
+    },
+    "hey": {
+        "id": "hey",
+        "category": "action"
     }
 }

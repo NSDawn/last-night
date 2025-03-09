@@ -1,57 +1,65 @@
 {
-    "m.kaytlyn.1.0": {
-        "id": "m.kaytlyn.1.0",
+    "kaytlyn.1.0": {
+        "id": "kaytlyn.1.0",
         "messageIds": [
-            "m.kaytlyn.1.a.0",
-            "m.kaytlyn.1.k.1",
-            "m.kaytlyn.1.a.2"
+            "kaytlyn.1.a.0",
+            "kaytlyn.1.k.1",
+            "kaytlyn.1.a.2"
         ],
         "events": {
-            "getTopics": ["charBrad"]
+            "getTopics": ["charBrad"],
+            "addFlags": ["intro"]
         }
     },
-    "m.kaytlyn.1.1": {
-        "id": "m.kaytlyn.1.1",
+    "kaytlyn.1.1": {
+        "id": "kaytlyn.1.1",
         "messageIds": [
-            "m.kaytlyn.1.a.3",
-            "m.kaytlyn.1.k.4"
+            "kaytlyn.1.a.3",
+            "kaytlyn.1.k.4"
         ],
         "events": {
             "getTopics": ["charStewart"]
         }
     },
-    "m.kaytlyn.1.2": {
-        "id": "m.kaytlyn.1.2",
+    "kaytlyn.1.2": {
+        "id": "kaytlyn.1.2",
         "messageIds": [
-            "m.kaytlyn.1.a.5",
-            "m.kaytlyn.1.k.6",
-            "m.kaytlyn.1.a.7",
-            "m.kaytlyn.1.k.8"
+            "kaytlyn.1.a.5",
+            "kaytlyn.1.k.6",
+            "kaytlyn.1.a.7",
+            "kaytlyn.1.k.8"
         ],
         "events": {
             "getTopics": ["charHunter"]
         }
     },
-    "m.kaytlyn.1.3": {
-        "id": "m.kaytlyn.1.3",
+    "kaytlyn.1.3": {
+        "id": "kaytlyn.1.3",
         "messageIds": [
-            "m.kaytlyn.1.a.9",
-            "m.kaytlyn.1.k.10",
-            "m.kaytlyn.1.a.11",
-            "m.kaytlyn.1.a.12",
-            "m.kaytlyn.1.k.13",
-            "m.kaytlyn.1.k.14"
+            "kaytlyn.1.a.9",
+            "kaytlyn.1.k.10",
+            "kaytlyn.1.a.11",
+            "kaytlyn.1.a.12",
+            "kaytlyn.1.k.13",
+            "kaytlyn.1.k.14"
         ],
         "events": {
-            "addUsers": ["tim"]
+            "startChains": [
+                {
+                    "userId": "tim", 
+                    "chainId": "tim.0"
+                }
+            ],
+            "addQuacks": ["update.0"]
         }
     },
 
 
-    "m.tim.0": {
-        "id": "m.tim.0",
+    "tim.0": {
+        "id": "tim.0",
         "messageIds": [
-            "m.tim.0.t.0"
+            "tim.0.t.0",
+            "tim.0.t.0"
         ]
     },
 

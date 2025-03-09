@@ -10,5 +10,25 @@
         "userId": "debugShrek",
         "requiredFlags": [],
         "chainId": "debug.debugscene.2"
+    },
+
+
+    {
+        "topicIds": ["charBrad"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["intro"],
+        "chainId": "kaytlyn.1.1"
+    },
+    {
+        "topicIds": ["charStewart"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["intro"],
+        "chainId": "kaytlyn.1.2"
+    },
+    {
+        "topicIds": ["charHunter"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["intro"],
+        "chainId": "kaytlyn.1.3"
     }
 ]

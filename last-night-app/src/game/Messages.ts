@@ -91,13 +91,13 @@ export type UserMessageHistory = {
     messageChainIds: string[];
 }
 
-
+// ! ====
 export function getDefaultMessageHistory(): MessageHistory {
     return [
         {
             userId: "kaytlyn",
             messageChainIds: [
-                "m.kaytlyn.0"
+                "kaytlyn.1.0"
             ],
         }
     ]
@@ -155,11 +155,7 @@ export type Topic = {
 
 export function getDefaultTopicInventory(): TopicInventory {
     return [
-        "debugTopic",
-        "charKaytlyn",
-        "charAngela",
-        "charTim",
-        "eggs"
+        "hey"
     ];
 }
 
