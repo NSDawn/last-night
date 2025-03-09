@@ -2,6 +2,7 @@ import MessagesApp from "../apps/MessagesApp";
 import { useGlobal } from "../../GlobalContextHandler"
 import { t } from "../../strings/i18n";
 import "../apps/Apps.css"
+import NotesApp from "../apps/NotesApp";
 
 export default function Screen() {
 
@@ -10,7 +11,7 @@ export default function Screen() {
     
     const appIcons: AppIconData[] = [
         { id: "messages", iconUrl: "/assets/img/ui/appicon-messages.png", appNode: <MessagesApp />},
-        {id: "notes", iconUrl: "/assets/img/ui/appicon-notes.png", appNode: undefined},
+        {id: "notes", iconUrl: "/assets/img/ui/appicon-notes.png", appNode: <NotesApp />},
         {id: "settings", iconUrl: "/assets/img/ui/appicon-settings.png", appNode: undefined},
     ];
 

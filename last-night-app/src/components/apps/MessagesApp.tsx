@@ -149,6 +149,7 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
     const [selectedTopics, setSelectedTopics] = useState([] as string[]);
     const [selectedCategory, setSelectedCategory] = useState(null as string|null);
     const [flags, setFlags] = G.flags;
+    const MAX_TOPICS = 3;
 
     const categories = [
         {name: "all", imgUrl: "/assets/img/ui/icon-back.png", value: null},
@@ -162,7 +163,9 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
         if (selectedTopics.includes(topicId)) {
             setSelectedTopics(selectedTopics.filter((id) => topicId !== id));
         } else {
-            setSelectedTopics(selectedTopics.concat([topicId]));
+            if (selectedTopics.length < MAX_TOPICS) {
+                setSelectedTopics(selectedTopics.concat([topicId]));
+            }
         }
 
     }
@@ -190,8 +193,8 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
             {!props.isHidden ? <>
                 <div className="send">
                     <div className="message-bar">
-                        {selectedTopics.map((topicId) => {
-                            return (<div className="selected-topic" onClick={() => onClickTopic(topicId)}>
+                        {selectedTopics.map((topicId, i) => {
+                            return (<div className="selected-topic" onClick={() => onClickTopic(topicId)} key={i}>
                                 {t(`topic.${topicId}`)}
                             </div>)
                         })}
@@ -212,7 +215,7 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
                             if (selectedCategory !== null && topic.category !== selectedCategory) return;
                             if (selectedTopics.includes(topicId)) return;
                             return (
-                                <div className="topic" onClick={() => onClickTopic(topicId)}>
+                                <div className={`topic ${selectedTopics.length >= MAX_TOPICS ? "disabled": ""}`} onClick={() => onClickTopic(topicId)}>
                                     {t(`topic.${topicId}`)}
                                 </div>
                             )

@@ -298,7 +298,16 @@ section.app.messages {
                             padding: 0.25rem 0.5rem; 
                             border-radius: 1rem;
                             &:hover {
+                                cursor: pointer;   
                                 transform: scale(1.05);
+                            }
+                            &.disabled {
+                                background-color: var(--rgb-drab);
+                                color: var(--rgb-line);
+                                &:hover {
+                                    cursor: default;
+                                    transform: scale(1);
+                                }
                             }
                         }
                     }
@@ -320,3 +329,72 @@ section.app.messages {
     }
   }
   
+section.app.notes {
+    & header {
+        background-color: var(--rgb-main2);
+        transition: ease-in-out 0.25s;
+        height: 5vh;
+        border-bottom: var(--rgb-line) 0.5rem solid;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        & h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        & .page-number {
+            display: flex;
+            align-items: center;
+            margin-left: 4.25rem;
+            gap: 0.5rem;
+        }
+        & h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        & button {
+            width: 2rem;
+            aspect-ratio: 1;
+            background-color: transparent;
+            box-shadow: none;
+            outline: none;
+            transition: ease-in 0.15s;
+            &.disabled {
+                width: 0;
+                overflow: hidden;
+            }
+            & img {
+                width: 2rem;
+                aspect-ratio: 1;
+            }
+            &.home-button {
+                margin-left: auto;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    & main {
+        height: 100%;
+        background-color: var(--rgb-drab);
+        padding: 1rem;
+        & > .textarea-wrapper {
+            outline: 0.15rem solid var(--rgb-line);
+            padding: 1rem;
+            text-align: left;
+            border-radius: 1rem;
+            background-color: var(--rgb-text-light);
+            color: var(--rgb-line);
+            height: 65.5vh;
+            & > textarea {
+                all: unset;
+                width: 100%;
+                height: 100%;
+                &::selection {
+                  background: var(--rgb-light);
+                }
+            }
+        }
+    }
+}
