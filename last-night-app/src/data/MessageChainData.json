@@ -28,7 +28,10 @@
             "debug.debugscene.2.1",
             "debug.debugscene.2.2",
             "debug.debugscene.2.3"
-        ]
+        ],
+        "events": {
+            "getTopics": ["shrekEggs"]
+        }
     },
     "debug.debugscene.3": {
         "id": "debug.debugscene.3",

@@ -14,7 +14,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
     const flags = useState([] as string[]);
     const notes = useState([] as string[]);
     const quacks = useState([] as string[]);
-    
+    const resolvedMessageChains = useState([] as string[]);
 
     useEffect(() => {
         messageHistory[1](JSON.parse(messageHistoryJSON[0]));
@@ -37,6 +37,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
             messageHistoryJSON: messageHistoryJSON,
             topicInventory: topicInventory,
             topicInventoryJSON: topicInventoryJSON,
+            resolvedMessageChains: resolvedMessageChains,
         }}>
             {props.children}
         </GlobalContext.Provider>
@@ -54,6 +55,7 @@ export type GlobalSingleton = {
     messageHistoryJSON: State<string>;
     topicInventory: State<TopicInventory>;
     topicInventoryJSON: State<string>;
+    resolvedMessageChains: State<string[]>;
 };
 
 export function useGlobal() {

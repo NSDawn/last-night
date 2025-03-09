@@ -15,6 +15,10 @@
         "id": "eggs",
         "category": "thing"
     },
+    "shrekEggs": {
+        "id": "shrekEggs",
+        "category": "thing"
+    },
     "debugTopic": {
         "id": "debugTopic",
         "category": "thing"
