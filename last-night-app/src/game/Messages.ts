@@ -21,6 +21,7 @@ export type MessageChain = {
         removeFlags?: string[];
         getTopics?: string[];
         delayMs?: number;
+        addUsers?: string[];
         addQuacks?: string[]; // supply in reverse chrono order
         startChains?: {userId: string, chainId: string}[];
     }
@@ -41,6 +42,7 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
     if (chain.events.getTopics) addTopics(G, chain.events.getTopics);
     setTimeout(() => {
         if (chain.events?.addQuacks) addQuack(G, chain.events?.addQuacks);
+        if (chain.events?.addUsers) chain.events?.addUsers.forEach((user) => addUserMessageHistory(G, user));
         if (chain.events?.startChains) chain.events?.startChains.forEach((chain) => addChainMessageHistory(G, chain.chainId, chain.userId));
     }, chain.events.delayMs ?? 0)
 }
@@ -107,11 +109,21 @@ export function getDefaultMessageHistory(): MessageHistory {
     ]
 }
 
+export function addUserMessageHistory(G: GlobalSingleton, userId: string) {
+    const [messageHistory, _] = G.messageHistory;
+    messageHistory.push({
+        userId: userId,
+        messageChainIds: [
+        ] as string[]
+    } as UserMessageHistory)
+    updateMessageHistory(G, messageHistory);
+}
+
 export function addChainMessageHistory(G: GlobalSingleton, chainId: string, userId: string) {
     const [messageHistory, _] = G.messageHistory;
 
     const userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
-    if (!userMessageHistory) return;
+    if (!userMessageHistory) addUserMessageHistory(G, userId);
 
     userMessageHistory.messageChainIds.push(chainId);
 
