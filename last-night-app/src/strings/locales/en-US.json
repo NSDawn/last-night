@@ -14,6 +14,111 @@
     "char.millicentPrep.truncatedName": "Millicent",
     "char.tim.truncatedName": "Tim",
 
+    
+
+
+
+    "m.kaitlyn.1.a.0": "hey did you get there?",
+    "m.kaitlyn.1.k.1": "Yeah, who are we looking for exactly? Theres a lot of people here that could be it.",
+    "m.kaitlyn.1.a.2": "Did tim not tell you on the way over? Whatever, I got a few leads",
+    "m.kaitlyn.1.a.3": "brad football. Hes a sports super star. Carries all our teams. Also super ripped you gotta check him when he takes his shirt off.",
+    "m.kaitlyn.1.k.4": "\"when\"?",
+    "m.kaitlyn.1.a.5": "Stewart newman. Theyre a big bookworm. Way shy tho. I bet youd get along with them.",
+    "m.kaitlyn.1.k.6": "but Im not a big reader",
+    "m.kaitlyn.1.a.7": "well close enough right",
+    "m.kaitlyn.1.k.8": "sure",
+    "m.kaitlyn.1.a.9": "Hunter Lionshead. Hes kinda crazy tbh. Idkw he always talks like shakespeare or something",
+    "m.kaitlyn.1.k.10": "How do you know its these 3?",
+    "m.kaitlyn.1.a.11": "A girls got her sources 😉 I heard all of them have a crush, and are gonna make moves tonight.",
+    "m.kaitlyn.1.a.12": "lmk when they show up",
+    "m.kaitlyn.1.k.13": "imo I cant see shit without my glasses 😭",
+    "m.kaitlyn.1.k.14": "you should ask tim to spot them",
+    
+    "m.kaitlyn.2.a.0": "how are you doing?",
+    "m.kaitlyn.2.k.1": "idk where I am ;-;",
+    "m.kaitlyn.2.a.2": "remember to look out for rebecca kansas shes def gonna be out there",
+    "m.kaitlyn.2.k.3": "uh I think shes b lining at me rn",
+    "m.kaitlyn.2.a.4": "girl get out of there",
+    "m.kaitlyn.2.a.5": "?",
+    "m.kaitlyn.2.a.6": "did you die",
+    "m.kaitlyn.2.k.7": "dude what is her problem?????????",
+    "m.kaitlyn.2.k.8": "she got in my face and started yapping about how much better her dress is than mine like I dont even want to be here",
+    "m.kaitlyn.2.a.9": "god I hate shes like that",
+    "m.kaitlyn.2.k.10": "she did brag about something happening in the projector room later tonight tho",
+    "m.kaitlyn.2.a.11": "crap has she figured it out already",
+    "m.kaitlyn.2.a.12": "🤷‍♀️",
+
+    "m.kaitlyn.3.a.0": "hey how are you doing?",
+    "m.kaitlyn.3.k.1": "There are so many people talking to me is this what being popular is like",
+    "m.kaitlyn.3.a.2": "relax its no biggy just dont say anything embarrassing or weird",
+    "m.kaitlyn.3.k.3": "who do you think I am 🫠",
+
+    "m.kaitlyn.4.a.0": "Tim got the password for the projector room can you get into it",
+    "m.kaitlyn.4.k.1": "idk where that is",
+    "m.kaitlyn.4.a.2": "in the gym theres stairs to the left before the seats",
+    "m.kaitlyn.4.k.3": "oh I found it",
+    "m.kaitlyn.4.k.4": "theres a teacher she says I cant go up",
+    "m.kaitlyn.4.a.5": "damn Im too pretty to be ignored ✨",
+    "m.kaitlyn.4.k.6": "🙄",
+
+
+
+
+
+    "m.tim.1.a.0": "hey have any of them shown up yet?",
+    "m.tim.1.t.1": "Yeah they just showed up. should I go talk to one of them?",
+
+    "m.tim.2.a.0": "talk to brad",
+    "m.tim.3.a.0": "talk to hunter",
+    "m.tim.4.a.0": "talk to stewart",
+    "m.tim.234.t.1": "👍",
+
+    "m.tim.5.t.0": "wait angie I lost kaitlyn",
+    "m.tim.5.a.1": "its fine Ill take care of her",
+
+    "m.tim.6.a.0": "how are you doing?",
+    "m.tim.6.t.1": "Im more concerned about you, hows the sushi going down?",
+    "m.tim.6.a.2": "more like how is it coming up 🤮 its rough out here",
+    "m.tim.6.t.3": "I hope it wasnt one of the eggs I brought from the farm",
+    "m.tim.6.a.4": "dont worry those are always great",
+    "m.tim.6.t.5": "also I realized I have no idea what to ask these guys about",
+    "m.tim.6.t.6": "do you have any leads?",
+
+    "m.tim.7.a.0": "can you see kaitlyn yet?",
+    "m.tim.7.t.1": "i cant see where she is, is there a problem?",
+    "m.tim.7.a.2": "rebecca just ran up to kaitlyn and started going off",
+    "m.tim.7.t.3": "is she ok? Rebecca always comes up with ridiculous stuff to say",
+    "m.tim.7.t.4": "I think kaitlyn didnt care",
+    "m.tim.7.t.5": "shes stronger than us all",
+
+    "m.tim.8.a.0": "ask brad if he knows anything about the projector room",
+    "m.tim.8.t.1": "he said he goes there after practice for the AC. a teacher gave him the password it’s 5555",
+    "m.tim.8.a.2": "rebecca said theres something happening in the projector room tonight, we gotta get in there",
+
+    "m.tim.9.a.0": "ask hunter if he knows anything about the projector room",
+    "m.tim.9.t.1": "“you postulate I would have such hidden intent but lack substantive evidence to accuse mwah of such machinations begone whoever you are”",
+    "m.tim.9.t.2": "ok man whatever you say",
+    "m.tim.9.a.3": "why is he talking about your postulate 🫣",
+    "m.tim.9.t.4": "wrong word angie",
+
+    "m.tim.10.a.0": "ask stewart if they know anything about the projector room",
+    "m.tim.10.t.1": "they didnt know anything about the projector room, but did say they were looking for you",
+    "m.tim.10.a.2": "What! Did they say why?",
+    "m.tim.10.t.3": "I asked but they got shy and ran off",
+
+
+
+
+
+    "m.rebecca.1.r.0": "and dont even think about getting into the projector room I already have it blocked off",
+    "m.rebecca.1.a.1": "how did you get my number?",
+    "m.rebecca.1.r.2": "I took over for the student council. Prom is under my control and i got my eye you",
+    "m.rebecca.1.a.3": "sure you do 🤭",
+
+
+
+
+
     "message.debug.debugscene.0.0": "WHATCHA DOIN' IN MY SWAMP 🧌🧌🧌",
     "message.debug.debugscene.0.1": "Shrek, is that you?",
     "message.debug.debugscene.0.2": "tell me ya little rat bastard",
