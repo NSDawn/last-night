@@ -1,0 +1,22 @@
+{
+    "charAngela": {
+        "id": "charAngela",
+        "category": "person"
+    },
+    "charKaytlyn": {
+        "id": "charKaytlyn",
+        "category": "person"
+    },
+    "charTim": {
+        "id": "charTim",
+        "category": "person"
+    },
+    "eggs": {
+        "id": "eggs",
+        "category": "thing"
+    },
+    "debugTopic": {
+        "id": "debugTopic",
+        "category": "thing"
+    }
+}

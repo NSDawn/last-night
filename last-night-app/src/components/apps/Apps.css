@@ -98,7 +98,7 @@ section.app.messages {
                 background-color: var(--rgb-main);
                 cursor: pointer;
                 &:nth-child(2n) {
-                    background-color: var(--rgb-juicy);
+                    background-color: var(--rgb-main2);
                 }
                 &:hover {
                     transform: scale(1.05);
@@ -135,24 +135,28 @@ section.app.messages {
             }
         }
         & > .chat {
-            height: 75vh;
-            background-color: var(--rgb-juicy);
+            height: 73vh;
+            background-color: var(--rgb-drab);
             transition: ease-in-out 0.25s;
+            display: flex;
+            flex-direction: column;
+
             &.disabled {
                 pointer-events: none;
                 transform: translateX(100%);
             }
             & > .chat-history {
-                overflow: scroll;
-                max-height: calc(75vh - 2rem);
+                overflow-y: scroll;
+                height: 100%;
                 padding: 1rem 0;
+                position: relative;
                 & > .message {
                     display: flex;
                     flex-direction: row;
                     &.player {
                         flex-direction: row-reverse;
                         & > .text {
-                            background-color: var(--rgb-drab);
+                            background-color: var(--rgb-main2);
                         }
                     }
                     & > .pfp {
@@ -170,6 +174,8 @@ section.app.messages {
                         }
                     }
                     & > .text {
+                        animation: messageAnimateIn 0.15s ease-out forwards;
+
                         text-align: left;
                         background-color: var(--rgb-main);
                         padding: 1rem;
@@ -181,10 +187,120 @@ section.app.messages {
                         & img {
                             display: block;
                             width: 12rem;
+                            border-radius: 0.5rem;
+                            margin-top: 1rem;
+                            outline: 0.15rem solid var(--rgb-line);
+
                         }
                     }
                     &.new-user {
                         margin-top: 0.75rem;
+                    }
+                }
+                & .click-to-continue {
+                    position: fixed;
+                    aspect-ratio: 1;
+                    right: 10.75rem;
+                    bottom: 0.5rem;
+                    border-radius: 50%;
+                    animation: messageAnimateIn 0.15s ease-out forwards;
+                    background-color: var(--rgb-light);
+                    outline: 0.15rem dashed var(--rgb-line);
+
+                    & img {
+                        width: 4rem;
+                        aspect-ratio: 1;
+                    }       
+                }
+            }
+            & .topic-select {
+                background-color: var(--rgb-main);
+                transition: ease-in-out 0.15s;
+                border-top: var(--rgb-line) 0.25rem solid;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 40vh;
+                padding: 0.5rem;
+                &.hidden {
+                    height: 5vh;
+                }
+                & .send {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    gap: 1rem;
+                    & .message-bar {
+                        height: 2rem;
+                        outline: 0.15rem solid var(--rgb-line);
+                        padding: 0.5rem 0.5rem; 
+                        border-radius: 1rem;
+                        background-color: var(--rgb-light);
+                        width: 20rem;
+                        display: flex;
+                        gap: 0.5rem;
+                        & .selected-topic {
+                            background-color: var(--rgb-main2);
+                            color: var(--rgb-text-light);
+                            white-space: nowrap;
+                            outline: 0.15rem solid var(--rgb-line);
+                            padding: 0.25rem 0.5rem; 
+                            border-radius: 1rem;
+                            &:hover {
+                                text-decoration: line-through;
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                    & .send-button {
+                        & img {
+                            width: 2rem; 
+                            aspect-ratio: 1;
+                        }
+                    }
+                }
+                & > .topic-inventory {
+                    width: 100%;
+                    height: 100%;
+                    & > .category-select {
+                        margin: 0.5rem 0rem;
+                        display: flex;
+                        gap: 0.5rem;
+                        
+                        & > button {
+                            transition: ease-in-out 0.25s;
+                            width: 1.5rem;
+                            padding: 0.25rem 0.5rem;
+                            &.selected {
+                                background-color: var(--rgb-main2);
+                                width: 2.5rem;
+                            }
+                            & > img {
+                                width: 1rem;
+                                aspect-ratio: 1;
+                            }
+                        }
+                    }
+                    & > .topics {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: 0.5rem;
+
+                        & > .topic {
+                            background-color: var(--rgb-light);
+                            color: var(--rgb-line);
+                            white-space: nowrap;
+                            outline: 0.15rem solid var(--rgb-line);
+                            padding: 0.25rem 0.5rem; 
+                            border-radius: 1rem;
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+                        }
                     }
                 }
             }
@@ -192,3 +308,15 @@ section.app.messages {
     }
     
 }
+
+@keyframes messageAnimateIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

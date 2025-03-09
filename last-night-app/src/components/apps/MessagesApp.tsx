@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { getMessage, getMessageChain, getUser, MessageHistory } from "../../game/Messages";
+import { addChainMessageHistory, getMessage, getMessageChain, getTopic, getUser, incrementShownMessagesMessageHistory, matchMessageChainRequest, MessageHistory, TopicInventory } from "../../game/Messages";
 import { State, useGlobal } from "../../GlobalContextHandler";
 import { t } from "../../strings/i18n";
 
@@ -57,25 +57,52 @@ function UserList(props: {messageHistory: MessageHistory, selectedUser: string|n
 }
 function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null, setSelectedUser: (user: string|null) => void}) {
     
+    const G = useGlobal();
+    const [topicInventory, setTopicInventory] = G.topicInventory;
     const userMessageHistory = props.messageHistory.filter((h) => h.userId === props.selectedUser)[0];
     let prevUserId = "";
     let shownMessagesI = 0;
+    const [hasMoreDialogue, setHasMoreDialogue] = useState(true);
+
+    const [topicSelectIsHidden, setTopicSelectIsHidden] = useState(hasMoreDialogue);
+    
+    useEffect(() => {
+        if (!userMessageHistory) return;
+        let totalMessages = -2; // dunno why im setting this to -2
+        userMessageHistory.messageChainIds.forEach((messageChainId) => getMessageChain(messageChainId).messageIds.forEach(_ => totalMessages ++) );
+        setHasMoreDialogue(totalMessages >= (userMessageHistory.shownMessages ?? 0));
+    }, [userMessageHistory]);
+
+    function chatHistoryOnClick() {
+        if (hasMoreDialogue) incrementShownMessagesMessageHistory(G, 1, props.selectedUser);
+    }
 
     useEffect(() => {
-        const div = document.querySelector("div.chat-history");
-        if (!div) return;
-        div.scrollTop = div.scrollHeight;
-         console.log("what");
-    }, [props.messageHistory]);
+        const chatHistoryDiv = document.querySelector("div.chat-history");
+        scrollToTheBottom(chatHistoryDiv);
+    }, [props.messageHistory, props.selectedUser, topicSelectIsHidden]);
+
+    useEffect(() => {
+        setTopicSelectIsHidden(hasMoreDialogue);
+        if (!hasMoreDialogue) {
+            setTimeout(() => {
+                const chatHistoryDiv = document.querySelector("div.chat-history");
+                scrollToTheBottom(chatHistoryDiv);
+            }, 251);
+        }
+    }, [hasMoreDialogue])
 
     return (
         <div className={`chat ${props.selectedUser === null ? "disabled" : ""}`}>
-            <div className="chat-history" >
+            <div className="chat-history" onClick={chatHistoryOnClick} >
+                
                 {props.selectedUser !== null ? 
                     
                     userMessageHistory.messageChainIds.map((messageChainId) => getMessageChain(messageChainId).messageIds.map((messageId, i) => 
                         {
-                            if (shownMessagesI > (userMessageHistory.shownMessages ?? 0)) return;
+                            if (shownMessagesI > (userMessageHistory.shownMessages ?? 0)) {
+                                return;
+                            };
                             shownMessagesI ++;
                             const message = getMessage(messageId);
                             const sender = getUser(message.senderId);
@@ -97,10 +124,105 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
                         }
                         
                     ))               
-                
+                : null}
+                {hasMoreDialogue?
+                    <div className="click-to-continue">
+                        <img  src="/assets/img/ui/mouse-click.gif" alt="click to continue" />
+                        
+                    </div>
                 : null}
             </div>
             
+            <TopicSelect topicInventory={topicInventory} isHidden={topicSelectIsHidden} setIsHidden={setTopicSelectIsHidden} selectedUser={props.selectedUser}/>
+        </div>
+    )
+}
+
+function scrollToTheBottom(div: Element | null) {
+    if (!div) return;
+    div.scrollTop = div.scrollHeight;
+}
+
+function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, setIsHidden: (f: boolean) => void, selectedUser: string | null} ) {
+    
+    const G = useGlobal();
+    const [selectedTopics, setSelectedTopics] = useState([] as string[]);
+    const [selectedCategory, setSelectedCategory] = useState(null as string|null);
+    const [flags, setFlags] = G.flags;
+
+    const categories = [
+        {name: "all", imgUrl: "/assets/img/ui/icon-back.png", value: null},
+        {name: "person", imgUrl: "/assets/img/ui/icon-back.png", value: "person"},
+        {name: "place", imgUrl: "/assets/img/ui/icon-back.png", value: "place"},
+        {name: "thing", imgUrl: "/assets/img/ui/icon-back.png", value: "thing"},
+        {name: "action", imgUrl: "/assets/img/ui/icon-back.png", value: "action"},
+    ]
+    
+    function onClickTopic(topicId: string) {
+        if (selectedTopics.includes(topicId)) {
+            setSelectedTopics(selectedTopics.filter((id) => topicId !== id));
+        } else {
+            setSelectedTopics(selectedTopics.concat([topicId]));
+        }
+
+    }
+
+    function onClickSend() {
+        if (!props.selectedUser) return;
+        const match = matchMessageChainRequest({
+            topicIds: [...selectedTopics],
+            userId: props.selectedUser,
+            requiredFlags: []
+        }, flags)
+        if (!match) return;
+        if (!match.chainId) return;
+        addChainMessageHistory(G, match.chainId, props.selectedUser);
+        incrementShownMessagesMessageHistory(G, 1, props.selectedUser);
+    }
+
+    useEffect(() => {
+        setSelectedTopics([]);
+        setSelectedCategory(null);
+    }, [props.isHidden])
+    
+    return (
+        <div className={`topic-select ${props.isHidden ? "hidden" : ""}`}>
+            {!props.isHidden ? <>
+                <div className="send">
+                    <div className="message-bar">
+                        {selectedTopics.map((topicId) => {
+                            return (<div className="selected-topic" onClick={() => onClickTopic(topicId)}>
+                                {t(`topic.${topicId}`)}
+                            </div>)
+                        })}
+                    </div>
+                    <button className="send-button" onClick={onClickSend}>
+                        <img src="/assets/img/ui/icon-back.png" alt="send button" />
+                    </button>
+                </div>
+                <div className="topic-inventory">
+                    <div className="category-select">
+                        {categories.map((category) => <button className={`category-button ${selectedCategory === category.value ? "selected" : ""}`} onClick={() => setSelectedCategory(category.value)}>
+                            <img src={category.imgUrl} alt={`${category.name} category button`} />
+                        </button>)}
+                    </div>
+                    <div className="topics"> 
+                        {props.topicInventory.map((topicId) => {
+                            const topic = getTopic(topicId);
+                            if (selectedCategory !== null && topic.category !== selectedCategory) return;
+                            if (selectedTopics.includes(topicId)) return;
+                            return (
+                                <div className="topic" onClick={() => onClickTopic(topicId)}>
+                                    {t(`topic.${topicId}`)}
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+                
+            </>: null }
+            
+
         </div>
     )
 }

@@ -22,9 +22,12 @@
 
   --rgb-line: #802344;
   --rgb-main: #be3462;
+  --rgb-main2:#be3482;
   --rgb-light: 	#ffb6c1;
-  --rgb-juicy: #ffab66;
-  --rgb-drab: #c99da3;
+  --rgb-light2: #ffd3b6;
+  --rgb-juicy: #d363ea;
+  --rgb-drab2: #9878b1;
+  --rgb-drab: #c38dd5;
   --rgb-off: #bde7f1;
   --rgb-text-light: #fff0f0; 
   --rgb-offdrab: #c6ddf0;
@@ -75,4 +78,7 @@ button {
 
 ::-webkit-scrollbar-track {
   background: transparent;
+}
+::-webkit-scrollbar-corner {
+  display: none;
 }

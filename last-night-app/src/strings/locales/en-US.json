@@ -19,6 +19,20 @@
     "message.debug.debugscene.1.1": "I'm an onion.",
     "message.debug.debugscene.1.2": "My mother almost ate me and my brother when I was an infant.",
     "message.debug.debugscene.1.3": "thank you.",
+    "message.debug.debugscene.2.0": "So, Mr. Shrek, what do you think about eggs?",
+    "message.debug.debugscene.2.1": "I ate an egg once.",
+    "message.debug.debugscene.2.2": "That shit was nasty.",
+    "message.debug.debugscene.2.3": "Oh, ok. Thanks.",
+    "message.debug.debugscene.3.0": "Hmm... I know Tim is bigly into eggs. Do you know anything about that?",
+    "message.debug.debugscene.3.1": "What an insolent LOSER dude!! Get a real hobby, amirite?",
+    "message.debug.debugscene.3.2": "He's always yearning for Angela too, does he think she thinks that's attractive... weird-ass eggman.",
+    "message.debug.debugscene.3.3": "I see. Thank you for the analysis.",
+    
+    "topic.charAngela": "Angela",
+    "topic.charKaytlyn": "Kaytlyn",
+    "topic.charTim": "Tim",
+    "topic.eggs": "Eggs",
+    "topic.debugTopic": "Debug Topic",
     
     "app.messages.userList.h": "Chats",
     "debug": "Debug"

@@ -1,0 +1,14 @@
+[
+    {
+        "topicIds": ["eggs", "charTim"],
+        "userId": "debugShrek",
+        "requiredFlags": [],
+        "chainId": "debug.debugscene.3"
+    },
+    {
+        "topicIds": ["eggs"],
+        "userId": "debugShrek",
+        "requiredFlags": [],
+        "chainId": "debug.debugscene.2"
+    }
+]
