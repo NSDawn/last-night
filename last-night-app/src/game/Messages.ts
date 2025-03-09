@@ -116,8 +116,11 @@ export function addUserMessageHistory(G: GlobalSingleton, userId: string) {
 export function addChainMessageHistory(G: GlobalSingleton, chainId: string, userId: string) {
     const [messageHistory, _] = G.messageHistory;
 
-    const userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
-    if (!userMessageHistory) addUserMessageHistory(G, userId);
+    let userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
+    if (!userMessageHistory) {
+        addUserMessageHistory(G, userId)
+        userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
+    };
 
     userMessageHistory.messageChainIds.push(chainId);
 
