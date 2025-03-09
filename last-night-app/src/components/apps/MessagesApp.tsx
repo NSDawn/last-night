@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { addChainMessageHistory, getMessage, getMessageChain, getTopic, getUser, incrementShownMessagesMessageHistory, matchMessageChainRequest, MessageHistory, TopicInventory, UserMessageHistory } from "../../game/Messages";
+import { addChainMessageHistory, getMessage, getMessageChain, getTopic, getUser, incrementShownMessagesMessageHistory, matchMessageChainRequest, MessageHistory, resolveMessageChainEvents, TopicInventory, UserMessageHistory } from "../../game/Messages";
 import { State, useGlobal } from "../../GlobalContextHandler";
 import { t } from "../../strings/i18n";
 
@@ -51,7 +51,6 @@ function UserList(props: {messageHistory: MessageHistory, selectedUser: string|n
                                 `${t(`char.${getMessage(getLastMessageId(userMessageHistory)).senderId}.truncatedName`)}: ${
                                     t(`message.${getLastMessageId(userMessageHistory)}`)
                                 }`
-                                
                             }
                         </div>
                         { getHasNotifications(userMessageHistory) ?
@@ -107,12 +106,16 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
     useEffect(() => {
         setTopicSelectIsHidden(hasMoreDialogue);
         if (!hasMoreDialogue) {
+            // scroll to the bottom
             setTimeout(() => {
                 const chatHistoryDiv = document.querySelector("div.chat-history");
                 scrollToTheBottom(chatHistoryDiv);
             }, 251);
+            // resolve events
+            resolveMessageChainEvents(G, userMessageHistory.messageChainIds[userMessageHistory.messageChainIds.length -1]);
         }
     }, [hasMoreDialogue])
+    
 
     return (
         <div className={`chat ${props.selectedUser === null ? "disabled" : ""}`}>
@@ -222,7 +225,7 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
                         })}
                     </div>
                     <button className="send-button" onClick={onClickSend}>
-                        <img src="/assets/img/ui/icon-back.png" alt="send button" />
+                        <img src="/assets/img/ui/icon-send.png" alt="send button" />
                     </button>
                 </div>
                 <div className="topic-inventory">

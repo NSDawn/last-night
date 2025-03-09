@@ -16,10 +16,33 @@ const messageChainData: Record<string, MessageChain> = _messageChainData;
 export type MessageChain = {
     id: string;
     messageIds: string[]; // ids
+    events?: {
+        addFlags?: string[];
+        removeFlags?: string[];
+        getTopics?: string[];
+        delayMs?: number;
+        addQuacks?: string[]; // supply in reverse chrono order
+        startChains?: {userId: string, chainId: string}[];
+    }
 }
 export function getMessageChain(key: string): MessageChain {
     const DEFAULT_KEY = "debug.debugscene.0";
     return messageChainData[key] ?? messageChainData[DEFAULT_KEY];
+}
+export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
+    const [resolvedMessageChains, setResolvedMessageChains] = G.resolvedMessageChains;
+    if (resolvedMessageChains.includes(key)) return;
+    const chain = getMessageChain(key);
+    setResolvedMessageChains([...resolvedMessageChains, chain.id]);
+    if (!chain.events) return;
+    
+    if (chain.events.addFlags) chain.events.addFlags.forEach((flag) => addFlag(G, flag));
+    if (chain.events.removeFlags) chain.events.removeFlags.forEach((flag) => removeFlag(G, flag));
+    if (chain.events.getTopics) addTopics(G, chain.events.getTopics);
+    setTimeout(() => {
+        if (chain.events?.addQuacks) addQuack(G, chain.events?.addQuacks);
+        if (chain.events?.startChains) chain.events?.startChains.forEach((chain) => addChainMessageHistory(G, chain.chainId, chain.userId));
+    }, chain.events.delayMs ?? 0)
 }
 
 import _messageChainRequestData from "../data/MessageChainRequestData.json";
@@ -32,7 +55,6 @@ export type MessageChainRequest = {
 }
 
 export function matchMessageChainRequest(request: MessageChainRequest, flags: string[]): MessageChainRequest | null {
-    console.log(request, flags);
     const matches = messageChainRequestData
         .filter((rq) => rq.userId === request.userId)
         .filter((rq) => !rq.topicIds.some((topic) => !request.topicIds.includes(topic)))
@@ -114,6 +136,8 @@ export function updateMessageHistory(G: GlobalSingleton, messageHistory: Message
 }
 
 import _topicData from "../data/TopicData.json";
+import { addFlag, removeFlag } from "./Flags";
+import { addQuack } from "./Quacks";
 const topicData: Record<string, Topic> = _topicData;
 
 export type TopicInventory = string[];
@@ -136,6 +160,12 @@ export function getDefaultTopicInventory(): TopicInventory {
 export function getTopic(key: string) {
     const DEFAULT_KEY = "debugTopic";
     return topicData[key] ?? topicData[DEFAULT_KEY];
+}
+
+export function addTopics(G: GlobalSingleton, topics: string | string[]) {
+    const topicsToAdd = (typeof topics == "string") ? [topics] : topics
+    const [topicInventory, _] = G.topicInventory;
+    updateTopicInventory(G, [...topicInventory, ...topicsToAdd]);
 }
 
 export function updateTopicInventory(G: GlobalSingleton, topicInventory: TopicInventory) {

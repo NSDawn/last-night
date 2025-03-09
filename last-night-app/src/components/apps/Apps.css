@@ -261,7 +261,7 @@ section.app.messages {
                         padding: 0.5rem 0.5rem; 
                         border-radius: 1rem;
                         background-color: var(--rgb-light);
-                        width: 20rem;
+                        width: 19rem;
                         display: flex;
                         gap: 0.5rem;
                         & .selected-topic {
@@ -278,6 +278,12 @@ section.app.messages {
                         }
                     }
                     & .send-button {
+                        height: 2rem;
+                        aspect-ratio: 1;
+                        padding: 0.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         & img {
                             width: 2rem; 
                             aspect-ratio: 1;
