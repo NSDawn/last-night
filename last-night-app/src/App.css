@@ -21,12 +21,14 @@ main.phone {
   box-shadow: var(--box-shadow);
 
   & section.screen {
+    overflow: hidden;
     outline: 2px solid var(--rgb-line);
+    position: relative;
     aspect-ratio: calc(9/16);
     height: 80vh;
     background-color: var(--rgb-line);
     display: grid; 
-    & > * {
+    & > section {
       aspect-ratio: calc(9/16);
       height: 80vh;
       grid-row: 1;
