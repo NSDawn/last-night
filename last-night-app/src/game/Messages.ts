@@ -50,6 +50,7 @@ const userData: Record<string, User> = _userData;
 export type User = {
     id: string;
     pfpUrl: string;
+    quacklyHandle: string;
     isPlayer?: boolean;
 }
 export function getUser(key: string | null): User {

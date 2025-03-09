@@ -2,9 +2,11 @@
     "app.messages": "Messages",
     "app.notes": "Notes",
     "app.settings": "Settings",
+    "app.quackly": "Quackly",
 
     "char.debugShrek.displayName": "Mr. Shrek",
     "char.debugPlayer.displayName": "N.S. Dawn",
+    "char.millicentPrep.displayName": "Millicent Preperatory School",
     "char.tim.displayName": "Tim Henderson",
 
     "message.debug.debugscene.0.0": "WHATCHA DOIN' IN MY SWAMP 🧌🧌🧌",
@@ -33,6 +35,14 @@
     "topic.charTim": "Tim",
     "topic.eggs": "Eggs",
     "topic.debugTopic": "Debug Topic",
+
+    "quack.blurb": "$USER (@$USERHANDLE) quacked...",
+    "quack.debugShrek.0": "onion 🧅",
+    "quack.debugShrek.1": "I hate Mondays, weak men, and capitalism.",
+    "quack.tim.0": "Having a hard time lately. My chicken, Shawarma, has a gizzard disease, and probably won't make it much longer. She's past her laying days, and she's had a good life, but it's sad to see her like this.",
+    "quack.update.0": "PROM is OFFICIALLY ON!!! Grab your friends, partners, and fellow students and come on down to the [venue]! Remember students, alcohol OF ANY KIND is STRICTLY BANNED.",
+    "quack.debugPlayer.0": "someone pls get me a glizzy 🌭 im starving",
+    "quack.debugPlayer.1": "i will reimburse $1.50 i swear just pls I need a nourishment",
     
     "app.messages.userList.h": "Chats",
     "debug": "Debug"

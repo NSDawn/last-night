@@ -398,3 +398,96 @@ section.app.notes {
         }
     }
 }
+
+section.app.quackly {
+    & header {
+        background-color: var(--rgb-juicy);
+        transition: ease-in-out 0.25s;
+        height: 5vh;
+        border-bottom: var(--rgb-line) 0.5rem solid;
+        box-shadow: var(--box-shadow);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        & h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        & .page-number {
+            display: flex;
+            align-items: center;
+            margin-left: 4.25rem;
+            gap: 0.5rem;
+        }
+        & h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+        & button {
+            width: 2rem;
+            aspect-ratio: 1;
+            background-color: transparent;
+            box-shadow: none;
+            outline: none;
+            transition: ease-in 0.15s;
+            &.disabled {
+                width: 0;
+                overflow: hidden;
+            }
+            & img {
+                width: 2rem;
+                aspect-ratio: 1;
+            }
+            &.home-button {
+                margin-left: auto;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    & main {
+        height: 73vh;
+        background-color: var(--rgb-juicy);
+        & .quack-history {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 73vh;
+            & .quack {
+                padding: 1rem 0.5rem;
+                text-align: right;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 0.25rem var(--rgb-line) dotted;
+                background-color: var(--rgb-main2);
+                &:nth-child(2n) {
+                    background-color: var(--rgb-main);
+                }
+                & .pfp {
+                    height: 8vh;
+                    aspect-ratio: 1;
+                    
+                    outline: 0.15rem solid var(--rgb-line);
+                    transition: ease-in 0.15s;
+                    box-shadow: var(--box-shadow);
+                    overflow: hidden;
+                    border-radius: 0.5rem;
+                    & img {
+                        width: 8vh;
+                        aspect-ratio: 1;
+                    }
+                }
+                & .text {
+                    width: 100%;
+                    padding: 0rem 1rem;
+                    & .blurb {
+                        font-style: italic;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}

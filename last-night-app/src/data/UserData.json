@@ -1,14 +1,22 @@
 {
     "debugShrek": {
         "id": "debugShrek",
+        "quacklyHandle": "lord-of-the-onions",
         "pfpUrl": "/assets/img/pfp/debugShrek.png"
     },
     "tim": {
         "id": "tim",
+        "quacklyHandle": "th3ch1ckenWHISPERER",
         "pfpUrl": "/assets/img/pfp/tim.png"
+    },
+    "millicentPrep": {
+        "id": "millicentPrep",
+        "quacklyHandle": "millicent124009391",
+        "pfpUrl": "/assets/img/pfp/millicentPrep.png"
     },
     "debugPlayer": {
         "id": "debugPlayer",
+        "quacklyHandle": "nsdawn",
         "pfpUrl": "/assets/img/pfp/debugPlayer.png",
         "isPlayer": true
     }
