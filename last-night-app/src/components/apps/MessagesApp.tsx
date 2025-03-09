@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { addChainMessageHistory, getMessage, getMessageChain, getTopic, getUser, incrementShownMessagesMessageHistory, matchMessageChainRequest, MessageHistory, TopicInventory } from "../../game/Messages";
+import { addChainMessageHistory, getMessage, getMessageChain, getTopic, getUser, incrementShownMessagesMessageHistory, matchMessageChainRequest, MessageHistory, TopicInventory, UserMessageHistory } from "../../game/Messages";
 import { State, useGlobal } from "../../GlobalContextHandler";
 import { t } from "../../strings/i18n";
 
@@ -47,12 +47,33 @@ function UserList(props: {messageHistory: MessageHistory, selectedUser: string|n
                             {t(`char.${userMessageHistory.userId}.displayName`)}
                         </div>
                         <div className="message-preview">
-                            You: This is the last message sent in this convo.
+                            {
+                                `${t(`char.${getMessage(getLastMessageId(userMessageHistory)).senderId}.truncatedName`)}: ${
+                                    t(`message.${getLastMessageId(userMessageHistory)}`)
+                                }`
+                                
+                            }
                         </div>
+                        { getHasNotifications(userMessageHistory) ?
+                            <div className="notification">
+                                <img src="/assets/img/ui/icon-speech.png" alt="notification icon" />
+                            </div>
+                        : null}
                     </div>
                 </div>
             )}
         </div> 
+    )
+}
+
+function getLastMessageId(userMessageHistory: UserMessageHistory) {
+    return (userMessageHistory.messageChainIds
+            .reduce((a, v) => a.concat(getMessageChain(v).messageIds), [] as string[])[userMessageHistory.shownMessages ?? 0])
+}
+
+function getHasNotifications(userMessageHistory: UserMessageHistory): boolean {
+    return (
+        userMessageHistory.messageChainIds.reduce((a, v) => a.concat(getMessageChain(v).messageIds), [] as string[]).length > (userMessageHistory.shownMessages ?? 0)
     )
 }
 function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null, setSelectedUser: (user: string|null) => void}) {
@@ -152,11 +173,11 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
     const MAX_TOPICS = 3;
 
     const categories = [
-        {name: "all", imgUrl: "/assets/img/ui/icon-back.png", value: null},
-        {name: "person", imgUrl: "/assets/img/ui/icon-back.png", value: "person"},
-        {name: "place", imgUrl: "/assets/img/ui/icon-back.png", value: "place"},
-        {name: "thing", imgUrl: "/assets/img/ui/icon-back.png", value: "thing"},
-        {name: "action", imgUrl: "/assets/img/ui/icon-back.png", value: "action"},
+        {name: "all", imgUrl: "/assets/img/ui/icon-pages.png", value: null},
+        {name: "person", imgUrl: "/assets/img/ui/icon-person.png", value: "person"},
+        {name: "place", imgUrl: "/assets/img/ui/icon-place.png", value: "place"},
+        {name: "thing", imgUrl: "/assets/img/ui/icon-star.png", value: "thing"},
+        {name: "action", imgUrl: "/assets/img/ui/icon-speech.png", value: "action"},
     ]
     
     function onClickTopic(topicId: string) {

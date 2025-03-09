@@ -31,15 +31,15 @@ export default function NotesApp() {
                     {t(`app.notes`)}
                 </h1>
                 <div className="page-number">
-                    <button onClick={() => incrementPage(-1)}>
-                        <img src="/assets/img/ui/icon-home.png" alt="page back icon" />
+                    <button className="page-button" onClick={() => incrementPage(-1)}>
+                        <img src="/assets/img/ui/icon-caret-left.png" alt="page back icon" />
 
                     </button>
                     <h2 className="pageNumber">
                         {page + 1}
                     </h2>
-                    <button onClick={() => incrementPage(1)}>
-                        <img src="/assets/img/ui/icon-home.png" alt="page forward icon" />
+                    <button className="page-button" onClick={() => incrementPage(1)}>
+                        <img src="/assets/img/ui/icon-caret-right.png" alt="page forward icon" />
                     </button>
                 </div>
                 <button className="home-button" onClick={() => setCurrentApp(null)}>

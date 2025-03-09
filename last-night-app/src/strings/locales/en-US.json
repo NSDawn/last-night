@@ -8,6 +8,11 @@
     "char.debugPlayer.displayName": "N.S. Dawn",
     "char.millicentPrep.displayName": "Millicent Preperatory School",
     "char.tim.displayName": "Tim Henderson",
+    
+    "char.debugShrek.truncatedName": "Shrek",
+    "char.debugPlayer.truncatedName": "You",
+    "char.millicentPrep.truncatedName": "Millicent",
+    "char.tim.truncatedName": "Tim",
 
     "message.debug.debugscene.0.0": "WHATCHA DOIN' IN MY SWAMP 🧌🧌🧌",
     "message.debug.debugscene.0.1": "Shrek, is that you?",
