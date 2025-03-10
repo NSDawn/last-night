@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 main.phone {
@@ -19,7 +20,10 @@ main.phone {
   justify-content: center;
   background-color: var(--rgb-light);
   box-shadow: var(--box-shadow);
-
+  transition: ease-in 0.35s;
+  &.disabled {
+    transform: translateY(120%);
+  }
   & section.screen {
     overflow: hidden;
     outline: 2px solid var(--rgb-line);
@@ -76,3 +80,20 @@ main.phone {
   }
 }
 
+main.comic {
+  position: absolute;
+  min-height: 80vh;
+  min-width: 60vh;
+  &.disabled {
+    z-index: -1;
+  }
+  div.comic-wrapper {
+    height: 80vh;
+    display: grid;
+    & > * {
+      grid-row: 1;
+      grid-column: 1;
+      height: 80vh;
+    }
+  }
+}

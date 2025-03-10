@@ -7,6 +7,7 @@ const GlobalContext = createContext<GlobalSingleton>(null as unknown as GlobalSi
 
 function GlobalContextHandler(props: PropsWithChildren) {
     
+    const gameState = useState("game" as string);
     const currentApp = useState(null as null | string);
     const messageHistory = useState(getDefaultMessageHistory());
     const messageHistoryJSON = useState(JSON.stringify(getDefaultMessageHistory()));
@@ -31,6 +32,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
 
     return (
         <GlobalContext.Provider value={{
+            gameState: gameState,
             notes: notes,
             flags: flags,
             quacks: quacks,
@@ -50,6 +52,7 @@ export default GlobalContextHandler;
 
 export type State<T> = [T, React.Dispatch<React.SetStateAction<T>>];
 export type GlobalSingleton = {
+    gameState: State<string>;
     notes: State<string[]>;
     flags: State<string[]>;
     quacks: State<string[]>;
