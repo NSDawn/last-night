@@ -12,10 +12,10 @@ export default function Screen() {
     const [currentApp, setCurrentApp] = G.currentApp;
     
     const appIcons: AppIconData[] = [
-        { id: "messages", iconUrl: "/assets/img/ui/appicon-messages.png", appNode: <MessagesApp />},
-        {id: "notes", iconUrl: "/assets/img/ui/appicon-notes.png", appNode: <NotesApp />},
-        {id: "settings", iconUrl: "/assets/img/ui/appicon-settings.png", appNode: undefined},
-        {id: "quackly", iconUrl: "/assets/img/ui/appicon-quackly.png", appNode: <QuacklyApp />},
+        { id: "messages", iconUrl: "assets/img/ui/appicon-messages.png", appNode: <MessagesApp />},
+        {id: "notes", iconUrl: "assets/img/ui/appicon-notes.png", appNode: <NotesApp />},
+        {id: "settings", iconUrl: "assets/img/ui/appicon-settings.png", appNode: undefined},
+        {id: "quackly", iconUrl: "assets/img/ui/appicon-quackly.png", appNode: <QuacklyApp />},
     ];
 
     return (

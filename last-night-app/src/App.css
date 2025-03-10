@@ -35,7 +35,7 @@ main.phone {
       grid-column: 1;
     }
     & section.home-screen { 
-      background-image: url("/assets/img/bg/phone-wallpaper.png");
+      background-image: url("../public/assets/img/bg/phone-wallpaper.png");
       background-size: cover;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

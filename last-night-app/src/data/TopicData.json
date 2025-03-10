@@ -42,5 +42,57 @@
     "hey": {
         "id": "hey",
         "category": "action"
+    },
+    "checkup": {
+        "id": "checkup",
+        "category": "action"
+    },
+    "pr": {
+        "id": "pr",
+        "category": "place"
+    },
+    "goto": {
+        "id": "goto",
+        "category": "action"
+    },
+    "cookies": {
+        "id": "cookies",
+        "category": "thing"
+    },
+    "anime": {
+        "id": "anime",
+        "category": "thing"
+    },
+    "flowers": {
+        "id": "flowers",
+        "category": "thing"
+    },
+    "whatSee": {
+        "id": "whatSee",
+        "category": "action"
+    },
+    "principal": {
+        "id": "principal",
+        "category": "person"
+    },
+    "dunks": {
+        "id": "dunks",
+        "category": "place"
+    },
+    "act": {
+        "id": "act",
+        "category": "action"
+    },
+    "cheer": {
+        "id": "cheer",
+        "category": "action"
+    },
+    "smith": {
+        "id": "smith",
+        "category": "person"
+    },
+    "remote": {
+        "id": "remote",
+        "category": "thing"
     }
 }

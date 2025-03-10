@@ -2,38 +2,53 @@
     "debugShrek": {
         "id": "debugShrek",
         "quacklyHandle": "lord-of-the-onions",
-        "pfpUrl": "/assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/debugShrek.png"
     },
     "tim": {
         "id": "tim",
         "quacklyHandle": "th3ch1ckenWHISPERER",
-        "pfpUrl": "/assets/img/pfp/tim.png"
+        "pfpUrl": "assets/img/pfp/tim.png"
     },
     "millicentPrep": {
         "id": "millicentPrep",
         "quacklyHandle": "millicent124009391",
-        "pfpUrl": "/assets/img/pfp/millicentPrep.png"
+        "pfpUrl": "assets/img/pfp/millicentPrep.png"
     },
     "debugPlayer": {
         "id": "debugPlayer",
         "quacklyHandle": "nsdawn",
-        "pfpUrl": "/assets/img/pfp/debugPlayer.png",
+        "pfpUrl": "assets/img/pfp/debugPlayer.png",
         "isPlayer": true
     },
     "angela": {
         "id": "angela",
         "quacklyHandle": "angie✨angie✨angie",
-        "pfpUrl": "/assets/img/pfp/debugPlayer.png",
+        "pfpUrl": "assets/img/pfp/debugPlayer.png",
         "isPlayer": true
     },
     "kaytlyn": {
         "id": "kaytlyn",
-        "quacklyHandle": "racoonInStem",
-        "pfpUrl": "/assets/img/pfp/debugShrek.png"
+        "quacklyHandle": "404KateNotFound",
+        "pfpUrl": "assets/img/pfp/debugShrek.png"
     },
     "rebecca": {
         "id": "rebecca",
         "quacklyHandle": "kansas_queen",
-        "pfpUrl": "/assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/debugShrek.png"
+    },
+    "brad": {
+        "id": "brad",
+        "quacklyHandle": "brad-a-licious",
+        "pfpUrl": "assets/img/pfp/debugShrek.png"
+    },
+    "stewart": {
+        "id": "stewart",
+        "quacklyHandle": "stewart",
+        "pfpUrl": "assets/img/pfp/debugShrek.png"
+    },
+    "hunter": {
+        "id": "hunter",
+        "quacklyHandle": "xXShadowCrossXx",
+        "pfpUrl": "assets/img/pfp/debugShrek.png"
     }
 }

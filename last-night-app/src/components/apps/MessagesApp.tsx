@@ -15,7 +15,7 @@ export default function MessagesApp() {
         <>  
             <header>
                 <button className={`back-button ${selectedUser === null ? "disabled" : ""}`} onClick={() => setSelectedUser(null)}>
-                   <img src="/assets/img/ui/icon-back.png" alt="back icon" />
+                   <img src="assets/img/ui/icon-back.png" alt="back icon" />
                 </button>
                 <img className={`pfp ${selectedUser === null ? "disabled" : ""}`} src={`${getUser(selectedUser).pfpUrl}`} alt={`${selectedUser} profile picture`} />
                 <h1>
@@ -24,7 +24,7 @@ export default function MessagesApp() {
                     : t(`app.messages.userList.h`)}
                 </h1>
                 <button className="home-button" onClick={() => setCurrentApp(null)}>
-                   <img src="/assets/img/ui/icon-home.png" alt="home icon" />
+                   <img src="assets/img/ui/icon-home.png" alt="home icon" />
                 </button>
             </header>
             <main>
@@ -56,7 +56,7 @@ function UserList(props: {messageHistory: MessageHistory, selectedUser: string|n
                         </div>
                         { getHasNotifications(userMessageHistory) ?
                             <div className="notification">
-                                <img src="/assets/img/ui/icon-notif.png" alt="notification icon" />
+                                <img src="assets/img/ui/icon-notif.png" alt="notification icon" />
                             </div>
                         : null}
                     </div>
@@ -156,7 +156,7 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
                 : null}
                 {hasMoreDialogue?
                     <div className="click-to-continue">
-                        <img  src="/assets/img/ui/mouse-click.gif" alt="click to continue" />
+                        <img  src="assets/img/ui/mouse-click.gif" alt="click to continue" />
                         
                     </div>
                 : null}
@@ -181,11 +181,11 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
     const MAX_TOPICS = 3;
 
     const categories = [
-        {name: "all", imgUrl: "/assets/img/ui/icon-pages.png", value: null},
-        {name: "person", imgUrl: "/assets/img/ui/icon-person.png", value: "person"},
-        {name: "place", imgUrl: "/assets/img/ui/icon-place.png", value: "place"},
-        {name: "thing", imgUrl: "/assets/img/ui/icon-star.png", value: "thing"},
-        {name: "action", imgUrl: "/assets/img/ui/icon-speech.png", value: "action"},
+        {name: "all", imgUrl: "assets/img/ui/icon-pages.png", value: null},
+        {name: "person", imgUrl: "assets/img/ui/icon-person.png", value: "person"},
+        {name: "place", imgUrl: "assets/img/ui/icon-place.png", value: "place"},
+        {name: "thing", imgUrl: "assets/img/ui/icon-star.png", value: "thing"},
+        {name: "action", imgUrl: "assets/img/ui/icon-speech.png", value: "action"},
     ]
     
     function onClickTopic(topicId: string) {
@@ -229,7 +229,7 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
                         })}
                     </div>
                     <button className="send-button" onClick={onClickSend}>
-                        <img src="/assets/img/ui/icon-send.png" alt="send button" />
+                        <img src="assets/img/ui/icon-send.png" alt="send button" />
                     </button>
                 </div>
                 <div className="topic-inventory">
