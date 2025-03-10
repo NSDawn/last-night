@@ -14,6 +14,7 @@
     "char.brad.displayName": "Brad Football",
     "char.stewart.displayName": "Stewart Newman",
     "char.hunter.displayName": "Hunter Lionshead",
+    "char.group.displayName": "Group Chat",
     
     "char.debugShrek.truncatedName": "Shrek",
     "char.debugPlayer.truncatedName": "You",
@@ -25,6 +26,7 @@
     "char.brad.truncatedName": "Brad",
     "char.stewart.truncatedName": "Stewart",
     "char.hunter.truncatedName": "Hunter",
+    "char.group.truncatedName": "Group Chat",
 
     "notif.quack": "$USER quacked.",
     "notif.message": "$USER just messaged you.",

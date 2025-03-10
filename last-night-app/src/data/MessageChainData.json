@@ -636,8 +636,7 @@
         "events": {
             "getTopics": ["smith"],
             "removeFlags": ["searching"],
-            "addFlags": ["stopped"],
-            "startChains": [{"userId": "rebecca", "chainId": "rebecca.2"}]
+            "addFlags": ["stopped"]
         }
     },
     "kaytlyn.13": {
@@ -852,7 +851,7 @@
     "kaytlyn.18": {
         "id": "kaytlyn.18",
         "messageIds": [
-            "kaytlyn.18.k.0",
+            "kaytlyn.18.a.0",
             "kaytlyn.18.k.1",
             "kaytlyn.18.a.2"
         ],
