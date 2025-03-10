@@ -1,6 +1,6 @@
 import { useGlobal } from "../../GlobalContextHandler";
 import "../../App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Comic.css";
 import { t } from "../../strings/i18n";
 
@@ -8,6 +8,7 @@ export default function Comic() {
 
     const G = useGlobal();
     const [gameState, setGameState] = G.gameState;
+    const [endGame, _] = G.endGame;
     const [comic, setComic] = useState(0); 
     const [element, setElement] = useState(1); 
     const comics = [
@@ -30,23 +31,47 @@ export default function Comic() {
             <img className="comic-1-1-0" src="./assets/img/bg/comic1speech1.png" alt="" />,
             <div className="comic-1-0-0-txt2">{t(`comic.1.3`)}</div>,
         ],
+        [
+            <img className="comic-3-0" src="./assets/img/bg/timgood.png" alt="" />,
+            <div className="comic-3-0-0 bubble"><div className="text-wrapper">{t(`comic.3.good`)}</div></div>,
+            <div className="comic-3-0-1 bubble"><div className="text-wrapper">{t(`comic.3.0`)}</div></div>,
+        ],
+        [
+            <img className="comic-3-0" src="./assets/img/bg/timsad.png" alt="" />,
+            <div className="comic-3-0-0 bubble"><div className="text-wrapper">{t(`comic.3.bad`)}</div></div>,
+            <div className="comic-3-0-1 bubble"><div className="text-wrapper">{t(`comic.3.0`)}</div></div>,
+
+        ],
     ]
 
     function onClickComic() {
         if (gameState !== "comic") return;
         if (comics[comic].length <= element) {
-            if (comic == 1) {
+            if (comic === 1) {
                 setGameState("game")
                 return;
             }
-            setComic(comic + 1);
-            setElement(1); 
+            if (comic === 0) {        
+                setComic(comic + 1);
+                setElement(1); 
+            }
             return; 
         }
         setElement(element + 1);
     }
 
+    useEffect(() => {
+        if (endGame === "good") {
+            setComic(2);
+            setElement(1);
+        } 
+        if (endGame === "bad") {
+            setComic(3);
+            setElement(1);
+        } 
+    }, [endGame])
 
+    
     return (
         <main className={`comic ${gameState !== "comic" ? "disabled" : ""}`}>
             <div className="comic-wrapper" onClick={onClickComic}>
