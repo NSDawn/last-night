@@ -8,6 +8,7 @@ export default function MessagesApp() {
     const G = useGlobal();
     const [currentApp, setCurrentApp] = G.currentApp;
     const [messageHistory, setMessageHistory] = G.messageHistory;
+    const [_, setMessageHistoryJSON] = G.messageHistoryJSON;
     const [selectedUser, setSelectedUser] = useState(null as string | null);
 
     return (
@@ -28,7 +29,7 @@ export default function MessagesApp() {
             </header>
             <main>
                 <UserList messageHistory={messageHistory} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
-                <Chat messageHistory={messageHistory} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
+                <Chat messageHistory={messageHistory} selectedUser={selectedUser} setSelectedUser={setSelectedUser} setMessageHistoryJSON={setMessageHistoryJSON}/>
             </main>
         </>
     )
@@ -76,7 +77,7 @@ function getHasNotifications(userMessageHistory: UserMessageHistory): boolean {
     )
 }
 
-function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null, setSelectedUser: (user: string|null) => void}) {
+function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null, setSelectedUser: (user: string|null) => void, setMessageHistoryJSON: (s: string) => void}) {
     
     const G = useGlobal();
     const [topicInventory, setTopicInventory] = G.topicInventory;
@@ -95,7 +96,10 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
     }, [userMessageHistory]);
 
     function chatHistoryOnClick() {
-        if (hasMoreDialogue) incrementShownMessagesMessageHistory(G, 1, props.selectedUser);
+        if (!hasMoreDialogue) return;
+        incrementShownMessagesMessageHistory(G, 1, props.selectedUser);
+        const messageHistoryFiltered = props.messageHistory.filter((h) => h.userId !== props.selectedUser);
+        props.setMessageHistoryJSON(JSON.stringify([userMessageHistory, ...messageHistoryFiltered]));
     }
 
     useEffect(() => {

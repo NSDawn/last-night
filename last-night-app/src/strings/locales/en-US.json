@@ -8,8 +8,8 @@
     "char.debugPlayer.displayName": "N.S. Dawn",
     "char.millicentPrep.displayName": "Millicent Preparatory School",
     "char.tim.displayName": "Tim Nguyen",
-    "char.kaytlyn.displayName": "Kaytlyn McHawtie",
-    "char.angela.displayName": "Angela McHawtie",
+    "char.kaytlyn.displayName": "Kaytlyn McHawté",
+    "char.angela.displayName": "Angela McHawté",
     
     "char.debugShrek.truncatedName": "Shrek",
     "char.debugPlayer.truncatedName": "You",
@@ -17,14 +17,15 @@
     "char.tim.truncatedName": "Tim",
     "char.kaytlyn.truncatedName": "Kaytlyn",
     "char.angela.truncatedName": "You",
-    
 
-
+    "notif.quack": "$USER quacked.",
+    "notif.message": "$USER just messaged you.",
+    "notif.new": "You can talk to $USER now!",
 
     "message.kaytlyn.1.a.0": "hey did you get there?",
     "message.kaytlyn.1.k.1": "Yeah, who are we looking for exactly? Theres a lot of people here that could be it.",
     "message.kaytlyn.1.a.2": "Did tim not tell you on the way over? Whatever, I got a few leads",
-    "message.kaytlyn.1.a.3": "brad football. Hes a sports super star. Carries all our teams. Also super ripped you gotta check him when he takes his shirt off.",
+    "message.kaytlyn.1.a.3": "brad futbawl. Hes a sports super star. Carries all our teams. Also super ripped you gotta check him when he takes his shirt off.",
     "message.kaytlyn.1.k.4": "\"when\"?",
     "message.kaytlyn.1.a.5": "Stewart newman. Theyre a big bookworm. Way shy tho. I bet youd get along with them.",
     "message.kaytlyn.1.k.6": "but Im not a big reader",
@@ -366,10 +367,10 @@
     "message.debug.debugscene.3.2": "He's always yearning for Angela too, does he think she thinks that's attractive... weird-ass eggman.",
     "message.debug.debugscene.3.3": "I see. Thank you for the analysis.",
     
-    "topic.charAngela": "Angela Hawtie",
-    "topic.charKaytlyn": "Kaytlyn Hawtie",
+    "topic.charAngela": "Angela Hawté",
+    "topic.charKaytlyn": "Kaytlyn Hawté",
     "topic.charRebecca": "Rebecca Kansas",
-    "topic.charBrad": "Brad Football",
+    "topic.charBrad": "Brad Futbawl",
     "topic.charStewart": "Stewart Newman",
     "topic.charHunter": "Hunter Lionshead",
     "topic.charTim": "Tim Nguyen",
@@ -382,7 +383,7 @@
     "quack.debugShrek.0": "onion 🧅",
     "quack.debugShrek.1": "I hate Mondays, weak men, and capitalism.",
     "quack.tim.0": "Having a hard time lately. My chicken, Shawarma, has a gizzard disease, and probably won't make it much longer. She's past her laying days, and she's had a good life, but it's sad to see her like this.",
-    "quack.update.0": "PROM is OFFICIALLY ON!!! Grab your friends, partners, and fellow students and come on down to the [venue]! Remember students, alcohol OF ANY KIND is STRICTLY BANNED.",
+    "quack.update.0": "PROM is OFFICIALLY ON!!! Grab your friends, partners, and fellow students and come on down to the dance floor! Remember students, alcohol OF ANY KIND is STRICTLY BANNED.",
     "quack.debugPlayer.0": "someone pls get me a glizzy 🌭 im starving",
     "quack.debugPlayer.1": "i will reimburse $1.50 i swear just pls I need a nourishment",
     
