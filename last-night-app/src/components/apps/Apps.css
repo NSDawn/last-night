@@ -167,7 +167,7 @@ section.app.messages {
                 transform: translateX(100%);
             }
             & > .chat-history {
-                background-image: url(assets/img/bg/phone-wallpaper.png);
+                background-image: url(../../../public/assets/img/bg/phone-wallpaper.png);
                 background-size: cover;
                 overflow-y: scroll;
                 height: 100%;
