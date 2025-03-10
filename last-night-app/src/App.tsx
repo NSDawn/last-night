@@ -3,15 +3,22 @@ import './App.css';
 import Phone from './components/main/Phone';
 import DebugTooltip from './components/debug/DebugTooltip';
 import Comic from './components/main/Comic';
+import { useGlobal } from './GlobalContextHandler';
+import Menu from './components/main/Menu';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const G = useGlobal();
+  const [gameState, _] = G.gameState;
 
   return (
     <>
+      {gameState === "menu" ?
+        <Menu />
+      : <>
       <Comic />
       <Phone />
       <DebugTooltip />
+      </>}
     </>
   )
 }

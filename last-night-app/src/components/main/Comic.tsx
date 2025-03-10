@@ -8,7 +8,7 @@ export default function Comic() {
 
     const G = useGlobal();
     const [gameState, setGameState] = G.gameState;
-    const [comic, setComic] = useState(0); 
+    const [comic, setComic] = useState(2); 
     const [element, setElement] = useState(1); 
     const comics = [
         [
@@ -30,12 +30,23 @@ export default function Comic() {
             <img className="comic-1-1-0" src="./assets/img/bg/comic1speech1.png" alt="" />,
             <div className="comic-1-0-0-txt2">{t(`comic.1.3`)}</div>,
         ],
+        [
+            <img className="comic-3-0" src="./assets/img/bg/timgood.png" alt="" />,
+            <div className="comic-3-0-0 bubble"><div className="text-wrapper">{t(`comic.3.good`)}</div></div>,
+            <div className="comic-3-0-1 bubble"><div className="text-wrapper">{t(`comic.3.0`)}</div></div>,
+        ],
+        [
+            <img className="comic-3-0" src="./assets/img/bg/timsad.png" alt="" />,
+            <div className="comic-3-0-0 bubble"><div className="text-wrapper">{t(`comic.3.bad`)}</div></div>,
+            <div className="comic-3-0-1 bubble"><div className="text-wrapper">{t(`comic.3.0`)}</div></div>,
+
+        ],
     ]
 
     function onClickComic() {
         if (gameState !== "comic") return;
         if (comics[comic].length <= element) {
-            if (comic == 1) {
+            if (comic === 1) {
                 setGameState("game")
                 return;
             }
