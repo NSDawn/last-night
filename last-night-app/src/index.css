@@ -13,6 +13,10 @@
   font-family: NotoColorEmoji;
   src: url("../public/assets/fonts/Noto_Color_Emoji/NotoColorEmoji-Regular.ttf");
 }
+@font-face {
+  font-family: SourGummy;
+  src: url("../public/assets/fonts/Sour_Gummy/SourGummy-VariableFont.ttf");
+}
 
 :root {
   font-family: "NotoSans", "NotoColorEmoji", sans-serif, system-ui;
@@ -26,6 +30,7 @@
   --rgb-light: 	#ffb6c1;
   --rgb-light2: #ffd3b6;
   --rgb-juicy: #d363ea;
+  --rgb-juicy-translucent: #d363eaf0;
   --rgb-drab2: #9878b1;
   --rgb-drab: #c38dd5;
   --rgb-off: #bde7f1;

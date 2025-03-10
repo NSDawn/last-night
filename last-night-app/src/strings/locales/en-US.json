@@ -30,6 +30,14 @@
     "notif.message": "$USER just messaged you.",
     "notif.new": "You can talk to $USER now!",
 
+    "comic.0.0": "Tonight's prom. Someone's going to confess their feelings for me, ...", 
+    "comic.0.1": "...Angela McHawté.", 
+    "comic.0.2": "Nothing, not even Rebecca Kansas, can stop me from having an impeccable night.", 
+    "comic.1.0": "That gas-station sushi... SHIT!", 
+    "comic.1.1": "RUMBLE", 
+    "comic.1.2": "THUNK", 
+    "comic.1.3": "KAYTLYN!!!", 
+
     "message.kaytlyn.1.a.0": "hey did you get there?",
     "message.kaytlyn.1.k.1": "Yeah, who are we looking for exactly? Theres a lot of people here that could be it.",
     "message.kaytlyn.1.a.2": "Did tim not tell you on the way over? Whatever, I got a few leads",

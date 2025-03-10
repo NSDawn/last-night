@@ -1,0 +1,199 @@
+
+main.comic {
+    position: absolute;
+    min-height: 80vh;
+    min-width: 60vh;
+    transition: ease-in-out 0.25s;
+    &.disabled {
+      z-index: -1;
+      opacity: 0;
+    }
+    div.comic-wrapper {
+      height: 80vh;
+      display: grid;
+      position: relative;
+      & .bubble {
+        background: var(--rgb-juicy-translucent);
+        outline: 0.15rem var(--rgb-line) solid;
+        z-index: 0;
+        border-radius: 50%;
+        padding: 1rem;
+        display: flex;
+        place-items: center center;
+        font-family: SourGummy;
+        animation: appear 0.2s forwards;
+        position: absolute;
+
+      }
+      & > * {
+        grid-row: 1;
+        grid-column: 1;
+        height: 80vh;
+      }
+      & .comic-0-0 {
+        animation: appearLeft 0.2s forwards;
+      }
+      & .comic-0-0-1 {
+        width: 10rem;
+        height: 10rem;
+        position: absolute;
+        left: 18rem;
+      }
+      & .comic-0-1 {
+        animation: appearRight 0.2s forwards;
+      }
+      & .comic-0-0-2 {
+        width: 8rem;
+        height: 5rem;
+        z-index: 1;
+        background-color: var(--rgb-main2);
+        font-size: 2rem;
+        font-variant: small-caps;
+        border-radius: 1rem;
+        position: absolute;
+        font-variant: small-caps;
+        top: 18rem;
+        left: 15rem;
+      }
+      & .comic-0-2 {
+        animation: appearLeft 0.2s forwards;
+      }
+      & .comic-0-2-0 {
+        width: 14rem;
+        height: 14rem;
+        font-size: 1.25rem;
+        position: absolute;
+        bottom: 2rem;
+        right: 8rem;
+      }
+      & .comic-1-0 {
+        animation: appearTop 0.2s forwards;
+      }
+      & .comic-1-1 {
+        animation: appearLeft 0.2s forwards;
+      }
+      & .comic-1-2 {
+        animation: appearBottom 0.2s forwards;
+      }
+      & .comic-1-0-0 {
+        animation: appear 0.2s forwards;
+      }
+      & .comic-1-0-0-txt {
+        animation: none;
+        font-family: SourGummy;
+        color: var(--rgb-line);
+        transform: rotate(-15deg);
+        font-size: 3.75rem;
+        position: absolute;
+        width: 18rem;
+        height: 6rem;
+        top: 11rem;
+        left: 11.5rem;
+      }
+      & .comic-1-1-0 {
+        animation: appear 0.2s forwards;
+      }
+      & .comic-1-0-1 {
+        width: 10rem;
+        font-size: 1.5rem;
+        height: 10rem;
+        right: 1rem;
+        top: 0.5rem;
+      }
+      & .comic-1-2-1 {
+        width: 9rem;
+        height: 2rem;
+        border-radius: 0;
+        outline: var(--rgb-line) 0.25rem solid;
+        background-color: var(--rgb-light);
+        font-size: 3rem;
+        color: var(--rgb-line);
+        text-align: center;
+        left: 1rem;
+        bottom: 18rem;
+      }
+      & .comic-1-0-0-txt2 {
+        animation: none;
+        font-family: SourGummy;
+        color: var(--rgb-line);
+        transform: rotate(8deg);
+        font-size: 6rem;
+        position: absolute;
+        width: 18rem;
+        height: 6rem;
+        bottom: 7rem;
+        left: 15rem;
+        text-shadow: var(--rgb-light) 0.4rem 0.4rem;
+      }
+    }
+  }
+
+@keyframes appearRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+}
+
+
+
+@keyframes appearLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+}
+
+@keyframes appearTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+    }
+}
+@keyframes appearBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%) scale(1);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes appearPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
