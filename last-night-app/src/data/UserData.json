@@ -19,5 +19,21 @@
         "quacklyHandle": "nsdawn",
         "pfpUrl": "/assets/img/pfp/debugPlayer.png",
         "isPlayer": true
+    },
+    "angela": {
+        "id": "angela",
+        "quacklyHandle": "angie✨angie✨angie",
+        "pfpUrl": "/assets/img/pfp/debugPlayer.png",
+        "isPlayer": true
+    },
+    "kaytlyn": {
+        "id": "kaytlyn",
+        "quacklyHandle": "racoonInStem",
+        "pfpUrl": "/assets/img/pfp/debugShrek.png"
+    },
+    "rebecca": {
+        "id": "rebecca",
+        "quacklyHandle": "kansas_queen",
+        "pfpUrl": "/assets/img/pfp/debugShrek.png"
     }
 }

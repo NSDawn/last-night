@@ -39,11 +39,23 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
     
     if (chain.events.addFlags) chain.events.addFlags.forEach((flag) => addFlag(G, flag));
     if (chain.events.removeFlags) chain.events.removeFlags.forEach((flag) => removeFlag(G, flag));
-    if (chain.events.getTopics) addTopics(G, chain.events.getTopics);
+    if (chain.events.getTopics) {
+        addTopics(G, chain.events.getTopics);
+    };
     setTimeout(() => {
-        if (chain.events?.addQuacks) addQuack(G, chain.events?.addQuacks);
-        if (chain.events?.addUsers) chain.events?.addUsers.forEach((user) => addUserMessageHistory(G, user));
-        if (chain.events?.startChains) chain.events?.startChains.forEach((chain) => addChainMessageHistory(G, chain.chainId, chain.userId));
+        if (chain.events?.addQuacks) {
+            addQuack(G, chain.events?.addQuacks)
+            const userId = getQuack(chain.events?.addQuacks[0]).userId
+            pushNotif(G, "quack", userId);
+        };
+        if (chain.events?.addUsers) chain.events?.addUsers.forEach((user) => {
+            addUserMessageHistory(G, user);
+            pushNotif(G, "newUser", user);
+        });
+        if (chain.events?.startChains) chain.events?.startChains.forEach((chain) => {
+            addChainMessageHistory(G, chain.chainId, chain.userId);
+            pushNotif(G, "message", chain.userId);
+        });
     }, chain.events.delayMs ?? 0)
 }
 
@@ -91,21 +103,15 @@ export type UserMessageHistory = {
     messageChainIds: string[];
 }
 
-
+// ! ====
 export function getDefaultMessageHistory(): MessageHistory {
     return [
         {
-            userId: "debugShrek",
+            userId: "kaytlyn",
             messageChainIds: [
-                "debug.debugscene.0"
+                "kaytlyn.1.0"
             ],
-        },
-        {
-            userId: "tim",
-            messageChainIds: [
-                "debug.debugscene.0"
-            ],
-        },
+        }
     ]
 }
 
@@ -122,8 +128,11 @@ export function addUserMessageHistory(G: GlobalSingleton, userId: string) {
 export function addChainMessageHistory(G: GlobalSingleton, chainId: string, userId: string) {
     const [messageHistory, _] = G.messageHistory;
 
-    const userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
-    if (!userMessageHistory) addUserMessageHistory(G, userId);
+    let userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
+    if (!userMessageHistory) {
+        addUserMessageHistory(G, userId)
+        userMessageHistory = messageHistory.filter((v) => v.userId === userId)[0];
+    };
 
     userMessageHistory.messageChainIds.push(chainId);
 
@@ -149,7 +158,8 @@ export function updateMessageHistory(G: GlobalSingleton, messageHistory: Message
 
 import _topicData from "../data/TopicData.json";
 import { addFlag, removeFlag } from "./Flags";
-import { addQuack } from "./Quacks";
+import { addQuack, getQuack } from "./Quacks";
+import { pushNotif } from "../components/elements/NotifHandler";
 const topicData: Record<string, Topic> = _topicData;
 
 export type TopicInventory = string[];
@@ -161,11 +171,7 @@ export type Topic = {
 
 export function getDefaultTopicInventory(): TopicInventory {
     return [
-        "debugTopic",
-        "charKaytlyn",
-        "charAngela",
-        "charTim",
-        "eggs"
+        "hey"
     ];
 }
 

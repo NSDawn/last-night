@@ -1,6 +1,7 @@
 import { PropsWithChildren, createContext, useContext, useState, useEffect } from "react";
 import { getDefaultMessageHistory, getDefaultTopicInventory, MessageHistory, TopicInventory } from "./game/Messages";
 import { t } from "./strings/i18n";
+import { Notif } from "./components/elements/NotifHandler";
 
 const GlobalContext = createContext<GlobalSingleton>(null as unknown as GlobalSingleton);
 
@@ -15,6 +16,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
     const notes = useState([] as string[]);
     const quacks = useState([] as string[]);
     const resolvedMessageChains = useState([] as string[]);
+    const notifStack = useState([] as Notif[])
 
     useEffect(() => {
         messageHistory[1](JSON.parse(messageHistoryJSON[0]));
@@ -38,6 +40,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
             topicInventory: topicInventory,
             topicInventoryJSON: topicInventoryJSON,
             resolvedMessageChains: resolvedMessageChains,
+            notifStack: notifStack,
         }}>
             {props.children}
         </GlobalContext.Provider>
@@ -56,6 +59,7 @@ export type GlobalSingleton = {
     topicInventory: State<TopicInventory>;
     topicInventoryJSON: State<string>;
     resolvedMessageChains: State<string[]>;
+    notifStack: State<Notif[]>
 };
 
 export function useGlobal() {

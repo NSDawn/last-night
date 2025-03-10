@@ -11,6 +11,22 @@
         "id": "charTim",
         "category": "person"
     },
+    "charRebecca": {
+        "id": "charRebecca",
+        "category": "person"
+    },
+    "charBrad": {
+        "id": "charBrad",
+        "category": "person"
+    },
+    "charStewart": {
+        "id": "charStewart",
+        "category": "person"
+    },
+    "charHunter": {
+        "id": "charHunter",
+        "category": "person"
+    },
     "eggs": {
         "id": "eggs",
         "category": "thing"
@@ -22,5 +38,9 @@
     "debugTopic": {
         "id": "debugTopic",
         "category": "thing"
+    },
+    "hey": {
+        "id": "hey",
+        "category": "action"
     }
 }

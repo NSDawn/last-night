@@ -4,6 +4,7 @@ import { t } from "../../strings/i18n";
 import "../apps/Apps.css"
 import NotesApp from "../apps/NotesApp";
 import QuacklyApp from "../apps/QuacklyApp";
+import NotifHandler from "../elements/NotifHandler";
 
 export default function Screen() {
 
@@ -36,7 +37,7 @@ export default function Screen() {
                     {appIcon.appNode}
                 </section>
             )}
-                
+            <NotifHandler />
         </section>
     )
 }
