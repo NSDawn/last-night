@@ -44,12 +44,7 @@
             "kaytlyn.1.k.14"
         ],
         "events": {
-            "startChains": [
-                {
-                    "userId": "tim", 
-                    "chainId": "tim.0"
-                }
-            ],
+            "addUsers": ["tim"],
             "addQuacks": ["update.0"]
         }
     },
