@@ -885,7 +885,7 @@
         "id": "tim.25",
         "messageIds": [
             "tim.25.t.0",
-            "tim.25.t.1"
+            "tim.25.a.1"
         ],
         "events": {
             "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.20"}]
@@ -980,7 +980,10 @@
             "group.2.b.1",
             "group.2.h.2",
             "group.2.s.3"
-        ]
+        ],
+        "events": {
+            "endGameGood": true
+        }
     },
 
 
