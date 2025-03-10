@@ -321,7 +321,9 @@ section.app.messages {
                         flex-direction: row;
                         flex-wrap: wrap;
                         gap: 0.5rem;
-
+                        z-index: 3;
+                        max-height: 7.5rem;
+                        
                         & > .topic {
                             background-color: var(--rgb-light);
                             color: var(--rgb-line);

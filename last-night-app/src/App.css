@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 main.phone {
@@ -19,7 +20,10 @@ main.phone {
   justify-content: center;
   background-color: var(--rgb-light);
   box-shadow: var(--box-shadow);
-
+  transition: ease-in 0.35s;
+  &.disabled {
+    transform: translateY(120%);
+  }
   & section.screen {
     overflow: hidden;
     outline: 2px solid var(--rgb-line);
@@ -35,7 +39,7 @@ main.phone {
       grid-column: 1;
     }
     & section.home-screen { 
-      background-image: url("../public/assets/img/bg/phone-wallpaper.png");
+      background-image: url("../public/assets/img/bg/angela-wallpaper.png");
       background-size: cover;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -44,6 +48,7 @@ main.phone {
         display: flex;
         flex-direction: column;
         align-items: center; justify-content: center;
+        color: var(--rgb-line);
         & button {
           width: 5rem;
           aspect-ratio: 1;

@@ -7,6 +7,7 @@ export default function DebugTooltip() {
 
     const G = useGlobal();
     const [currentApp, _] = G.currentApp;
+    const [gameState, setGameState] = G.gameState;
     const [notifStack, __] = G.notifStack;
     const [flags, ___] = G.flags;
 
@@ -24,24 +25,13 @@ export default function DebugTooltip() {
     return (
         <div className="debug-tooltip">
             <h2>
-                Current App: <code>{currentApp}</code>
-            </h2>
-            <h2>
-                notifStack: <code>{`${notifStack.length}`}</code>
-            </h2>
-            <h2>
                 flags: <code>{`${flags}`}</code>
             </h2>
-            <button onClick={() => addChainMessageHistory(G, "debug.debugscene.1", "debugShrek")}>
-                Add Chain 
+            <button onClick={() => setGameState("comic")}>
+                Comic
             </button>
-            
-            <button onClick={() => incrementShownMessagesMessageHistory(G, 1, "debugShrek")}>
-                (Shrek) Add Shown Messages + 1 
-            </button>
-            <br/>
-            <button onClick={addQuacks}>
-                Add Quacks
+            <button onClick={() => setGameState("game")}>
+                Game
             </button>
         </div>
     )
