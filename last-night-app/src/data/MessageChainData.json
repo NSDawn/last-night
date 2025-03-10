@@ -44,19 +44,435 @@
             "kaytlyn.1.k.14"
         ],
         "events": {
-            "addUsers": ["tim"],
+            "startChains": [{"userId": "tim", "chainId": "tim.0"}],
             "addQuacks": ["update.0"]
+        }
+    },
+    "tim.0": {
+        "id": "tim.0",
+        "messageIds": [
+            "tim.0.t.0"
+        ]
+    },
+    "tim.1": {
+        "id": "tim.1",
+        "messageIds": [
+            "tim.1.a.0",
+            "tim.1.t.1"
+        ],
+        "events": {
+            "getTopics": ["goto"]
+        }
+    },
+    "tim.2": {
+        "id": "tim.2",
+        "messageIds": [
+            "tim.2.a.0",
+            "tim.234.t.1"
+        ],
+        "events": {
+            "addFlags": ["brad"],
+            "startChains": [
+                {
+                    "userId": "tim",
+                    "chainId": "tim.5"
+                }
+            ]
+        }
+    },
+    "tim.3": {
+        "id": "tim.3",
+        "messageIds": [
+            "tim.3.a.0",
+            "tim.234.t.1"
+        ],
+        "events": {
+            "addFlags": ["hunter"],
+            "startChains": [
+                {
+                    "userId": "tim",
+                    "chainId": "tim.5"
+                }
+            ]
+        }
+    },
+    "tim.4": {
+        "id": "tim.4",
+        "messageIds": [
+            "tim.4.a.0",
+            "tim.234.t.1"
+        ],
+        "events": {
+            "addFlags": ["stewart"],
+            "startChains": [
+                {
+                    "userId": "tim",
+                    "chainId": "tim.5"
+                }
+            ]
+        }
+    },
+    "tim.5": {
+        "id": "tim.5",
+        "messageIds": [
+            "tim.5.t.0",
+            "tim.5.a.1"
+        ],
+        "events": {
+            "getTopics": ["checkup"],
+            "addFlags": ["lost", "noPass", "talking"],
+            "removeFlags": ["intro"]
+        }
+    },
+    "tim.2.alt": {
+        "id": "tim.2.alt",
+        "messageIds": [
+            "tim.2.a.0",
+            "tim.234.t.1",
+            "tim.234.t.2"
+        ],
+        "events": {
+            "addFlags": ["brad"],
+            "removeFlags": ["stewart", "hunter"]
+        }
+    },
+    "tim.3.alt": {
+        "id": "tim.3.alt",
+        "messageIds": [
+            "tim.3.a.0",
+            "tim.234.t.1",
+            "tim.234.t.2"
+        ],
+        "events": {
+            "addFlags": ["hunter"],
+            "removeFlags": ["stewart", "brad"]
+        }
+    },
+    "tim.4.alt": {
+        "id": "tim.4.alt",
+        "messageIds": [
+            "tim.4.a.0",
+            "tim.234.t.1",
+            "tim.234.t.2"
+        ],
+        "events": {
+            "addFlags": ["stewart"],
+            "removeFlags": ["brad", "hunter"]
+        }
+    },
+    "kaytlyn.2": {
+        "id": "kaytlyn.2",
+        "messageIds": [
+            "kaytlyn.2.a.0",
+            "kaytlyn.2.k.1",
+            "kaytlyn.2.a.2",
+            "kaytlyn.2.k.3",
+            "kaytlyn.2.a.4",
+            "kaytlyn.2.a.5",
+            "kaytlyn.2.a.6",
+            "kaytlyn.2.k.7",
+            "kaytlyn.2.k.8",
+            "kaytlyn.2.a.9",
+            "kaytlyn.2.k.10",
+            "kaytlyn.2.a.11",
+            "kaytlyn.2.k.12"
+        ],
+        "events": {
+            "getTopics": ["pr", "charRebecca"],
+            "addFlags": ["lost1"],
+            "removeFlags": ["lost"],
+            "startChains": [{"userId": "rebecca", "chainId": "rebecca.1"}]
+        }
+    },
+    "rebecca.1": {
+        "id": "rebecca.1",
+        "messageIds": [
+            "rebecca.1.r.0",
+            "rebecca.1.a.1",
+            "rebecca.1.r.2",
+            "rebecca.1.a.3"
+        ]
+    },
+    "tim.6": {
+        "id": "tim.6",
+        "messageIds": [
+            "tim.6.a.0",
+            "tim.6.t.1",
+            "tim.6.a.2",
+            "tim.6.t.3",
+            "tim.6.a.4",
+            "tim.6.t.5",
+            "tim.6.t.6"
+        ]
+    },
+    "tim.7": {
+        "id": "tim.7",
+        "messageIds": [
+            "tim.7.a.0",
+            "tim.7.t.1",
+            "tim.7.a.2",
+            "tim.7.t.3",
+            "tim.7.t.4",
+            "tim.7.t.5"
+        ]
+    },
+    "tim.8": {
+        "id": "tim.8",
+        "messageIds": [
+            "tim.8.a.0",
+            "tim.8.t.1",
+            "tim.8.a.2"
+        ],
+        "events": {
+            "removeFlags": ["brad", "noPass"],
+            "addFlags": ["pass"]
+        }
+    },
+    "tim.9": {
+        "id": "tim.9",
+        "messageIds": [
+            "tim.9.a.0",
+            "tim.9.t.1",
+            "tim.9.t.2",
+            "tim.9.a.3",
+            "tim.9.t.4"
+        ],
+        "events": {
+            "removeFlags": ["hunter"]
+        }
+    },
+    "tim.10": {
+        "id": "tim.10",
+        "messageIds": [
+            "tim.10.a.0",
+            "tim.10.t.1",
+            "tim.10.a.2",
+            "tim.10.t.3"
+        ],
+        "events": {
+            "removeFlags": ["stewart"]
+        }
+    },
+    "kaytlyn.3": {
+        "id": "kaytlyn.3",
+        "messageIds": [
+            "kaytlyn.3.a.0",
+            "kaytlyn.3.k.1",
+            "kaytlyn.3.a.2",
+            "kaytlyn.3.k.3"
+        ]
+    },
+    "kaytlyn.4": {
+        "id": "kaytlyn.4",
+        "messageIds": [
+            "kaytlyn.4.a.0",
+            "kaytlyn.4.k.1",
+            "kaytlyn.4.a.2",
+            "kaytlyn.4.k.3",
+            "kaytlyn.4.k.4",
+            "kaytlyn.4.a.5",
+            "kaytlyn.4.k.6"
+        ]
+    },
+    "tim.11.alt": {
+        "id": "tim.11.alt",
+        "messageIds": [
+            "tim.11.a.0",
+            "tim.11.t.1.alt",
+            "tim.11.a.2.alt"
+        ]
+    },
+    "tim.11": {
+        "id": "tim.11",
+        "messageIds": [
+            "tim.11.a.0",
+            "tim.11.t.1",
+            "tim.11.a.2",
+            "tim.11.t.3",
+            "tim.11.a.4",
+            "tim.11.t.5",
+            "tim.11.a.6",
+            "tim.11.a.7",
+            "tim.11.t.8",
+            "tim.11.a.9",
+            "tim.11.t.10",
+            "tim.11.a.11",
+            "tim.11.t.12",
+            "tim.11.a.13",
+            "tim.11.t.14",
+            "tim.11.a.15",
+            "tim.11.t.16",
+            "tim.11.t.17"
+        ],
+        "events": {
+            "getTopics": ["flowers"],
+            "addFlags": ["TinPR"],
+            "removeFlags": ["brad", "stewart", "hunter", "talking"]
+        }
+    },
+    "tim.12": {
+        "id": "tim.12",
+        "messageIds": [
+            "tim.12.a.0",
+            "tim.12.t.1",
+            "tim.12.a.2",
+            "tim.12.a.3",
+            "tim.12.t.4"
+        ]
+    },
+    "kaytlyn.5": {
+        "id": "kaytlyn.5",
+        "messageIds": [
+            "kaytlyn.5.a.0",
+            "kaytlyn.5.k.1",
+            "kaytlyn.5.a.2",
+            "kaytlyn.5.k.3",
+            "kaytlyn.5.a.4",
+            "kaytlyn.5.k.5",
+            "kaytlyn.5.a.6",
+            "kaytlyn.5.k.7",
+            "kaytlyn.5.a.8",
+            "kaytlyn.5.k.9",
+            "kaytlyn.5.a.10",
+            "kaytlyn.5.k.11",
+            "kaytlyn.5.k.12",
+            "kaytlyn.5.a.13"
+        ],
+        "events": {
+            "getTopics": ["whatSee"],
+            "addFlags": ["KtoB"],
+            "removeFlags": ["lost1"]
+        }
+    },
+    "tim.13": {
+        "id": "tim.13",
+        "messageIds": [
+            "tim.13.a.0",
+            "tim.13.t.1",
+            "tim.13.a.2",
+            "tim.13.t.3",
+            "tim.13.a.4"
+        ],
+        "events": {
+            "getTopics": ["cookies", "anime"]
+        }
+    },
+    "kaytlyn.6": {
+        "id": "kaytlyn.6",
+        "messageIds": [
+            "kaytlyn.6.a.0",
+            "kaytlyn.6.k.1",
+            "kaytlyn.6.a.2",
+            "kaytlyn.6.k.3"
+        ],
+        "events": {
+            "addFlags": ["flowersUsed"]
+        }
+    },
+    "kaytlyn.7": {
+        "id": "kaytlyn.7",
+        "messageIds": [
+            "kaytlyn.7.a.0",
+            "kaytlyn.7.k.1",
+            "kaytlyn.7.a.2",
+            "kaytlyn.7.k.3",
+            "kaytlyn.7.a.4"
+        ],
+        "events": {
+            "addFlags": ["animeUsed"]
+        }
+    },
+    "kaytlyn.8": {
+        "id": "kaytlyn.8",
+        "messageIds": [
+            "kaytlyn.8.a.0",
+            "kaytlyn.8.k.1",
+            "kaytlyn.8.a.2",
+            "kaytlyn.8.a.3",
+            "kaytlyn.8.k.4",
+            "kaytlyn.8.a.5"
+        ],
+        "events": {
+            "addFlags": ["cookiesUsed"]
+        }
+    },
+    "kaytlyn.6.alt": {
+        "id": "kaytlyn.6.alt",
+        "messageIds": [
+            "kaytlyn.6.a.0",
+            "kaytlyn.6.k.1",
+            "kaytlyn.6.a.2",
+            "kaytlyn.6.k.3"
+        ],
+        "events": {
+            "addFlags": ["flowersUsed"],
+            "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.9"}]
+        }
+    },
+    "kaytlyn.7.alt": {
+        "id": "kaytlyn.7.alt",
+        "messageIds": [
+            "kaytlyn.7.a.0",
+            "kaytlyn.7.k.1",
+            "kaytlyn.7.a.2",
+            "kaytlyn.7.k.3",
+            "kaytlyn.7.a.4"
+        ],
+        "events": {
+            "addFlags": ["animeUsed"],
+            "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.9"}]
+        }
+    },
+    "kaytlyn.8.alt": {
+        "id": "kaytlyn.8.alt",
+        "messageIds": [
+            "kaytlyn.8.a.0",
+            "kaytlyn.8.k.1",
+            "kaytlyn.8.a.2",
+            "kaytlyn.8.a.3",
+            "kaytlyn.8.k.4",
+            "kaytlyn.8.a.5"
+        ],
+        "events": {
+            "addFlags": ["cookiesUsed"],
+            "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.9"}]
+        }
+    },
+    "kaytlyn.9": {
+        "id": "kaytlyn.9",
+        "messageIds": [
+            "kaytlyn.9.k.0",
+            "kaytlyn.9.a.1",
+            "kaytlyn.9.k.2",
+            "kaytlyn.9.k.3",
+            "kaytlyn.9.a.4",
+            "kaytlyn.9.k.5",
+            "kaytlyn.9.k.6",
+            "kaytlyn.9.k.7",
+            "kaytlyn.9.a.8",
+            "kaytlyn.9.a.9",
+            "kaytlyn.9.k.10",
+            "kaytlyn.9.k.11",
+            "kaytlyn.9.a.12",
+            "kaytlyn.9.k.13",
+            "kaytlyn.9.a.14",
+            "kaytlyn.9.k.15",
+            "kaytlyn.9.k.16"
+        ],
+        "events": {
+            "removeFlags": ["lost", "TinPR", "talking", "cookiesUsed", "animeUsed", "flowersUsed", "KtoB", "pass"]
         }
     },
 
 
-    "tim.0": {
-        "id": "tim.0",
-        "messageIds": [
-            "tim.0.t.0",
-            "tim.0.t.0"
-        ]
-    },
+
+
+
+
+
+
+
+
 
 
     "debug.debugscene.0": {

@@ -8,6 +8,7 @@ export default function DebugTooltip() {
     const G = useGlobal();
     const [currentApp, _] = G.currentApp;
     const [notifStack, __] = G.notifStack;
+    const [flags, ___] = G.flags;
 
     function addQuacks() {
         addQuack(G, [
@@ -27,6 +28,9 @@ export default function DebugTooltip() {
             </h2>
             <h2>
                 notifStack: <code>{`${notifStack.length}`}</code>
+            </h2>
+            <h2>
+                flags: <code>{`${flags}`}</code>
             </h2>
             <button onClick={() => addChainMessageHistory(G, "debug.debugscene.1", "debugShrek")}>
                 Add Chain 

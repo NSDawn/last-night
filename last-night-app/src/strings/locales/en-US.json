@@ -58,7 +58,7 @@
     "message.kaytlyn.2.a.9": "god I hate shes like that",
     "message.kaytlyn.2.k.10": "she did brag about something happening in the projector room later tonight tho",
     "message.kaytlyn.2.a.11": "crap has she figured it out already",
-    "message.kaytlyn.2.a.12": "🤷‍♀️",
+    "message.kaytlyn.2.k.12": "🤷‍♀️",
 
     "message.kaytlyn.3.a.0": "hey how are you doing?",
     "message.kaytlyn.3.k.1": "There are so many people talking to me is this what being popular is like",
@@ -218,6 +218,7 @@
     "message.tim.3.a.0": "talk to hunter",
     "message.tim.4.a.0": "talk to stewart",
     "message.tim.234.t.1": "👍",
+    "message.tim.234.t.2": "what should I ask about?",
 
     "message.tim.5.t.0": "wait angie I lost kaytlyn",
     "message.tim.5.a.1": "its fine Ill take care of her",
@@ -251,6 +252,9 @@
     "message.tim.10.t.1": "they didnt know anything about the projector room, but did say they were looking for you",
     "message.tim.10.a.2": "What! Did they say why?",
     "message.tim.10.t.3": "I asked but they got shy and ran off",
+
+    "message.tim.11.t.1.alt": "dont you need a password to get into it?",
+    "message.tim.11.a.2.alt": "crap you do? Maybe someone knows it",
 
     "message.tim.11.a.0": "can you get into the projector room?",
     "message.tim.11.t.1": "ok I’ll head over there.",
@@ -471,10 +475,10 @@
 
 
 
-    "m.rebecca.1.r.0": "and dont even think about getting into the projector room I already have it blocked off",
-    "m.rebecca.1.a.1": "how did you get my number?",
-    "m.rebecca.1.r.2": "I took over for the student council. Prom is under my control and i got my eye you",
-    "m.rebecca.1.a.3": "sure you do 🤭",
+    "message.rebecca.1.r.0": "and dont even think about getting into the projector room I already have it blocked off",
+    "message.rebecca.1.a.1": "how did you get my number?",
+    "message.rebecca.1.r.2": "I took over for the student council. Prom is under my control and i got my eye you",
+    "message.rebecca.1.a.3": "sure you do 🤭",
 
 
 

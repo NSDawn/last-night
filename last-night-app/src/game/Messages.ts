@@ -34,11 +34,25 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
     const [resolvedMessageChains, setResolvedMessageChains] = G.resolvedMessageChains;
     if (resolvedMessageChains.includes(key)) return;
     const chain = getMessageChain(key);
-    setResolvedMessageChains([...resolvedMessageChains, chain.id]);
+    if (
+        chain.id !== "tim.2.alt" && chain.id !== "tim.3.alt" && chain.id !== "tim.4.alt"
+    ) {
+        setResolvedMessageChains([...resolvedMessageChains, chain.id]);
+    }
     if (!chain.events) return;
-    
-    if (chain.events.addFlags) chain.events.addFlags.forEach((flag) => addFlag(G, flag));
-    if (chain.events.removeFlags) chain.events.removeFlags.forEach((flag) => removeFlag(G, flag));
+    const [flags, setFlags] = G.flags;
+    let tempFlags = [...flags];
+
+    if (chain.events.removeFlags) {
+        for (let flag of chain.events.removeFlags)
+            tempFlags = removeFlag(tempFlags, flag);
+    } 
+    if (chain.events.addFlags) {
+        for (let flag of chain.events.addFlags)
+            tempFlags = addFlag(tempFlags, flag)
+    }
+    setFlags(tempFlags);
+
     if (chain.events.getTopics) {
         addTopics(G, chain.events.getTopics);
     };

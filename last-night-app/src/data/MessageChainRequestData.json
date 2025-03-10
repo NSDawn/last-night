@@ -30,5 +30,187 @@
         "userId": "kaytlyn",
         "requiredFlags": ["intro"],
         "chainId": "kaytlyn.1.3"
+    },
+    {
+        "topicIds": ["hey"],
+        "userId": "tim",
+        "requiredFlags": ["intro"],
+        "chainId": "tim.1"
+    },
+    {
+        "topicIds": ["charBrad"],
+        "userId": "tim",
+        "requiredFlags": ["intro"],
+        "chainId": "tim.1"
+    },
+    {
+        "topicIds": ["charHunter"],
+        "userId": "tim",
+        "requiredFlags": ["intro"],
+        "chainId": "tim.1"
+    },
+    {
+        "topicIds": ["charStewart"],
+        "userId": "tim",
+        "requiredFlags": ["intro"],
+        "chainId": "tim.1"
+    },
+    {
+        "topicIds": ["goto", "charBrad"],
+        "userId": "tim",
+        "requiredFlags": ["intro"],
+        "chainId": "tim.2"
+    },
+    {
+        "topicIds": ["goto", "charHunter"],
+        "userId": "tim",
+        "requiredFlags": ["intro"],
+        "chainId": "tim.3"
+    },
+    {
+        "topicIds": ["goto", "charStewart"],
+        "userId": "tim",
+        "requiredFlags": ["intro"],
+        "chainId": "tim.4"
+    },
+    {
+        "topicIds": ["goto", "charBrad"],
+        "userId": "tim",
+        "requiredFlags": ["talking"],
+        "chainId": "tim.2.alt"
+    },
+    {
+        "topicIds": ["goto", "charHunter"],
+        "userId": "tim",
+        "requiredFlags": ["talking"],
+        "chainId": "tim.3.alt"
+    },
+    {
+        "topicIds": ["goto", "charStewart"],
+        "userId": "tim",
+        "requiredFlags": ["talking"],
+        "chainId": "tim.4.alt"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["lost"],
+        "chainId": "kaytlyn.2"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "tim",
+        "requiredFlags": ["talking"],
+        "chainId": "tim.6"
+    },
+    {
+        "topicIds": ["goto", "charRebecca"],
+        "userId": "tim",
+        "requiredFlags": ["lost1"],
+        "chainId": "tim.7"
+    },
+    {
+        "topicIds": ["charRebecca"],
+        "userId": "tim",
+        "requiredFlags": ["lost1"],
+        "chainId": "tim.7"
+    },
+    {
+        "topicIds": ["pr"],
+        "userId": "tim",
+        "requiredFlags": ["brad"],
+        "chainId": "tim.8"
+    },
+    {
+        "topicIds": ["pr"],
+        "userId": "tim",
+        "requiredFlags": ["hunter"],
+        "chainId": "tim.9"
+    },
+    {
+        "topicIds": ["pr"],
+        "userId": "tim",
+        "requiredFlags": ["stewart"],
+        "chainId": "tim.10"
+    },
+    {
+        "topicIds": ["goto", "pr"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["lost1", "pass"],
+        "chainId": "kaytlyn.4"
+    },
+    {
+        "topicIds": ["goto", "pr"],
+        "userId": "tim",
+        "requiredFlags": ["noPass"],
+        "chainId": "tim.11.alt"
+    },
+    {
+        "topicIds": ["goto", "pr"],
+        "userId": "tim",
+        "requiredFlags": ["pass"],
+        "chainId": "tim.11"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "tim",
+        "requiredFlags": ["TinPR"],
+        "chainId": "tim.12"
+    },
+    {
+        "topicIds": ["goto", "charBrad"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["TinPR"],
+        "chainId": "kaytlyn.5"
+    },
+    {
+        "topicIds": ["whatSee"],
+        "userId": "tim",
+        "requiredFlags": ["TinPR"],
+        "chainId": "tim.13"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["KtoB"],
+        "chainId": "kaytlyn.3"
+    },
+
+    {
+        "topicIds": ["flowers"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["KtoB"],
+        "chainId": "kaytlyn.6"
+    },
+    {
+        "topicIds": ["anime"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["KtoB"],
+        "chainId": "kaytlyn.7"
+    },
+    {
+        "topicIds": ["cookies"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["KtoB"],
+        "chainId": "kaytlyn.8"
+    },
+
+    {
+        "topicIds": ["flowers"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["KtoB", "cookiesUsed", "animeUsed"],
+        "chainId": "kaytlyn.6.alt"
+    },
+    {
+        "topicIds": ["anime"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["KtoB", "flowersUsed", "cookiesUsed"],
+        "chainId": "kaytlyn.7.alt"
+    },
+    {
+        "topicIds": ["cookies"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["KtoB", "flowersUsed", "animeUsed"],
+        "chainId": "kaytlyn.8.alt"
     }
 ]
