@@ -7,7 +7,7 @@ const GlobalContext = createContext<GlobalSingleton>(null as unknown as GlobalSi
 
 function GlobalContextHandler(props: PropsWithChildren) {
     
-    const gameState = useState("game" as string);
+    const gameState = useState("menu" as string);
     const currentApp = useState(null as null | string);
     const messageHistory = useState(getDefaultMessageHistory());
     const messageHistoryJSON = useState(JSON.stringify(getDefaultMessageHistory()));
