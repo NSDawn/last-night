@@ -50,5 +50,10 @@
         "id": "hunter",
         "quacklyHandle": "xXShadowCrossXx",
         "pfpUrl": "assets/img/pfp/debugShrek.png"
+    },
+    "group": {
+        "id": "group",
+        "quacklyHandle": "Group Chat",
+        "pfpUrl": "assets/img/pfp/debugShrek.png"
     }
 }

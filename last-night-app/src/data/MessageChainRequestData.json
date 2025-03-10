@@ -212,5 +212,257 @@
         "userId": "kaytlyn",
         "requiredFlags": ["KtoB", "flowersUsed", "animeUsed"],
         "chainId": "kaytlyn.8.alt"
+    },
+
+
+
+    {
+        "topicIds": ["hey"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.1"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.1"
+    },
+    {
+        "topicIds": ["charHunter"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.2"
+    },
+    {
+        "topicIds": ["charStewart"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.3"
+    },
+    {
+        "topicIds": ["pr"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.4"
+    },
+    {
+        "topicIds": ["cookies"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.5"
+    },
+    {
+        "topicIds": ["anime"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.6"
+    },
+    {
+        "topicIds": ["flowers"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.7"
+    },
+    {
+        "topicIds": ["whatSee"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.8"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "searching"],
+        "chainId": "kaytlyn.10"
+    },
+    {
+        "topicIds": ["goto", "charStewart"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "searching"],
+        "chainId": "kaytlyn.11"
+    },
+    {
+        "topicIds": ["charStewart"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "searching"],
+        "chainId": "kaytlyn.11"
+    },
+    {
+        "topicIds": ["act"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "searching"],
+        "chainId": "tim.15"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "tim",
+        "requiredFlags": ["part2"],
+        "chainId": "tim.14"
+    },
+    {
+        "topicIds": ["cheer"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "searching"],
+        "chainId": "kaytlyn.12"
+    },
+    {
+        "topicIds": ["charStewart"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "stopped"],
+        "chainId": "kaytlyn.13"
+    },
+    {
+        "topicIds": ["smith"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "stopped"],
+        "chainId": "kaytlyn.13"
+    },
+    {
+        "topicIds": ["smith"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.9"
+    },
+    {
+        "topicIds": ["dunks", "smith"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.9"
+    },
+    {
+        "topicIds": ["dunks", "smith", "principal"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.9"
+    },
+    {
+        "topicIds": ["smith", "principal"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker"],
+        "chainId": "brad.9"
+    },
+    {
+        "topicIds": ["charHunter"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "timNoH"],
+        "chainId": "tim.17"
+    },
+    {
+        "topicIds": ["goto", "charHunter"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "timNoH"],
+        "chainId": "tim.17"
+    },
+    {
+        "topicIds": ["goto", "charHunter"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "timNoH"],
+        "chainId": "tim.17"
+    },
+    {
+        "topicIds": ["principal"],
+        "userId": "tim",
+        "requiredFlags": ["part2"],
+        "chainId": "tim.18"
+    },
+    {
+        "topicIds": ["pr"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "TtoH"],
+        "chainId": "tim.19"
+    },
+    {
+        "topicIds": ["remote"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "TtoH"],
+        "chainId": "tim.20"
+    },
+    {
+        "topicIds": ["principal", "remote"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "TtoH"],
+        "chainId": "tim.20"
+    },
+    {
+        "topicIds": ["pr", "remote"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "TtoH"],
+        "chainId": "tim.20"
+    },
+    {
+        "topicIds": ["pr", "principal", "remote"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "TtoH"],
+        "chainId": "tim.20"
+    },
+    {
+        "topicIds": ["cookies"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "TtoH"],
+        "chainId": "tim.21"
+    },
+    {
+        "topicIds": ["flowers"],
+        "userId": "tim",
+        "requiredFlags": ["part2", "TtoH"],
+        "chainId": "tim.22"
+    },
+
+    {
+        "topicIds": ["smith"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker", "distracted"],
+        "chainId": "brad.10"
+    },
+    {
+        "topicIds": ["dunks", "smith"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker", "distracted"],
+        "chainId": "brad.10"
+    },
+    {
+        "topicIds": ["dunks", "smith", "principal"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker", "distracted"],
+        "chainId": "brad.10"
+    },
+    {
+        "topicIds": ["smith", "principal"],
+        "userId": "brad",
+        "requiredFlags": ["part2", "locker", "distracted"],
+        "chainId": "brad.10"
+    }
+
+    ,
+    {
+        "topicIds": ["charStewart"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "free"],
+        "chainId": "kaytlyn.14"
+    },
+    {
+        "topicIds": ["charStewart"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "trapped"],
+        "chainId": "kaytlyn.15"
+    },
+    {
+        "topicIds": ["hey"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "trapped"],
+        "chainId": "kaytlyn.15"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "trapped"],
+        "chainId": "kaytlyn.15"
+    },
+    {
+        "topicIds": ["whatSee"],
+        "userId": "kaytlyn",
+        "requiredFlags": ["part2", "trapped"],
+        "chainId": "kaytlyn.15"
     }
 ]
