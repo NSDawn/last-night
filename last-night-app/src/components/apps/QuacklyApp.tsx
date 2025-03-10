@@ -16,7 +16,7 @@ export default function QuacklyApp() {
                     {t(`app.quackly`)}
                 </h1>
                 <button className="home-button" onClick={() => setCurrentApp(null)}>
-                   <img src="/assets/img/ui/icon-home.png" alt="home icon" />
+                   <img src="assets/img/ui/icon-home.png" alt="home icon" />
                 </button>
             </header>
             <main>

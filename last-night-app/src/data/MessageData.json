@@ -100,7 +100,7 @@
     },
     "debug.debugscene.0.7": {
         "id": "debug.debugscene.0.7",
-        "imgUrl": "/assets/img/pfp/tim.png",
+        "imgUrl": "assets/img/pfp/tim.png",
         "senderId": "debugPlayer"
     },
     "debug.debugscene.1.0": {

@@ -2,16 +2,16 @@
 
 @font-face {
   font-family: NotoSans;
-  src: url("/assets/fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf");
+  src: url("assets/fonts/Noto_Sans/NotoSans-VariableFont_wdth\,wght.ttf");
 }
 @font-face {
   font-family: NotoSans;
   font-style: italic;
-  src: url("/assets/fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf");
+  src: url("assets/fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth\,wght.ttf");
 }
 @font-face {
   font-family: NotoColorEmoji;
-  src: url("/assets/fonts/Noto_Color_Emoji/NotoColorEmoji-Regular.ttf");
+  src: url("assets/fonts/Noto_Color_Emoji/NotoColorEmoji-Regular.ttf");
 }
 
 :root {
