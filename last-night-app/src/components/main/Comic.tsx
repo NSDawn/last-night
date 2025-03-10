@@ -1,6 +1,6 @@
 import { useGlobal } from "../../GlobalContextHandler";
 import "../../App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Comic.css";
 import { t } from "../../strings/i18n";
 
@@ -8,7 +8,8 @@ export default function Comic() {
 
     const G = useGlobal();
     const [gameState, setGameState] = G.gameState;
-    const [comic, setComic] = useState(2); 
+    const [endGame, _] = G.endGame;
+    const [comic, setComic] = useState(0); 
     const [element, setElement] = useState(1); 
     const comics = [
         [
@@ -50,14 +51,27 @@ export default function Comic() {
                 setGameState("game")
                 return;
             }
-            setComic(comic + 1);
-            setElement(1); 
+            if (comic === 0) {        
+                setComic(comic + 1);
+                setElement(1); 
+            }
             return; 
         }
         setElement(element + 1);
     }
 
+    useEffect(() => {
+        if (endGame === "good") {
+            setComic(2);
+            setElement(1);
+        } 
+        if (endGame === "bad") {
+            setComic(3);
+            setElement(1);
+        } 
+    }, [endGame])
 
+    
     return (
         <main className={`comic ${gameState !== "comic" ? "disabled" : ""}`}>
             <div className="comic-wrapper" onClick={onClickComic}>

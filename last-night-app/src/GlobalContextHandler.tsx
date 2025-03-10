@@ -18,6 +18,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
     const quacks = useState([] as string[]);
     const resolvedMessageChains = useState([] as string[]);
     const notifStack = useState([] as Notif[])
+    const endGame = useState("");
 
     useEffect(() => {
         messageHistory[1](JSON.parse(messageHistoryJSON[0]));
@@ -43,6 +44,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
             topicInventoryJSON: topicInventoryJSON,
             resolvedMessageChains: resolvedMessageChains,
             notifStack: notifStack,
+            endGame: endGame,
         }}>
             {props.children}
         </GlobalContext.Provider>
@@ -62,7 +64,8 @@ export type GlobalSingleton = {
     topicInventory: State<TopicInventory>;
     topicInventoryJSON: State<string>;
     resolvedMessageChains: State<string[]>;
-    notifStack: State<Notif[]>
+    notifStack: State<Notif[]>;
+    endGame: State<string>;
 };
 
 export function useGlobal() {

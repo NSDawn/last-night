@@ -85,6 +85,7 @@ section.app.messages {
     
             &.disabled {
                 pointer-events: none;
+                z-index: -1;
             }
             & .user {
                 position: relative;
@@ -323,7 +324,7 @@ section.app.messages {
                         gap: 0.5rem;
                         z-index: 100;
                         max-height: 7.5rem;
-                        
+
                         & > .topic {
                             background-color: var(--rgb-light);
                             color: var(--rgb-line);

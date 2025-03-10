@@ -24,6 +24,8 @@ export type MessageChain = {
         addUsers?: string[];
         addQuacks?: string[]; // supply in reverse chrono order
         startChains?: {userId: string, chainId: string}[];
+        endGameGood?: boolean;
+        endGameBad?: boolean;
     }
 }
 export function getMessageChain(key: string): MessageChain {
@@ -70,6 +72,16 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
             addChainMessageHistory(G, chain.chainId, chain.userId);
             pushNotif(G, "message", chain.userId);
         });
+        const [_, setEndGame] = G.endGame;
+        const [__, setGameState] = G.gameState;
+        if (chain.events?.endGameBad) {
+            setEndGame("bad");
+            setGameState("comic");
+        }
+        if (chain.events?.endGameGood) {
+            setEndGame("good");
+            setGameState("comic");
+        }
     }, chain.events.delayMs ?? 0)
 }
 
