@@ -12,6 +12,5 @@ audioFileNames.forEach((filename) => {
 export function playAudio(G: GlobalSingleton, key: string) {
     const [config, _] = G.config;
     if (key.startsWith("sfx/") && !config.sfxEnabled) return;
-    console.log(audio);
     audio[key]?.play();
 }
