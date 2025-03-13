@@ -20,7 +20,7 @@ export type MessageChain = {
     events?: {
         addFlags?: string[];
         removeFlags?: string[];
-        getTopics?: string | string[];
+        getTopics?: string[];
         removeTopics?: string | string[];
         delayMs?: number;
         addUsers?: string[];
@@ -38,8 +38,7 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
     const [resolvedMessageChains, setResolvedMessageChains] = G.resolvedMessageChains;
     if (resolvedMessageChains.includes(key)) return;
     const chain = getMessageChain(key);
-    
-    if (!chain.repeatable) {
+    if (chain.repeatable) {
         setResolvedMessageChains([...resolvedMessageChains, chain.id]);
     }
     if (!chain.events) return;
@@ -56,12 +55,9 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
     }
     setFlags(tempFlags);
 
-    if (chain.events.getTopics) {
-        addTopics(G, chain.events.getTopics);
+    if (chain.events.getTopics || chain.events.removeTopics) {
+        addOrRemoveTopics(G, chain.events.getTopics ?? [], chain.events.removeTopics ?? []);
     };
-    if (chain.events.removeFlags) {
-        removeTopics(G, chain.events.removeFlags);
-    }
     setTimeout(() => {
         if (chain.events?.addQuacks) {
             addQuack(G, chain.events?.addQuacks)
@@ -216,10 +212,12 @@ export function addTopics(G: GlobalSingleton, topics: string | string[]) {
     updateTopicInventory(G, [...topicInventory, ...topicsToAdd]);
 }
 
-export function removeTopics(G: GlobalSingleton, topics: string | string[]) {
-    const topicsToRemove = (typeof topics == "string") ? [topics] : topics
+export function addOrRemoveTopics(G: GlobalSingleton, topicsToAdd: string | string[], topicsToRemove: string | string[]) {
+    const topicsToAdd2 = (typeof topicsToAdd == "string") ? [topicsToAdd] : topicsToAdd;
+    const topicsToRemove2 = (typeof topicsToRemove == "string") ? [topicsToRemove] : topicsToRemove;
     const [topicInventory, _] = G.topicInventory;
-    updateTopicInventory(G, topicInventory.filter((topic) => !topicsToRemove.includes(topic)));
+    const removed = topicInventory.filter((topic) => !topicsToRemove2.includes(topic));
+    updateTopicInventory(G, [...removed, ...topicsToAdd2])
 }
 
 export function updateTopicInventory(G: GlobalSingleton, topicInventory: TopicInventory) {
