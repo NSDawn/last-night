@@ -55,5 +55,10 @@
         "id": "group",
         "quacklyHandle": "Group Chat",
         "pfpUrl": "assets/img/pfp/debugPlayer.png"
+    },
+    "lance": {
+        "id": "lance",
+        "quacklyHandle": "Lancy-poo",
+        "pfpUrl": "assets/img/pfp/lance.png"
     }
 }
