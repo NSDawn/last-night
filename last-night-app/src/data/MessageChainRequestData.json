@@ -98,6 +98,18 @@
         "chainId": "kaytlyn.2"
     },
     {
+        "topicIds": ["pr"],
+        "userId": "rebecca",
+        "requiredFlags": ["lost1"],
+        "chainId": "rebecca.11"
+    },
+    {
+        "topicIds": ["checkup"],
+        "userId": "rebecca",
+        "requiredFlags": [],
+        "chainId": "rebecca.12"
+    },
+    {
         "topicIds": ["checkup"],
         "userId": "tim",
         "requiredFlags": ["talking"],
