@@ -1,12 +1,12 @@
 import { GlobalSingleton } from "../GlobalContextHandler";
 
 export type Config = {
-    sfxEnabled: boolean;
+    sfxVolume: number;
 }
 
 export function getDefaultConfig(): Config {
     return {
-        sfxEnabled: true,
+        sfxVolume: 0.7,
     }
 }
 

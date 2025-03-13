@@ -8,6 +8,9 @@
     "menu.h2": "You're missing prom, but not the goss!",
     "menu.start": "Start",
 
+    "settings.audio.h": "Audio Settings",
+    "settings.audio.sfx": "SFX Volume:",
+
     "char.debugShrek.displayName": "Mr. Shrek",
     "char.debugPlayer.displayName": "N.S. Dawn",
     "char.millicentPrep.displayName": "Millicent Preparatory School",

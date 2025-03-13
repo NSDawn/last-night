@@ -9,8 +9,14 @@ audioFileNames.forEach((filename) => {
     audio[key] = new Audio(filename);
 });
 
-export function playAudio(G: GlobalSingleton, key: string) {
+export function playAudio(G: GlobalSingleton, key: string, playEvenIfPlaying = false) {
     const [config, _] = G.config;
-    if (key.startsWith("sfx/") && !config.sfxEnabled) return;
+    if (key.startsWith("sfx/")) {
+        if (config.sfxVolume < 0.05) return;
+        audio[key].volume = config.sfxVolume;
+    };
+    if (playEvenIfPlaying && audio[key]) {
+        audio[key].currentTime = 0
+    }
     audio[key]?.play();
 }

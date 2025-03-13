@@ -4,6 +4,7 @@ import { t } from "../../strings/i18n";
 import "../apps/Apps.css"
 import NotesApp from "../apps/NotesApp";
 import QuacklyApp from "../apps/QuacklyApp";
+import SettingsApp from "../apps/SettingsApp";
 import NotifHandler from "../elements/NotifHandler";
 
 export default function Screen() {
@@ -14,8 +15,8 @@ export default function Screen() {
     const appIcons: AppIconData[] = [
         { id: "messages", iconUrl: "assets/img/ui/appicon-messages.png", appNode: <MessagesApp />},
         {id: "notes", iconUrl: "assets/img/ui/appicon-notes.png", appNode: <NotesApp />},
-        //{id: "settings", iconUrl: "assets/img/ui/appicon-settings.png", appNode: undefined},
         {id: "quackly", iconUrl: "assets/img/ui/appicon-quackly.png", appNode: <QuacklyApp />},
+        {id: "settings", iconUrl: "assets/img/ui/appicon-settings.png", appNode: <SettingsApp />},
     ];
 
     return (

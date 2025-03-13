@@ -67,8 +67,21 @@ button {
   box-shadow: var(--box-shadow-small);
   outline: 2px solid var(--rgb-line);
   cursor: pointer;
+  transition: ease-in-out 0.15s;
   &:hover {
     transform: scale(1.05);
+  }
+}
+
+button.img-button {
+  width: 2rem;
+  aspect-ratio: 1;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  & img {
+    width: 2rem;
+    aspect-ratio: 1;
   }
 }
 
@@ -87,3 +100,37 @@ button {
 ::-webkit-scrollbar-corner {
   display: none;
 }
+
+input[type="range"] {  
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: #00000000;
+  width: 8rem;
+  &::-webkit-slider-runnable-track {
+    background-color: var(--rgb-light);
+    border: none;
+    outline: none;
+    height: 0.25rem;
+    outline: 0.15rem solid var(--rgb-line);
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -0.5rem; /* Centers thumb on the track */
+    background-color: var(--rgb-main);
+    outline: 0.15rem solid var(--rgb-line);
+    border-radius: 0;
+    height: 1.3rem;
+    width: 0.5rem;  
+    transform: scale(1); 
+    transition: ease-in-out 0.15s; 
+  }
+  &:hover {
+    &::-webkit-slider-thumb {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
