@@ -5,6 +5,7 @@ import DebugTooltip from './components/debug/DebugTooltip';
 import Comic from './components/main/Comic';
 import { useGlobal } from './GlobalContextHandler';
 import Menu from './components/main/Menu';
+import AudioManager from "./components/elements/AudioManager"
 
 function App() {
   const G = useGlobal();

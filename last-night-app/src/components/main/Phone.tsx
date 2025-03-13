@@ -1,4 +1,5 @@
 import { useGlobal } from "../../GlobalContextHandler"
+import AudioManager from "../elements/AudioManager";
 import Screen from "./Screen";
 
 export default function Phone() {
@@ -15,6 +16,7 @@ export default function Phone() {
                 <button onClick={() => setCurrentApp(null)}/>
                 
             </div>
+            <AudioManager />
         </main>
     )
 }

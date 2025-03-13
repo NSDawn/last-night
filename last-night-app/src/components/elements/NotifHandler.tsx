@@ -3,7 +3,7 @@ import { GlobalSingleton, useGlobal } from "../../GlobalContextHandler";
 import "./NotifHandler.css";
 import { t } from "../../strings/i18n";
 import { getUser } from "../../game/Messages";
-import { playAudio } from "../../game/AudioManager";
+import { playAudio } from "./AudioManager";
 
 export default function NotifHandler() {
 

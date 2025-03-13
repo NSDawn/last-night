@@ -2,11 +2,13 @@ import { GlobalSingleton } from "../GlobalContextHandler";
 
 export type Config = {
     sfxVolume: number;
+    bgmVolume: number;
 }
 
 export function getDefaultConfig(): Config {
     return {
         sfxVolume: 0.7,
+        bgmVolume: 0.35,
     }
 }
 

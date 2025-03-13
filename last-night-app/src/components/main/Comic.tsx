@@ -3,7 +3,7 @@ import "../../App.css";
 import { useEffect, useState } from "react";
 import "./Comic.css";
 import { t } from "../../strings/i18n";
-import { playAudio } from "../../game/AudioManager";
+import { playAudio } from "../elements/AudioManager";
 
 export default function Comic() {
 

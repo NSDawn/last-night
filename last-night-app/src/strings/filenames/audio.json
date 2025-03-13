@@ -1,5 +1,10 @@
 [
     "public/assets/audio/sfx/notif-long.mp3",
     "public/assets/audio/sfx/notif-short.mp3",
-    "public/assets/audio/sfx/running.mp3"
+    "public/assets/audio/sfx/running.mp3",
+    "public/assets/audio/bgm/massobeats-daydream.mp3",
+    "public/assets/audio/bgm/massobeats-floral.mp3",
+    "public/assets/audio/bgm/massobeats-honey_jam.mp3",
+    "public/assets/audio/bgm/massobeats-mango_tea.mp3",
+    "public/assets/audio/bgm/massobeats-peach_prosecco.mp3"
 ]

@@ -25,7 +25,11 @@ function GlobalContextHandler(props: PropsWithChildren) {
 
     useEffect(() => {
         messageHistory[1](JSON.parse(messageHistoryJSON[0]));
-    }, [messageHistoryJSON[0]])
+    }, [messageHistoryJSON[0]]);
+
+    useEffect(() => {
+        config[1](JSON.parse(configJSON[0]));
+    }, [configJSON[0]]);
 
     useEffect(() => {
         topicInventory[1](

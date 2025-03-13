@@ -594,9 +594,11 @@ section.app.settings {
             padding: 1rem;
             background-color: var(--rgb-main2);
             outline: 0.15rem solid var(--rgb-line);
+            border-radius: 1rem;
             & h2 {
                 font-size: 1.25rem;
                 margin: 0;
+                margin-bottom: 1rem;
             }
             & div.setting {
                 display: flex;
@@ -604,6 +606,8 @@ section.app.settings {
                     flex: 1;       
                 }
                 & > .setting-label {
+                    display: flex;
+                    place-items: center flex-start;
                     text-align: left;
                 }
                 & > .setter {

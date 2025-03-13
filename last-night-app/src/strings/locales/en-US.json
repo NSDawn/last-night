@@ -9,7 +9,8 @@
     "menu.start": "Start",
 
     "settings.audio.h": "Audio Settings",
-    "settings.audio.sfx": "SFX Volume:",
+    "settings.audio.sfx": "SFX Volume",
+    "settings.audio.bgm": "BGM Volume",
 
     "char.debugShrek.displayName": "Mr. Shrek",
     "char.debugPlayer.displayName": "N.S. Dawn",
