@@ -67,6 +67,7 @@
             "tim.1.t.1"
         ],
         "events": {
+            "removeTopics": ["hey"],
             "getTopics": ["goto"],
             "removeFlags": ["intro"],
             "addFlags": ["intro1"]
@@ -135,6 +136,7 @@
     },
     "tim.2.alt": {
         "id": "tim.2.alt",
+        "repeatable": true,
         "messageIds": [
             "tim.2.a.0",
             "tim.234.t.1",
@@ -147,6 +149,7 @@
     },
     "tim.3.alt": {
         "id": "tim.3.alt",
+        "repeatable": true,
         "messageIds": [
             "tim.3.a.0",
             "tim.234.t.1",
@@ -159,6 +162,7 @@
     },
     "tim.4.alt": {
         "id": "tim.4.alt",
+        "repeatable": true,
         "messageIds": [
             "tim.4.a.0",
             "tim.234.t.1",
@@ -649,6 +653,7 @@
             "tim.15.a.4"
         ],
         "events": {
+            "removeTopics": ["act"],
             "getTopics": ["cheer"]
         }
     },
@@ -663,6 +668,7 @@
             "kaytlyn.12.a.5"
         ],
         "events": {
+            "removeTopics": ["cheer"],
             "startChains": [{"userId": "tim", "chainId": "tim.16"}]
         }
     },
@@ -756,6 +762,7 @@
             "tim.20.t.4"
         ],
         "events": {
+            "removeTopics": ["remote"],
             "addFlags": ["distracted"]
         }
     },
