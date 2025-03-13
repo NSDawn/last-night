@@ -58,19 +58,19 @@
     {
         "topicIds": ["goto", "charBrad"],
         "userId": "tim",
-        "requiredFlags": ["intro"],
+        "requiredFlags": ["intro1"],
         "chainId": "tim.2"
     },
     {
         "topicIds": ["goto", "charHunter"],
         "userId": "tim",
-        "requiredFlags": ["intro"],
+        "requiredFlags": ["intro1"],
         "chainId": "tim.3"
     },
     {
         "topicIds": ["goto", "charStewart"],
         "userId": "tim",
-        "requiredFlags": ["intro"],
+        "requiredFlags": ["intro1"],
         "chainId": "tim.4"
     },
     {
@@ -226,13 +226,13 @@
         "topicIds": ["hey"],
         "userId": "brad",
         "requiredFlags": ["part2", "locker"],
-        "chainId": "brad.1"
+        "chainId": "brad.1.alt"
     },
     {
         "topicIds": ["checkup"],
         "userId": "brad",
         "requiredFlags": ["part2", "locker"],
-        "chainId": "brad.1"
+        "chainId": "brad.1.alt"
     },
     {
         "topicIds": ["charHunter"],
