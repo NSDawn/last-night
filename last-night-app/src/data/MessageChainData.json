@@ -67,7 +67,9 @@
             "tim.1.t.1"
         ],
         "events": {
-            "getTopics": ["goto"]
+            "getTopics": ["goto"],
+            "removeFlags": ["intro"],
+            "addFlags": ["intro1"]
         }
     },
     "tim.2": {
@@ -128,7 +130,7 @@
         "events": {
             "getTopics": ["checkup"],
             "addFlags": ["lost", "noPass", "talking"],
-            "removeFlags": ["intro"]
+            "removeFlags": ["intro1"]
         }
     },
     "tim.2.alt": {
@@ -185,7 +187,7 @@
             "kaytlyn.2.k.12"
         ],
         "events": {
-            "getTopics": ["pr", "charRebecca"],
+            "getTopics": ["pr"],
             "addFlags": ["lost1"],
             "removeFlags": ["lost"],
             "startChains": [{"userId": "rebecca", "chainId": "rebecca.1"}]
@@ -348,8 +350,19 @@
         "events": {
             "getTopics": ["whatSee"],
             "addFlags": ["KtoB"],
-            "removeFlags": ["lost1"]
+            "removeFlags": ["lost1"],
+            "startChains": [{"userId": "rebecca", "chainId": "rebecca.2"}]
         }
+    },
+    "rebecca.2": {
+        "id": "rebecca.2",
+        "messageIds": [
+            "rebecca.2.r.0",
+            "rebecca.2.a.1",
+            "rebecca.2.r.2",
+            "rebecca.2.r.3",
+            "rebecca.2.a.4"
+        ]
     },
     "tim.13": {
         "id": "tim.13",
@@ -469,12 +482,28 @@
         "events": {
             "removeFlags": ["lost", "TinPR", "talking", "cookiesUsed", "animeUsed", "flowersUsed", "KtoB", "pass"],
             "addFlags": ["part2", "locker", "searching", "timNoH"],
-            "addUsers": ["brad"]
+            "addUsers": ["brad"],
+            "startChains": [
+                {"userId": "brad", "chainId": "brad.1"},
+                {"userId": "rebecca", "chainId": "rebecca.3"}
+            ]
         }
+    },
+    "rebecca.3": {
+        "id": "rebecca.3",
+        "messageIds": [
+            "rebecca.3.r.0",
+            "rebecca.3.r.1",
+            "rebecca.3.r.2",
+            "rebecca.3.a.3",
+            "rebecca.3.r.4",
+            "rebecca.3.a.5"
+        ]
     },
     "brad.1": {
         "id": "brad.1",
         "messageIds": [
+            "brad.1.b.0",
             "brad.1.a.0",
             "brad.1.b.1",
             "brad.1.a.2",
@@ -483,6 +512,15 @@
         "events": {
             "getTopics": ["dunks", "principal"]
         }
+    },
+    "brad.1.alt": {
+        "id": "brad.1.alt",
+        "messageIds": [
+            "brad.1.a.0",
+            "brad.1.b.1",
+            "brad.1.a.2",
+            "brad.1.b.3"
+        ]
     },
     "brad.2": {
         "id": "brad.2",
@@ -643,8 +681,17 @@
         "events": {
             "getTopics": ["smith"],
             "removeFlags": ["searching"],
-            "addFlags": ["stopped"]
+            "addFlags": ["stopped"],
+            "startChains": [{"userId": "rebecca", "chainId": "rebecca.4"}]
         }
+    },
+    "rebecca.4": {
+        "id": "rebecca.4",
+        "messageIds": [
+            "rebecca.4.r.0",
+            "rebecca.4.a.1",
+            "rebecca.4.r.2"
+        ]
     },
     "kaytlyn.13": {
         "id": "kaytlyn.13",
@@ -658,9 +705,6 @@
         "id": "brad.9",
         "messageIds": [
             "brad.9.a.0",
-            "brad.9.b.1",
-            "brad.9.b.2",
-            "brad.9.a.3",
             "brad.9.b.4"
         ]
     },
@@ -735,8 +779,7 @@
         "id": "brad.10",
         "messageIds": [
             "brad.9.a.0",
-            "brad.9.b.1",
-            "brad.9.b.2",
+            "brad.9.b.4",
             "brad.10.a.1",
             "brad.10.b.2",
             "brad.10.b.3"
@@ -768,6 +811,20 @@
             "tim.23.t.2",
             "tim.23.t.3",
             "tim.23.a.4"
+        ],
+        "events": {
+            "startChains": [{"userId": "rebecca", "chainId": "rebecca.5"}]
+        }
+    },
+    "rebecca.5": {
+        "id": "rebecca.5",
+        "messageIds": [
+            "rebecca.5.r.0",
+            "rebecca.5.a.1",
+            "rebecca.5.r.2",
+            "rebecca.5.r.3",
+            "rebecca.5.r.4",
+            "rebecca.5.a.5"
         ]
     },
     "kaytlyn.15": {
@@ -822,7 +879,9 @@
             "kaytlyn.16.a.10"
         ],
         "events": {
-            "startChains": [{"userId": "stewart", "chainId": "stewart.1"}]
+            "startChains": [
+                {"userId": "stewart", "chainId": "stewart.1"}
+            ]
         }
     },
     "stewart.1": {
@@ -832,7 +891,9 @@
             "stewart.1.s.1"
         ],
         "events": {
-            "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.17"}]
+            "startChains": [
+                {"userId": "kaytlyn", "chainId": "kaytlyn.17"}
+            ]
         }
     },
     "kaytlyn.17": {
@@ -842,7 +903,9 @@
             "kaytlyn.17.k.1"
         ],
         "events": {
-            "startChains": [{"userId": "stewart", "chainId": "stewart.2"}]
+            "startChains": [
+                {"userId": "stewart", "chainId": "stewart.2"}
+            ]
         }
     },
     "stewart.2": {
@@ -852,7 +915,9 @@
             "stewart.2.s.1"
         ],
         "events": {
-            "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.18"}]
+            "startChains": [
+                {"userId": "kaytlyn", "chainId": "kaytlyn.18"}
+            ]
         }
     },
     "kaytlyn.18": {
@@ -863,7 +928,9 @@
             "kaytlyn.18.a.2"
         ],
         "events": {
-            "startChains": [{"userId": "brad", "chainId": "brad.11"}]
+            "startChains": [
+                {"userId": "brad", "chainId": "brad.11"}
+            ]
         }
     },
     "brad.11": {
@@ -874,7 +941,9 @@
             "brad.11.b.2"
         ],
         "events": {
-            "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.19"}]
+            "startChains": [
+                {"userId": "kaytlyn", "chainId": "kaytlyn.19"}
+            ]
         }
     },
     "kaytlyn.19": {
@@ -915,8 +984,19 @@
             "tim.26.t.1"
         ],
         "events": {
-            "startChains": [{"userId": "kaytlyn", "chainId": "kaytlyn.21"}]
+            "startChains": [
+                {"userId": "kaytlyn", "chainId": "kaytlyn.21"},
+                {"userId": "rebecca", "chainId": "rebecca.6"}
+            ]
         }
+    },
+    "rebecca.6": {
+        "id": "rebecca.6",
+        "messageIds": [
+            "rebecca.6.r.0",
+            "rebecca.6.a.1",
+            "rebecca.6.r.2"
+        ]
     },
     "kaytlyn.21": {
         "id": "kaytlyn.21",

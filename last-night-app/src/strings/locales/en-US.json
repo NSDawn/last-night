@@ -53,7 +53,7 @@
     "message.kaytlyn.1.a.3": "of course but no ones gonna guess its you",
     "message.kaytlyn.1.k.4": "still couldnt you have just gone a little late",
     "message.kaytlyn.1.a.5": "girl you dont understand the war this sushi is waging on me 🤢",
-    "message.kaytlyn.1.a.51": "beside tim went with you, he can help you",
+    "message.kaytlyn.1.a.51": "besides theres no way im letting rebecca find whoever this is before me shes def trying to steal my night",
     "message.kaytlyn.1.k.6": "who are we looking for exactly? Theres a lot of people here that could be it.",
     "message.kaytlyn.1.a.7": "Did tim not tell you on the way over? Whatever, I got a few leads",
     "message.kaytlyn.1.a.8": "brad football. Hes a sports super star. Carries all our teams. Also super ripped you gotta check him when he takes his shirt off.",
@@ -398,11 +398,11 @@
 
 
 
-
+    "message.brad.1.b.0": "wassup this is brad 💪",
     "message.brad.1.a.0": "Hey which teams are you running with so I can look for you",
-    "message.brad.1.b.1": "p much all of them. Im in the locker room rn. Gonna come out for the next event to jump over teachers and dunk its gonna be rad 💪",
+    "message.brad.1.b.1": "p much all of them. Im in the locker room rn. Gonna come out for the next event to jump over a teacher and dunk",
     "message.brad.1.a.2": "no way who are you jumping over",
-    "message.brad.1.b.3": "the principal and other than that rebecca keeps changing them",
+    "message.brad.1.b.3": "the principal its gonna be so rad 😎",
 
     "message.brad.2.a.0": "do you know hunter lionhead?",
     "message.brad.2.b.1": "oh yeah hes great. Showed me that volleyball anime",
@@ -451,8 +451,8 @@
     "message.brad.8.b.1": "wouldn’t you like to know 🤐",
     "message.brad.8.a.2": "🫣",
 
-    "message.brad.9.a.0": "during the dunk contest can you call up mr smith instead of one of the other teachers to jump over?",
-    "message.brad.9.b.1": "one of the teachers would need to be busy or something and theyre constantly changing.",
+    "message.brad.9.a.0": "during the dunk contest can you call up mr smith instead of the principal to jump over?",
+    "message.brad.9.b.1": "she would need to be busy or something and theyre constantly changing.",
     "message.brad.9.b.2": "The only one that isnt being swapped out all the time is the principal.",
 
     "message.brad.9.a.3": "can you swap out the principal then?",
@@ -507,9 +507,33 @@
     "message.rebecca.1.r.2": "I took over for the student council. Prom is under my control and i got my eye you",
     "message.rebecca.1.a.3": "sure you do 🤭",
 
-    "message.rebecca.2.a.0": "",
+    "message.rebecca.2.r.0": "no way im letting u getting brads number",
+    "message.rebecca.2.a.1": "so ur admitting brad has something to do with the projector room 🧐",
+    "message.rebecca.2.r.2": "i never said that",
+    "message.rebecca.2.r.3": "how did you send me that you didnt even take out your phone",
+    "message.rebecca.2.a.4": "cus im magic bitch 💅",
 
+    "message.rebecca.3.r.0": "I cant believe brad actually gave you his number",
+    "message.rebecca.3.r.1": "you were so embarrassing the whole time",
+    "message.rebecca.3.r.2": "who even talks like that so cringeee",
+    "message.rebecca.3.a.3": "not you saying that when you had snot on ur face the whole time",
+    "message.rebecca.3.r.4": "SHUT UP UR LYING",
+    "message.rebecca.3.a.5": "who knows too bad you cant ask brad if I am 😬",
 
+    "message.rebecca.4.r.0": "dont think I dont see you trying to meet stewart",
+    "message.rebecca.4.a.1": "no way you seriously sent a teacher to stop them 😭",
+    "message.rebecca.4.r.2": "yeah cry about it",
+
+    "message.rebecca.5.r.0": "DONT THINK I DIDNT JUST SEE THAT WHAT ARE YOU TWO DOING",
+    "message.rebecca.5.a.1": "like as if id know",
+    "message.rebecca.5.r.2": "WTF DOES THAT EVEN MEAN",
+    "message.rebecca.5.r.3": "you are so getting in trouble for this",
+    "message.rebecca.5.r.4": "where did the principal go? What did you do!?",
+    "message.rebecca.5.a.5": "cry about it byeeee",
+
+    "message.rebecca.6.r.0": "I CANT BELIEVE YOU HIRED SOMEONE TO DISTRACT THE PRINCIPAL",
+    "message.rebecca.6.a.1": "girl thats tim",
+    "message.rebecca.6.r.2": "WHO?",
 
 
 
