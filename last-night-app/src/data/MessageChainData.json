@@ -67,6 +67,7 @@
             "tim.1.t.1"
         ],
         "events": {
+            "removeTopics": ["hey"],
             "getTopics": ["goto"],
             "removeFlags": ["intro"],
             "addFlags": ["intro1"]
@@ -652,6 +653,7 @@
             "tim.15.a.4"
         ],
         "events": {
+            "removeTopics": ["act"],
             "getTopics": ["cheer"]
         }
     },
@@ -666,6 +668,7 @@
             "kaytlyn.12.a.5"
         ],
         "events": {
+            "removeTopics": ["cheer"],
             "startChains": [{"userId": "tim", "chainId": "tim.16"}]
         }
     },
@@ -759,6 +762,7 @@
             "tim.20.t.4"
         ],
         "events": {
+            "removeTopics": ["remote"],
             "addFlags": ["distracted"]
         }
     },
