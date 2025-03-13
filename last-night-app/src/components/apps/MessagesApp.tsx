@@ -184,7 +184,7 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
     const [selectedTopics, setSelectedTopics] = useState([] as string[]);
     const [selectedCategory, setSelectedCategory] = useState(null as string|null);
     const [flags, setFlags] = G.flags;
-    const MAX_TOPICS = 3;
+    const MAX_TOPICS = 2;
 
     const categories = [
         {name: "all", imgUrl: "assets/img/ui/icon-pages.png", value: null},

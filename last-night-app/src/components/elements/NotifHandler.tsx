@@ -3,6 +3,7 @@ import { GlobalSingleton, useGlobal } from "../../GlobalContextHandler";
 import "./NotifHandler.css";
 import { t } from "../../strings/i18n";
 import { getUser } from "../../game/Messages";
+import { playAudio } from "../../game/AudioManager";
 
 export default function NotifHandler() {
 
@@ -13,9 +14,14 @@ export default function NotifHandler() {
 
     useEffect(() => {
         if (isNotifying) return;
-        console.log(notifStack);
         if (notifStack.length > 0) {
             setIsNotifying(true);
+            if (notifStack[0].type === "topic") {
+                playAudio(G, "sfx/notif-short")
+            } else {
+                playAudio(G, "sfx/notif-long");
+
+            }
             setTimeout(() => {
                 popNotif(G);
                 setIsNotifying(false);
