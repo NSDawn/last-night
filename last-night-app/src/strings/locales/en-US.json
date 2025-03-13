@@ -34,7 +34,8 @@
 
     "notif.quack": "$USER quacked.",
     "notif.message": "$USER just messaged you.",
-    "notif.new": "You can talk to $USER now!",
+    "notif.newUser": "You can talk to $USER now!",
+    "notif.topic": "New topic(s) added!",
 
     "comic.0.0": "Tonight's prom. Someone's going to confess their feelings for me, ...", 
     "comic.0.1": "...Angela McHawté.", 

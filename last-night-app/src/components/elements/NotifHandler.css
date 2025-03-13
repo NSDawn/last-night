@@ -11,10 +11,13 @@ div.push-notif {
     width: 100%;
     gap: 1rem;
     place-items: center center;
-    animation: notif 3s forwards;
+    animation: notif 1.5s forwards;
     display: flex; 
+    &.topic {
+        background-color: var(--rgb-light); 
+    }
     & .pfp {
-        margin: 0rem 1rem;
+        margin: 0rem 0.75rem;
         width: 2rem; 
         outline: 0.15rem var(--rgb-line) solid;
         border-radius: 50%;
@@ -25,6 +28,9 @@ div.push-notif {
             width: 2rem;
             aspect-ratio: 1;
         }
+    }
+    & .text {
+        margin: 0rem 0.75rem;
     }
 }
 

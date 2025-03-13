@@ -96,7 +96,15 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
     }, [userMessageHistory]);
 
     function chatHistoryOnClick() {
-        if (!hasMoreDialogue) return;
+        if (!topicSelectIsHidden) return;
+        if (!hasMoreDialogue) {
+            setTopicSelectIsHidden(false);
+            setTimeout(() => {
+                const chatHistoryDiv = document.querySelector("div.chat-history");
+                scrollToTheBottom(chatHistoryDiv);
+            }, 251);
+            return;
+        }
         incrementShownMessagesMessageHistory(G, 1, props.selectedUser);
         const messageHistoryFiltered = props.messageHistory.filter((h) => h.userId !== props.selectedUser);
         props.setMessageHistoryJSON(JSON.stringify([userMessageHistory, ...messageHistoryFiltered]));
@@ -108,15 +116,13 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
     }, [props.messageHistory, props.selectedUser, topicSelectIsHidden]);
 
     useEffect(() => {
-        setTopicSelectIsHidden(hasMoreDialogue);
         if (!hasMoreDialogue) {
             // scroll to the bottom
-            setTimeout(() => {
-                const chatHistoryDiv = document.querySelector("div.chat-history");
-                scrollToTheBottom(chatHistoryDiv);
-            }, 251);
+            
             // resolve events
             resolveMessageChainEvents(G, userMessageHistory.messageChainIds[userMessageHistory.messageChainIds.length -1]);
+        } else {
+            setTopicSelectIsHidden(true);
         }
     }, [hasMoreDialogue])
     
@@ -154,7 +160,7 @@ function Chat(props: {messageHistory: MessageHistory, selectedUser: string|null,
                         
                     ))               
                 : null}
-                {hasMoreDialogue?
+                {topicSelectIsHidden?
                     <div className="click-to-continue">
                         <img  src="assets/img/ui/mouse-click.gif" alt="click to continue" />
                         
@@ -178,7 +184,7 @@ function TopicSelect(props: {topicInventory: TopicInventory, isHidden: boolean, 
     const [selectedTopics, setSelectedTopics] = useState([] as string[]);
     const [selectedCategory, setSelectedCategory] = useState(null as string|null);
     const [flags, setFlags] = G.flags;
-    const MAX_TOPICS = 3;
+    const MAX_TOPICS = 2;
 
     const categories = [
         {name: "all", imgUrl: "assets/img/ui/icon-pages.png", value: null},

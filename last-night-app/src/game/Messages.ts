@@ -38,7 +38,7 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
     const [resolvedMessageChains, setResolvedMessageChains] = G.resolvedMessageChains;
     if (resolvedMessageChains.includes(key)) return;
     const chain = getMessageChain(key);
-    if (chain.repeatable) {
+    if (!chain.repeatable) {
         setResolvedMessageChains([...resolvedMessageChains, chain.id]);
     }
     if (!chain.events) return;
@@ -57,6 +57,10 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
 
     if (chain.events.getTopics || chain.events.removeTopics) {
         addOrRemoveTopics(G, chain.events.getTopics ?? [], chain.events.removeTopics ?? []);
+        if (chain.events.getTopics) {
+            
+            pushNotif(G, "topic", undefined);
+        }
     };
     setTimeout(() => {
         if (chain.events?.addQuacks) {

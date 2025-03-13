@@ -2,6 +2,7 @@ import { PropsWithChildren, createContext, useContext, useState, useEffect } fro
 import { getDefaultMessageHistory, getDefaultTopicInventory, MessageHistory, TopicInventory } from "./game/Messages";
 import { t } from "./strings/i18n";
 import { Notif } from "./components/elements/NotifHandler";
+import { Config, getDefaultConfig } from "./game/Config";
 
 const GlobalContext = createContext<GlobalSingleton>(null as unknown as GlobalSingleton);
 
@@ -19,6 +20,8 @@ function GlobalContextHandler(props: PropsWithChildren) {
     const resolvedMessageChains = useState([] as string[]);
     const notifStack = useState([] as Notif[])
     const endGame = useState("");
+    const config = useState(getDefaultConfig());
+    const configJSON = useState(JSON.stringify(getDefaultConfig()))
 
     useEffect(() => {
         messageHistory[1](JSON.parse(messageHistoryJSON[0]));
@@ -45,6 +48,8 @@ function GlobalContextHandler(props: PropsWithChildren) {
             resolvedMessageChains: resolvedMessageChains,
             notifStack: notifStack,
             endGame: endGame,
+            config: config,
+            configJSON: configJSON,
         }}>
             {props.children}
         </GlobalContext.Provider>
@@ -66,6 +71,8 @@ export type GlobalSingleton = {
     resolvedMessageChains: State<string[]>;
     notifStack: State<Notif[]>;
     endGame: State<string>;
+    config: State<Config>;
+    configJSON: State<string>
 };
 
 export function useGlobal() {

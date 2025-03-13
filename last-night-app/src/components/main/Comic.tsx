@@ -3,6 +3,7 @@ import "../../App.css";
 import { useEffect, useState } from "react";
 import "./Comic.css";
 import { t } from "../../strings/i18n";
+import { playAudio } from "../../game/AudioManager";
 
 export default function Comic() {
 
@@ -43,6 +44,11 @@ export default function Comic() {
 
         ],
     ]
+    const comicSFX: Record<number, Record<number, string>> = {
+        1: {
+            4: "sfx/running"
+        }
+    }
 
     function onClickComic() {
         if (gameState !== "comic") return;
@@ -50,14 +56,16 @@ export default function Comic() {
             if (comic === 1) {
                 setGameState("game")
                 return;
-            }
-            if (comic === 0) {        
+            } else if (comic === 0) {        
                 setComic(comic + 1);
                 setElement(1); 
             }
-            return; 
+        } else {
+            setElement(element + 1);
         }
-        setElement(element + 1);
+        if (comicSFX[comic] && comicSFX[comic][element]) {
+            playAudio(G, comicSFX[comic][element]);
+        }
     }
 
     useEffect(() => {
