@@ -510,6 +510,15 @@
     "message.rebecca.1.r.2": "I took over for the student council. Prom is under my control and i got my eye you",
     "message.rebecca.1.a.3": "sure you do 🤭",
 
+    "message.rebecca.11.a.0": "what do you know about the projector room",
+    "message.rebecca.11.r.1": "as if id tell you",
+    "message.rebecca.11.r.2": "why dont you go flirt with someone else",
+    "message.rebecca.11.a.3": "whatever 🙄",
+
+    "message.rebecca.12.a.0": "how are you?",
+    "message.rebecca.12.r.1": "prettier than you thats for sure",
+    "message.rebecca.12.a.2": "girl what is your problem",
+
     "message.rebecca.2.r.0": "no way im letting u getting brads number",
     "message.rebecca.2.a.1": "so ur admitting brad has something to do with the projector room 🧐",
     "message.rebecca.2.r.2": "i never said that",
@@ -582,7 +591,7 @@
     "topic.shrekEggs": "Shrek's Eggs",
     "topic.debugTopic": "Debug Topic",
     "topic.hey": "Hey",
-    "topic.checkup": "How are you doing?",
+    "topic.checkup": "How are you?",
     "topic.pr": "Projector Room",
     "topic.goto": "Go To",
     "topic.cookies": "Cookies",
