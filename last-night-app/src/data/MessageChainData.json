@@ -126,6 +126,7 @@
     },
     "tim.2.alt": {
         "id": "tim.2.alt",
+        "repeatable": true,
         "messageIds": [
             "tim.2.a.0",
             "tim.234.t.1",
@@ -138,6 +139,7 @@
     },
     "tim.3.alt": {
         "id": "tim.3.alt",
+        "repeatable": true,
         "messageIds": [
             "tim.3.a.0",
             "tim.234.t.1",
@@ -150,6 +152,7 @@
     },
     "tim.4.alt": {
         "id": "tim.4.alt",
+        "repeatable": true,
         "messageIds": [
             "tim.4.a.0",
             "tim.234.t.1",
