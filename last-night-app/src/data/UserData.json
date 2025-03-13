@@ -23,37 +23,37 @@
     "angela": {
         "id": "angela",
         "quacklyHandle": "angie✨angie✨angie",
-        "pfpUrl": "assets/img/pfp/debugPlayer.png",
+        "pfpUrl": "assets/img/pfp/angelaTest.png",
         "isPlayer": true
     },
     "kaytlyn": {
         "id": "kaytlyn",
         "quacklyHandle": "404KateNotFound",
-        "pfpUrl": "assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/debugPlayer.png"
     },
     "rebecca": {
         "id": "rebecca",
         "quacklyHandle": "kansas_queen",
-        "pfpUrl": "assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/millicentPrep.png"
     },
     "brad": {
         "id": "brad",
         "quacklyHandle": "brad-a-licious",
-        "pfpUrl": "assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/bradTest.png"
     },
     "stewart": {
         "id": "stewart",
         "quacklyHandle": "stewart",
-        "pfpUrl": "assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/stewartTest.png"
     },
     "hunter": {
         "id": "hunter",
         "quacklyHandle": "xXShadowCrossXx",
-        "pfpUrl": "assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/hunter.png"
     },
     "group": {
         "id": "group",
         "quacklyHandle": "Group Chat",
-        "pfpUrl": "assets/img/pfp/debugShrek.png"
+        "pfpUrl": "assets/img/pfp/debugPlayer.png"
     }
 }

@@ -136,6 +136,12 @@
     {
         "topicIds": ["goto", "pr"],
         "userId": "kaytlyn",
+        "requiredFlags": ["lost1", "noPass"],
+        "chainId": "kaytlyn.4"
+    },
+    {
+        "topicIds": ["goto", "pr"],
+        "userId": "kaytlyn",
         "requiredFlags": ["lost1", "pass"],
         "chainId": "kaytlyn.4"
     },
