@@ -122,5 +122,8 @@ main.menu {
     height: 5rem;
     transform: translateY(30vh);
     margin-top: 4rem;
+    &:hover {
+      transform: translateY(30vh) scale(1.1);
+    }
   }
 }
