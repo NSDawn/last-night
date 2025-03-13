@@ -28,5 +28,45 @@
         "id": "debugPlayer.1",
         "userId": "debugPlayer",
         "timestamp": "11:24 PM"
+    },
+    "brad.1": {
+        "id": "brad.1",
+        "userId": "brad",
+        "timestamp": "6:03 PM"
+    },
+    "hunter.1": {
+        "id": "hunter.1",
+        "userId": "hunter",
+        "timestamp": "5:30 PM"
+    },
+    "update.1": {
+        "id": "update.1",
+        "userId": "millicentPrep",
+        "timestamp": "7:43 PM"
+    },
+    "update.2": {
+        "id": "update.2",
+        "userId": "millicentPrep",
+        "timestamp": "7:52 PM"
+    },
+    "lance.1": {
+        "id": "lance.1",
+        "userId": "lance",
+        "timestamp": "5:44 PM"
+    },
+    "lance.2": {
+        "id": "lance.2",
+        "userId": "lance",
+        "timestamp": "6:12 PM"
+    },
+    "lance.3": {
+        "id": "lance.3",
+        "userId": "lance",
+        "timestamp": "7:37 PM"
+    },
+    "lance.4": {
+        "id": "lance.4",
+        "userId": "lance",
+        "timestamp": "7:53 PM"
     }
 }

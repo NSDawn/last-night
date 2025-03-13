@@ -22,6 +22,7 @@
     "char.stewart.displayName": "Stewart Newman",
     "char.hunter.displayName": "Hunter Lionshead",
     "char.group.displayName": "Group Chat",
+    "char.lance.displayName": "Lance",
     
     "char.debugShrek.truncatedName": "Shrek",
     "char.debugPlayer.truncatedName": "You",
@@ -34,6 +35,7 @@
     "char.stewart.truncatedName": "Stewart",
     "char.hunter.truncatedName": "Hunter",
     "char.group.truncatedName": "Group Chat",
+    "char.lance.truncatedName": "Lance",
 
     "notif.quack": "$USER quacked.",
     "notif.message": "$USER just messaged you.",
@@ -189,7 +191,7 @@
     "message.kaytlyn.15.a.0": "GIRL WHAT IS GOING ON IN THERE",
     "message.kaytlyn.15.a.1": "no way you stop responding now 😭",
 
-    "message.kaytlyn.16.k.0": "KLJBNVUSBNJBDUCVBIJSDFJHVIUSHO",
+    "message.kaytlyn.16.k.0": "KLJBNVUSBNJBDUCVBIJSDFJ",
     "message.kaytlyn.16.a.1": "girl what happened!",
     "message.kaytlyn.16.k.2": "“HEY ANGELA I WANTED TO ASK IF YOU COULD INTRODUCE ME TO YOUR SISTER I HAVE A CRUSH ON HER”",
     "message.kaytlyn.16.k.3": "👁️👄👁️",
@@ -538,6 +540,16 @@
     "message.rebecca.6.r.0": "I CANT BELIEVE YOU HIRED SOMEONE TO DISTRACT THE PRINCIPAL",
     "message.rebecca.6.a.1": "girl thats tim",
     "message.rebecca.6.r.2": "WHO?",
+
+    "quack.brad.1": "tonights gonna be so rad 😎 GET READY FOR THE BRADSTER",
+    "quack.lance.1": "no way angela and rebecca are beefing next to brad prom gonna go crazy",
+    "quack.hunter.1": "This night will be a canvas upon which the unknown shall paint its masterpiece. No soul can predict what it will unveil, the mysteries it will cradle in its midnight embrace.",
+    "quack.lance.2": "saw someone sneaking into the projector room. taking bets on who it is and what theyre gonna do. starting pot is $25",
+    "quack.lance.3": "who tf just played that anime. mf im only on s1!",
+    "quack.lance.4": "yoo since when did stewart have it like that",
+    "quack.update.1": "Reminder to all students that the projector room is off limits. We ask the student who took the remote a few weeks ago to please return it to the prinicipal, and refrain from playing anime during sporting events.",
+    "quack.update.2": "Please refrain from throwing eggs at teachers.",
+
 
 
 

@@ -238,7 +238,8 @@
         ],
         "events": {
             "removeFlags": ["brad", "noPass"],
-            "addFlags": ["pass"]
+            "addFlags": ["pass"],
+            "addQuacks": ["hunter.1"]
         }
     },
     "tim.9": {
@@ -355,7 +356,8 @@
             "getTopics": ["whatSee"],
             "addFlags": ["KtoB"],
             "removeFlags": ["lost1"],
-            "startChains": [{"userId": "rebecca", "chainId": "rebecca.2"}]
+            "startChains": [{"userId": "rebecca", "chainId": "rebecca.2"}],
+            "addQuacks": ["lance.1"]
         }
     },
     "rebecca.2": {
@@ -490,7 +492,8 @@
             "startChains": [
                 {"userId": "brad", "chainId": "brad.1"},
                 {"userId": "rebecca", "chainId": "rebecca.3"}
-            ]
+            ],
+            "addQuacks": ["brad.1"]
         }
     },
     "rebecca.3": {
@@ -514,7 +517,7 @@
             "brad.1.b.3"
         ],
         "events": {
-            "getTopics": ["dunks", "principal"]
+            "addQuacks": ["lance.2"]
         }
     },
     "brad.1.alt": {
@@ -763,7 +766,8 @@
         ],
         "events": {
             "removeTopics": ["remote"],
-            "addFlags": ["distracted"]
+            "addFlags": ["distracted"],
+            "addQuacks": ["lance.3"]
         }
     },
     "tim.21": {
@@ -793,7 +797,8 @@
         ],
         "events": {
             "removeFlags": ["stopped", "locker"],
-            "addFlags": ["free"]
+            "addFlags": ["free"],
+            "removeTopics": ["smith", "principal"]
         }
     },
     "kaytlyn.14": {
@@ -820,7 +825,9 @@
             "tim.23.a.4"
         ],
         "events": {
-            "startChains": [{"userId": "rebecca", "chainId": "rebecca.5"}]
+            "startChains": [{"userId": "rebecca", "chainId": "rebecca.5"}],
+            "addQuacks": ["update.1", "lance.4"],
+            "removeTopics": ["charHunter", "charBrad", "cookies", "flowers", "anime", "pr", "goto"]
         }
     },
     "rebecca.5": {
@@ -1023,7 +1030,8 @@
             "kaytlyn.22.k.12"
         ],
         "events": {
-            "startChains": [{"userId": "stewart", "chainId": "stewart.3"}]
+            "startChains": [{"userId": "stewart", "chainId": "stewart.3"}],
+            "addQuacks": ["update.2"]
         }
     },
     "stewart.3": {
