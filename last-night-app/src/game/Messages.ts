@@ -57,6 +57,10 @@ export function resolveMessageChainEvents(G: GlobalSingleton, key: string) {
 
     if (chain.events.getTopics || chain.events.removeTopics) {
         addOrRemoveTopics(G, chain.events.getTopics ?? [], chain.events.removeTopics ?? []);
+        if (chain.events.getTopics) {
+            
+            pushNotif(G, "topic", undefined);
+        }
     };
     setTimeout(() => {
         if (chain.events?.addQuacks) {

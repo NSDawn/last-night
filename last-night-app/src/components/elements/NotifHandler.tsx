@@ -9,7 +9,7 @@ export default function NotifHandler() {
     const G = useGlobal()
     const [notifStack, setNotifStack] = G.notifStack;
     const [isNotifying, setIsNotifying] = useState(false);
-    const NOTIF_LENGTH_MS = 3000;
+    const NOTIF_LENGTH_MS = 1500;
 
     useEffect(() => {
         if (isNotifying) return;
@@ -26,13 +26,15 @@ export default function NotifHandler() {
     return (
         <>
         {isNotifying? 
-            <div className="push-notif">
-                <div className="pfp">
-                    <img src={`${getUser(notifStack[0].userId).pfpUrl}`} alt="push notification profile picture" />
-                </div>
+            <div className={`push-notif ${notifStack[0].type === "topic" ? "topic" : ""}`}>
+                {notifStack[0].userId?
+                    <div className="pfp">
+                        <img src={`${getUser(notifStack[0].userId).pfpUrl}`} alt="push notification profile picture" />
+                    </div>
+                : null}
+                
                 <div className="text">
                     {t(`notif.${notifStack[0].type}`).replace("$USER", t(`char.${notifStack[0].userId}.truncatedName`))}
-
                 </div>
             </div>
         : null}
@@ -42,11 +44,11 @@ export default function NotifHandler() {
 }
 
 export type Notif = {
-    type: "quack" | "message" | "newUser";
-    userId: string;
+    type: "quack" | "message" | "newUser" | "topic";
+    userId?: string;
 }
 
-export function pushNotif(G: GlobalSingleton, type: "quack" | "message" | "newUser", userId: string) {
+export function pushNotif(G: GlobalSingleton, type: "quack" | "message" | "newUser" | "topic", userId: string | undefined) {
     const [notifStack, setNotifStack] = G.notifStack;
     const newNotif: Notif = {type: type, userId: userId};
     setNotifStack([...notifStack, newNotif])
