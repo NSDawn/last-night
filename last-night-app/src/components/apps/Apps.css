@@ -591,6 +591,7 @@ section.app.settings {
         background-color: var(--rgb-main);
         padding: 1rem;
         & div.category {
+            margin-bottom: 1rem;
             padding: 1rem;
             background-color: var(--rgb-main2);
             outline: 0.15rem solid var(--rgb-line);

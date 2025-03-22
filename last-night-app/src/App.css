@@ -89,41 +89,51 @@ main.menu {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: url("../public/assets/img/bg/comic0panel1.png");
-  background-size: 30%;
+  background-image: url("../public/assets/img/bg/title.png");
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  place-items: center center;
+  align-items: flex-end;
+  justify-content: flex-end;
   
   & h1 {
-    font-size: 5rem;
+    max-width: 50rem;
+    font-size: 8rem;
+    line-height: 6rem;
     border-radius: 2rem;
-    padding: 1rem;
-    margin: 0;
-    text-shadow: 0.15rem 0.15rem var(--rgb-light);
-    transform: translateY(30vh);
+    margin: 0rem 1rem;
+    color: var(--rgb-text-light);
+    text-align: end;
+    filter: drop-shadow(-0.4rem -0.4rem var(--rgb-main-transparent)) drop-shadow(0.3rem 0.3rem var(--rgb-line));
   }
   & h2 {
-    text-shadow: 0.15rem 0.15rem var(--rgb-light);
     font-size: 2rem;
-    margin: 0;
+    margin: 0rem 1rem;
     border-radius: 1rem;
-    background: var(--rgb-text-light);
+    color: var(--rgb-text-light);
+    background: var(--rgb-main-transparent);
     padding: 0.5rem;
-    text-shadow: 0.15rem 0.15rem var(--rgb-light);
-    transform: translateY(30vh);
 
-
+    font-weight: 200;
   }
   & button {
     border-radius: 1rem;
+    background-color: var(--rgb-light);
+    font-weight: 200;
+    box-shadow: var(--box-shadow);
     font-size: 3rem;
     width: 18rem;
     height: 5rem;
-    transform: translateY(30vh);
-    margin-top: 4rem;
+    margin: 2rem 4rem 2rem 0rem;
     &:hover {
-      transform: translateY(30vh) scale(1.1);
+      transform: scale(1.05);
     }
+  }
+}
+
+a {
+  color: var(--rgb-light);
+  &:hover {
+    transform: scale(1.05);
   }
 }

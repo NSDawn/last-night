@@ -7,8 +7,8 @@ export type Config = {
 
 export function getDefaultConfig(): Config {
     return {
-        sfxVolume: 0.7,
-        bgmVolume: 0.35,
+        sfxVolume: 0.5,
+        bgmVolume: 0.075,
     }
 }
 

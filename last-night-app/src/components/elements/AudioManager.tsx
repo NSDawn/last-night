@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { GlobalSingleton, useGlobal } from "../../GlobalContextHandler";
 import _audio from "../../strings/filenames/audio.json";
+import { repeat } from "../debug/DebugTooltip";
 const audioFileNames: string[] = _audio;
 
 export const audio: Record<string, HTMLAudioElement> = {};
@@ -10,17 +11,27 @@ export default function AudioManager() {
     const G = useGlobal();
     const [config, _] = G.config;
     const [playIdx, setPlayIdx] = useState(Math.floor(Math.random() * playList.length));
-    console.log(config.bgmVolume);
+
     useEffect(() => {
-        playNext(playIdx, setPlayIdx);
+        setBGM();
+        repeat(() => {
+            if (audio[playList[playIdx]].ended) {
+                audio[playList[playIdx]].currentTime = 0;
+                audio[playList[playIdx]].pause();
+                setNextIdx();
+            }
+        }, 1000)
     }, [])
 
-    function playNext(playIdx: number, setPlayIdx: (n: number) => void) {
-        const nextIdx = (playIdx + 1) % playList.length;
-        setPlayIdx(nextIdx);
-        playAudio(G, playList[nextIdx]);
-        audio[playList[nextIdx]].addEventListener("ended", () => {playNext(playIdx, setPlayIdx)}, { once: true });
+    function setNextIdx() {
+        setPlayIdx((playIdx + 1) % playList.length);
     }
+    function setBGM() {
+        //audio[playList[playIdx]].addEventListener("ended", () => {setNextIdx}, { once: true });
+        playAudio(G, playList[playIdx]);
+    }
+
+    useEffect(setBGM, [playIdx])
     
     useEffect(() => {
         audio[playList[playIdx]].volume = config.bgmVolume;

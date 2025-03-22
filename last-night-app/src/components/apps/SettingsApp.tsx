@@ -11,7 +11,7 @@ export default function SettingsApp() {
     const [currentApp, setCurrentApp] = G.currentApp;
     const [sfxVolumeInput, setSfxVolumeInput] = useState(config.sfxVolume * 100);
     const [sfxVolumeButtonSrc, setSfxVolumeButtonSrc] = useState("");
-    const [bgmVolumeInput, setBgmVolumeInput] = useState(config.bgmVolume * 200);
+    const [bgmVolumeInput, setBgmVolumeInput] = useState(config.bgmVolume * 800);
     // const [bgmVolumeSrc, setBgmVolumeSrc] = useState("");
 
     useEffect(() => {
@@ -20,7 +20,7 @@ export default function SettingsApp() {
     }, [sfxVolumeInput]);
 
     useEffect(() => {
-        changeConfig(G, "bgmVolume", bgmVolumeInput/200);
+        changeConfig(G, "bgmVolume", bgmVolumeInput/800);
     }, [bgmVolumeInput]);
 
     function getVolumeButtonSrc(volume: number) {
@@ -74,14 +74,6 @@ export default function SettingsApp() {
                         </div>
                     </div>
                     <div className="setter">
-                        {/* <button
-                        className="play-bgm img-button"
-                        onClick={() => {playAudio(G, "sfx/notif-short", true)}}>
-                            <img 
-                                src={sfxVolumeButtonSrc} 
-                                alt="play sfx icon" 
-                            />
-                        </button> */}
                         <input 
                             type="range" 
                             value={bgmVolumeInput}
@@ -90,6 +82,59 @@ export default function SettingsApp() {
                     </div>
                 </div>
                 
+            </div>
+            <div className="category">
+                <h2>
+                    {t(`settings.credits.h`)}
+                </h2>
+                <div className="setting credit-conflxted">
+                    <div className="setting-label">
+                        <div>
+                            {t(`settings.credits.conflxted.role`)}
+                        </div>
+                    </div>
+                    <div className="setter">
+                        <a href="https://conflxcted.itch.io/" target="_blank">
+                            {t(`settings.credits.conflxted`)}
+                        </a>
+                    </div>
+                </div>
+                <div className="setting credit-atumemot">
+                    <div className="setting-label">
+                        <div>
+                            {t(`settings.credits.atumemot.role`)}
+                        </div>
+                    </div>
+                    <div className="setter">
+                        <a href="https://atumemot.itch.io/" target="_blank">
+                            {t(`settings.credits.atumemot`)}
+                        </a>
+                    </div>
+                </div>
+                <div className="setting credit-nsdawn">
+                    <div className="setting-label">
+                        <div>
+                            {t(`settings.credits.nsdawn.role`)}
+                        </div>
+                    </div>
+                    <div className="setter">
+                        <a href="https://ns-dawn.itch.io/" target="_blank">
+                            {t(`settings.credits.nsdawn`)}
+                        </a>
+                    </div>
+                </div>
+                <div className="setting credit-audio">
+                    <div className="setting-label">
+                        <div>
+                            {t(`settings.credits.audio.role`)}
+                        </div>
+                    </div>
+                    <div className="setter">
+                        <a href="https://github.com/NSDawn/last-night?tab=readme-ov-file#asset-credits" target="_blank">
+                            {t(`settings.credits.audio`)}
+                        </a>
+                    </div>
+                </div>
             </div>
         </main>
     </>)

@@ -36,3 +36,7 @@ export default function DebugTooltip() {
         </div>
     )
 }
+export function repeat(f: Function, delayMs: number) {
+    f();
+    setTimeout(() => repeat(f, delayMs), delayMs);
+}

@@ -1,15 +1,19 @@
 
 main.comic {
     position: absolute;
-    min-height: 80vh;
-    min-width: 60vh;
+    min-height: 100vh;
+    min-width: 100vh;
     transition: ease-in-out 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &.disabled {
       z-index: -1;
       opacity: 0;
     }
     div.comic-wrapper {
       height: 80vh;
+      overflow: hidden;
       display: grid;
       position: relative;
       & .bubble {
@@ -38,6 +42,8 @@ main.comic {
         height: 10rem;
         position: absolute;
         left: 18rem;
+        top: 2rem;
+        z-index: 3;
       }
       & .comic-0-1 {
         animation: appearRight 0.2s forwards;

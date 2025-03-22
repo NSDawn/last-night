@@ -5,12 +5,22 @@
     "app.quackly": "Quackly",
 
     "menu.h1": "What's the Tea, Sis?",
-    "menu.h2": "You're missing prom, but not the goss!",
+    "menu.h2": "atumemot, conflxted, & N.S. Dawn",
     "menu.start": "Start",
 
     "settings.audio.h": "Audio Settings",
     "settings.audio.sfx": "SFX Volume",
     "settings.audio.bgm": "BGM Volume",
+    "settings.credits.h": "Credits",
+
+    "settings.credits.nsdawn.role": "Programmer",
+    "settings.credits.nsdawn": "N.S. Dawn",
+    "settings.credits.conflxted.role": "Artist",
+    "settings.credits.conflxted": "conflxted",
+    "settings.credits.atumemot.role": "Writer",
+    "settings.credits.atumemot": "atumemot",
+    "settings.credits.audio.role": "Audio",
+    "settings.credits.audio": "see credits",
 
     "char.debugShrek.displayName": "Mr. Shrek",
     "char.debugPlayer.displayName": "N.S. Dawn",
