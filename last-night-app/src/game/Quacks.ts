@@ -22,3 +22,8 @@ export function addQuack(G: GlobalSingleton, quackId: string | string[]) {
         setQuacks([...quackId, ...quacks]);
     }
 }
+export function getDefaultQuacks(): string[] {
+    return [
+        "lashi.1"
+    ]
+}

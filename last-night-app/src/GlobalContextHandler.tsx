@@ -3,6 +3,7 @@ import { getDefaultMessageHistory, getDefaultTopicInventory, MessageHistory, Top
 import { t } from "./strings/i18n";
 import { Notif } from "./components/elements/NotifHandler";
 import { Config, getDefaultConfig } from "./game/Config";
+import { getDefaultQuacks } from "./game/Quacks";
 
 const GlobalContext = createContext<GlobalSingleton>(null as unknown as GlobalSingleton);
 
@@ -16,7 +17,7 @@ function GlobalContextHandler(props: PropsWithChildren) {
     const topicInventoryJSON = useState(JSON.stringify(getDefaultTopicInventory()));
     const flags = useState([] as string[]);
     const notes = useState([] as string[]);
-    const quacks = useState([] as string[]);
+    const quacks = useState(getDefaultQuacks() as string[]);
     const resolvedMessageChains = useState([] as string[]);
     const notifStack = useState([] as Notif[])
     const endGame = useState("");
@@ -79,6 +80,78 @@ export type GlobalSingleton = {
     configJSON: State<string>
 };
 
+export type SaveableGlobalSingleton = {
+    gameState: string;
+    notes: string[];
+    flags: string[];
+    quacks: string[];
+    currentApp: null | string;
+    messageHistoryJSON: string;
+    topicInventoryJSON: string;
+    resolvedMessageChains: string[];
+    notifStack: Notif[];
+    endGame: string;
+    configJSON: string;
+    timestamp?: number;
+}
+
 export function useGlobal() {
     return useContext(GlobalContext);
+}
+
+export function storeSaveData(data: SaveableGlobalSingleton, slot = 0) {
+    localStorage.setItem(`wtts-save-${slot}`, JSON.stringify(data));
+}
+
+export function pullSaveData(slot = 0): SaveableGlobalSingleton | undefined {
+    let s = localStorage.getItem(`wtts-save-${slot}`);
+    if (s && s !== "") return JSON.parse(s);
+    return undefined;
+}
+
+export function loadSaveData(G: GlobalSingleton, data: SaveableGlobalSingleton) {
+    G.gameState[1](data.gameState);
+    G.notes[1](data.notes);
+    G.flags[1](data.flags);
+    G.quacks[1](data.quacks);
+    G.messageHistoryJSON[1](data.messageHistoryJSON);
+    G.topicInventoryJSON[1](data.topicInventoryJSON);
+    G.resolvedMessageChains[1](data.resolvedMessageChains);
+    G.notifStack[1](data.notifStack);
+    G.endGame[1](data.endGame);
+    G.configJSON[1](data.configJSON);
+}
+
+export function makeSaveData(G: GlobalSingleton): SaveableGlobalSingleton {
+    return {
+        gameState: G.gameState[0],
+        notes: G.notes[0],
+        flags: G.flags[0],
+        quacks: G.quacks[0],
+        currentApp: G.currentApp[0],
+        messageHistoryJSON: G.messageHistoryJSON[0],
+        topicInventoryJSON: G.topicInventoryJSON[0],
+        resolvedMessageChains: G.resolvedMessageChains[0],
+        notifStack: G.notifStack[0],
+        endGame: G.endGame[0],
+        configJSON: G.configJSON[0],
+        timestamp: Date.now()
+    }
+}
+
+export function getEmptySaveData(): SaveableGlobalSingleton {
+    return {
+        gameState: "menu",
+        notes: [],
+        flags: [],
+        quacks: getDefaultQuacks(),
+        currentApp: null,
+        messageHistoryJSON: JSON.stringify(getDefaultMessageHistory()),
+        topicInventoryJSON: JSON.stringify(getDefaultTopicInventory()),
+        resolvedMessageChains: [],
+        notifStack: [],
+        endGame: "",
+        configJSON: JSON.stringify(getDefaultConfig()),
+        timestamp: Date.now()
+    }
 }

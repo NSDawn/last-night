@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useGlobal } from "../../GlobalContextHandler";
+import { loadSaveData, makeSaveData, pullSaveData, storeSaveData, useGlobal } from "../../GlobalContextHandler";
 import { t } from "../../strings/i18n";
 import { changeConfig } from "../../game/Config";
 import { playAudio } from "../elements/AudioManager";
@@ -12,8 +12,10 @@ export default function SettingsApp() {
     const [sfxVolumeInput, setSfxVolumeInput] = useState(config.sfxVolume * 100);
     const [sfxVolumeButtonSrc, setSfxVolumeButtonSrc] = useState("");
     const [bgmVolumeInput, setBgmVolumeInput] = useState(config.bgmVolume * 800);
-    // const [bgmVolumeSrc, setBgmVolumeSrc] = useState("");
+    const [saveTimestampStrings, setSaveTimestampStrings] = useState(["", "", ""]);
 
+    useEffect(updateTimestampStrings, []);
+    
     useEffect(() => {
         changeConfig(G, "sfxVolume", sfxVolumeInput/100);
         setSfxVolumeButtonSrc(getVolumeButtonSrc(sfxVolumeInput))
@@ -29,6 +31,27 @@ export default function SettingsApp() {
         if (volume <= 50) return "assets/img/ui/icon-volume-1.png";
         if (volume <= 70) return "assets/img/ui/icon-volume-2.png";
         return "assets/img/ui/icon-volume-3.png";
+    }
+
+    function saveOrLoadButtonClicked(slot: number, mode: "save" | "load") {
+        if (mode === "save") {
+            storeSaveData(makeSaveData(G), slot)
+            updateTimestampStrings();
+        }
+        if (mode === "load") {
+            let data = pullSaveData(slot);
+            if (data) loadSaveData(G, data);
+        }
+    }
+
+    function updateTimestampStrings() {
+        setSaveTimestampStrings(saveTimestampStrings.map((_, slot) => {
+                let data = pullSaveData(slot);
+                if (data && data.timestamp) return new Date(data.timestamp).toDateString();
+                //TODO: write a date to string function based on t
+                return "";
+            }
+        ));
     }
 
     return (<>
@@ -133,6 +156,29 @@ export default function SettingsApp() {
                         <a href="https://github.com/NSDawn/last-night?tab=readme-ov-file#asset-credits" target="_blank">
                             {t(`settings.credits.audio`)}
                         </a>
+                    </div>
+                </div>
+            </div>
+            <div className="category">
+                <h2>
+                    {t(`settings.save.h`)}
+                </h2>
+                <div className="setting save">
+                    <div className="setting-label">
+                        <div>
+                            {t(`settings.save.slot.1`)}
+                        </div>
+                    </div>
+                    <div className="setter">
+                        <span>
+                            {saveTimestampStrings[0]}
+                        </span>
+                        <button className="save" onClick={() => saveOrLoadButtonClicked(0, "save")}>
+                            {t(`settings.save.save`)}
+                        </button>
+                        <button className="load" onClick={() => saveOrLoadButtonClicked(0, "load")}>
+                            {t(`settings.save.load`)} 
+                        </button>
                     </div>
                 </div>
             </div>

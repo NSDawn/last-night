@@ -110,6 +110,36 @@
         "chainId": "rebecca.12"
     },
     {
+        "topicIds": ["charBrad"],
+        "userId": "rebecca",
+        "requiredFlags": [],
+        "chainId": "rebecca.flavorconvo.brad"
+    },
+    {
+        "topicIds": ["goto"],
+        "userId": "rebecca",
+        "requiredFlags": [],
+        "chainId": "rebecca.flavorconvo.request"
+    },
+    {
+        "topicIds": ["goto", "*"],
+        "userId": "rebecca",
+        "requiredFlags": [],
+        "chainId": "rebecca.flavorconvo.request"
+    },
+    {
+        "topicIds": ["flowers"],
+        "userId": "rebecca",
+        "requiredFlags": [],
+        "chainId": "rebecca.flavorconvo.mintflowers"
+    },
+    {
+        "topicIds": ["flowers", "*"],
+        "userId": "rebecca",
+        "requiredFlags": [],
+        "chainId": "rebecca.flavorconvo.mintflowers"
+    },
+    {
         "topicIds": ["checkup"],
         "userId": "tim",
         "requiredFlags": ["talking"],

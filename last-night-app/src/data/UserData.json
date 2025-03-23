@@ -60,5 +60,10 @@
         "id": "lance",
         "quacklyHandle": "Lancy-poo",
         "pfpUrl": "assets/img/pfp/lance.png"
+    },
+    "lashi": {
+        "id": "lashi",
+        "quacklyHandle": "danielquacks",
+        "pfpUrl": "assets/img/pfp/lashi.png"
     }
 }

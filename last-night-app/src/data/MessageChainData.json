@@ -223,6 +223,36 @@
             "rebecca.12.a.2"
         ]
     },
+    "rebecca.flavorconvo.brad": {
+        "id": "rebecca.flavorconvo.brad",
+        "messageIds": [
+            "rebecca.flavorconvo.brad.a.0",
+            "rebecca.flavorconvo.brad.r.1",
+            "rebecca.flavorconvo.brad.a.2",
+            "rebecca.flavorconvo.brad.r.3",
+            "rebecca.flavorconvo.brad.r.4",
+            "rebecca.flavorconvo.brad.r.5",
+            "rebecca.flavorconvo.brad.r.6"
+        ]
+    },
+    "rebecca.flavorconvo.request": {
+        "id": "rebecca.flavorconvo.request",
+        "messageIds": [
+            "rebecca.flavorconvo.request.a.0",
+            "rebecca.flavorconvo.request.r.1"
+        ]
+    },
+    "rebecca.flavorconvo.mintflowers": {
+        "id": "rebecca.flavorconvo.mintflowers",
+        "messageIds": [
+            "rebecca.flavorconvo.mintflowers.a.0",
+            "rebecca.flavorconvo.mintflowers.r.1",
+            "rebecca.flavorconvo.mintflowers.r.2",
+            "rebecca.flavorconvo.mintflowers.r.3",
+            "rebecca.flavorconvo.mintflowers.r.4",
+            "rebecca.flavorconvo.mintflowers.r.5"
+        ]
+    },
     "tim.6": {
         "id": "tim.6",
         "messageIds": [
@@ -1104,16 +1134,6 @@
             "endGameGood": true
         }
     },
-
-
-
-
-
-
-
-
-
-
 
     "debug.debugscene.0": {
         "id": "debug.debugscene.0",

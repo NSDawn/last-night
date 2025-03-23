@@ -101,8 +101,19 @@ export type MessageChainRequest = {
 export function matchMessageChainRequest(request: MessageChainRequest, flags: string[]): MessageChainRequest | null {
     const matches = messageChainRequestData
         .filter((rq) => rq.userId === request.userId)
-        .filter((rq) => !rq.topicIds.some((topic) => !request.topicIds.includes(topic)))
         .filter((rq) => rq.topicIds.length === request.topicIds.length)
+        .filter((rq) => {
+            if (!rq.topicIds.some((topic) => topic !== "*")) {
+                return true;
+            } else if (rq.topicIds.includes("*")) {
+                return (
+                    !rq.topicIds
+                        .filter((topic) => topic !== "*")
+                        .some((topic) => !request.topicIds.includes(topic))
+                )
+            }
+            return !rq.topicIds.some((topic) => !request.topicIds.includes(topic))
+        })
         .filter((rq) => !rq.requiredFlags.some((flag) => !flags.includes(flag)))
         .sort((rqA, rqB) => rqB.requiredFlags.length - rqA.requiredFlags.length)
     ;
