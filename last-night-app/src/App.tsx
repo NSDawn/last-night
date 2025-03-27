@@ -18,7 +18,7 @@ function App() {
       : <>
       <Comic />
       <Phone />
-      <DebugTooltip />
+      {/* <DebugTooltip /> */}
       </>}
     </>
   )
