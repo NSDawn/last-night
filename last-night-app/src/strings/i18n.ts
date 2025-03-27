@@ -1,3 +1,4 @@
+import moment from "moment";
 import _enUS from "./locales/en-US.json";
 const enUS: Record<string, string> = _enUS;
 
@@ -13,6 +14,11 @@ export function getCurrentLocale() {
 
 export function t(key: string): string  {
     return tCustomLocale(key, getCurrentLocale())
+}
+
+export function tDate(timestamp: number | Date, tkey = "date"): string {
+    const date = new Date(timestamp);
+    return moment(date).format(t(tkey));
 }
 
 export function tCustomLocale(key: string, locale: string): string {

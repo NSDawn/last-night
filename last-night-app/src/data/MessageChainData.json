@@ -235,6 +235,18 @@
             "rebecca.flavorconvo.brad.r.6"
         ]
     },
+    "rebecca.flavorconvo.hunter": {
+        "id": "rebecca.flavorconvo.hunter",
+        "messageIds": [
+            "rebecca.flavorconvo.hunter.a.0",
+            "rebecca.flavorconvo.hunter.r.1",
+            "rebecca.flavorconvo.hunter.a.2",
+            "rebecca.flavorconvo.hunter.r.3",
+            "rebecca.flavorconvo.hunter.a.4",
+            "rebecca.flavorconvo.hunter.r.5",
+            "rebecca.flavorconvo.hunter.r.6"
+        ]
+    },
     "rebecca.flavorconvo.request": {
         "id": "rebecca.flavorconvo.request",
         "messageIds": [

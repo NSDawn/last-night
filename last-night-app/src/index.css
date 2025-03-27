@@ -17,7 +17,9 @@
   font-family: SourGummy;
   src: url("../public/assets/fonts/Sour_Gummy/SourGummy-VariableFont.ttf");
 }
-
+body {
+  overflow: hidden;
+}
 :root {
   font-family: "NotoSans", "NotoColorEmoji", sans-serif, system-ui;
   line-height: 1.5;

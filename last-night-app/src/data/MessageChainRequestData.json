@@ -11,8 +11,6 @@
         "requiredFlags": [],
         "chainId": "debug.debugscene.2"
     },
-
-
     {
         "topicIds": ["charBrad"],
         "userId": "kaytlyn",
@@ -114,6 +112,12 @@
         "userId": "rebecca",
         "requiredFlags": [],
         "chainId": "rebecca.flavorconvo.brad"
+    },
+    {
+        "topicIds": ["charHunter"],
+        "userId": "rebecca",
+        "requiredFlags": [],
+        "chainId": "rebecca.flavorconvo.hunter"
     },
     {
         "topicIds": ["goto"],

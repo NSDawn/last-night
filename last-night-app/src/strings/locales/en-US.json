@@ -21,9 +21,14 @@
     "settings.credits.audio.role": "Audio",
     "settings.credits.audio": "see credits",
     "settings.save.h": "Save Data",
-    "settings.save.slot.1": "Slot 1",
+    "settings.save.slot.0": "Slot 1",
+    "settings.save.slot.1": "Slot 2",
+    "settings.save.slot.2": "Slot 3",
     "settings.save.save": "Save",
+    "settings.save.overwrite": "Overwrite",
     "settings.save.load": "Load",
+    "settings.save.date": "MM/DD HH:mm",
+    "settings.save.emptySlot": "(empty)",
 
     "char.debugShrek.displayName": "Mr. Shrek",
     "char.debugPlayer.displayName": "N.S. Dawn",
@@ -545,6 +550,14 @@
     "message.rebecca.flavorconvo.brad.r.5": "stop",
     "message.rebecca.flavorconvo.brad.r.6": "snooping",
 
+    "message.rebecca.flavorconvo.hunter.a.0": "did you spot hunter anywhere?",
+    "message.rebecca.flavorconvo.hunter.r.1": "someone gotta steal that man's thesaurus and burn it",
+    "message.rebecca.flavorconvo.hunter.a.2": "LOL what",
+    "message.rebecca.flavorconvo.hunter.r.3": "aint nobody can understand what that edgelord is saying",
+    "message.rebecca.flavorconvo.hunter.a.4": "ok fair",
+    "message.rebecca.flavorconvo.hunter.r.5": "ive got my eye on him rn",
+    "message.rebecca.flavorconvo.hunter.r.6": "no wait nvm disregard that",
+
     "message.rebecca.flavorconvo.tim.a.0": "what's tim up to?",
     "message.rebecca.flavorconvo.tim.r.1": "who now",
     "message.rebecca.flavorconvo.tim.a.2": "nvm",
@@ -597,6 +610,10 @@
     "quack.update.1": "Reminder to all students that the projector room is off limits. We ask the student who took the remote a few weeks ago to please return it to the prinicipal, and refrain from playing anime during sporting events.",
     "quack.update.2": "Please refrain from throwing eggs at teachers.",
     "quack.lashi.1": "Anyone else feel like that sushi from the 6-12 across from school was kinda... sus today? Tasted weird.",
+    "quack.rebecca.1": "kinda embarrassing what some of the girls are wearing tonight... prom really fell off this year. y'all really gonna get confessed to wearing these dresses? oh oops... did that slip out...🤭",
+    "quack.rebecca.2": "ok on the dl angela looks really sexy tn...😵‍💫 ngl",
+    "quack.rebecca.3": "SHIT SHIT SHIT SIHT how do I delete a quack that wasn't supposed to go on my main",
+
 
     "message.debug.debugscene.0.0": "WHATCHA DOIN' IN MY SWAMP 🧌🧌🧌",
     "message.debug.debugscene.0.1": "Shrek, is that you?",

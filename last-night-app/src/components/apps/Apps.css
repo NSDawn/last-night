@@ -325,7 +325,7 @@ section.app.messages {
                         z-index: 100;
                         max-height: 7rem;
                         overflow-y: scroll;
-                        padding: 0.25rem 0.1rem;
+                        padding: 0.25rem;
 
                         & > .topic {
                             background-color: var(--rgb-light);
@@ -614,9 +614,18 @@ section.app.settings {
                     display: flex;
                     gap: 0.5rem;
                     flex-direction: row-reverse;
+                    align-items: center;
                     & button {
                         color: var(--rgb-line);
                         padding: 0 0.5rem;
+                    }
+                }
+                &.save {
+                    & button {
+                        margin: 0.25rem 0rem;
+                    }
+                    & div.timestamp {
+                        white-space: nowrap;
                     }
                 }
             }

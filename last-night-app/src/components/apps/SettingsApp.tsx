@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { loadSaveData, makeSaveData, pullSaveData, storeSaveData, useGlobal } from "../../GlobalContextHandler";
-import { t } from "../../strings/i18n";
+import { t, tDate } from "../../strings/i18n";
 import { changeConfig } from "../../game/Config";
 import { playAudio } from "../elements/AudioManager";
 
@@ -11,7 +11,7 @@ export default function SettingsApp() {
     const [currentApp, setCurrentApp] = G.currentApp;
     const [sfxVolumeInput, setSfxVolumeInput] = useState(config.sfxVolume * 100);
     const [sfxVolumeButtonSrc, setSfxVolumeButtonSrc] = useState("");
-    const [bgmVolumeInput, setBgmVolumeInput] = useState(config.bgmVolume * 800);
+    const [bgmVolumeInput, setBgmVolumeInput] = useState(config.bgmVolume * 200);
     const [saveTimestampStrings, setSaveTimestampStrings] = useState(["", "", ""]);
 
     useEffect(updateTimestampStrings, []);
@@ -22,7 +22,7 @@ export default function SettingsApp() {
     }, [sfxVolumeInput]);
 
     useEffect(() => {
-        changeConfig(G, "bgmVolume", bgmVolumeInput/800);
+        changeConfig(G, "bgmVolume", bgmVolumeInput/200);
     }, [bgmVolumeInput]);
 
     function getVolumeButtonSrc(volume: number) {
@@ -47,11 +47,19 @@ export default function SettingsApp() {
     function updateTimestampStrings() {
         setSaveTimestampStrings(saveTimestampStrings.map((_, slot) => {
                 let data = pullSaveData(slot);
-                if (data && data.timestamp) return new Date(data.timestamp).toDateString();
+                if (data && data.timestamp) return tDate(data.timestamp, "settings.save.date");
                 //TODO: write a date to string function based on t
                 return "";
             }
         ));
+    }
+
+    function hasSaveData(index: number) {
+        return saveTimestampStrings[index] !== "";
+    }
+
+    function getTimestampT(index: number) {
+        return saveTimestampStrings[index] === "" ? t("settings.save.emptySlot") : saveTimestampStrings[index];
     }
 
     return (<>
@@ -163,24 +171,29 @@ export default function SettingsApp() {
                 <h2>
                     {t(`settings.save.h`)}
                 </h2>
-                <div className="setting save">
-                    <div className="setting-label">
-                        <div>
-                            {t(`settings.save.slot.1`)}
+
+                {saveTimestampStrings.map((v, i) => 
+                    <div className="setting save" key={i}>
+                        <div className="setting-label">
+                            <div>
+                                {t(`settings.save.slot.${i}`)}
+                            </div>
+                        </div>
+                        <div className="setter">
+                            <button className="save" onClick={() => saveOrLoadButtonClicked(i, "save")}>
+                                {t(hasSaveData(i) ? "settings.save.overwrite" : `settings.save.save`)}
+                            </button>
+                            {hasSaveData(i) ?
+                                <button className="load" onClick={() => saveOrLoadButtonClicked(i, "load")}>
+                                    {t(`settings.save.load`)} 
+                                </button>
+                            :null}
+                            <div className="timestamp">
+                                {getTimestampT(i)}
+                            </div>
                         </div>
                     </div>
-                    <div className="setter">
-                        <span>
-                            {saveTimestampStrings[0]}
-                        </span>
-                        <button className="save" onClick={() => saveOrLoadButtonClicked(0, "save")}>
-                            {t(`settings.save.save`)}
-                        </button>
-                        <button className="load" onClick={() => saveOrLoadButtonClicked(0, "load")}>
-                            {t(`settings.save.load`)} 
-                        </button>
-                    </div>
-                </div>
+                )}
             </div>
         </main>
     </>)
